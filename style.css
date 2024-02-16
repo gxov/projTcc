@@ -1,0 +1,43 @@
+.badgeCategoria {
+    color: black;
+    background-color: rgb(255, 128, 0);
+    padding: 0.3rem;
+    border-radius: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+}
+
+.estiloTexto{
+    font-family: Poppins,sans-serif;
+}
+
+.mainNav{
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    background-color: rgb(21, 15, 15);
+}
+
+.navTransparente{
+    background-color: transparent !important;
+}
+
+.conteudo{
+    background-color: rgb(42, 26, 15);
+    color: white;
+}
+
+.navSide{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
