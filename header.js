@@ -1,4 +1,6 @@
 const mainNav = document.getElementById('mainNav');
+const sideNav = document.getElementById('sideNav');
+const mainCont = document.getElementById('main');
 const mainNavHgt = mainNav.offsetTop;
 
 function funct() {
@@ -14,5 +16,9 @@ function funct() {
 window.onscroll = function () { funct() }
 
 function openNav() {
-    document.getElementById("navSide").style.width = "250px";
+    sideNav.className = sideNav.className + " sideNavShow"
+    mainCont.className = "container-fluid mainContent mainContentFloat"
+    sideNav.style.width = "20%";
+    mainCont.style.width = "80%";
 }
+
