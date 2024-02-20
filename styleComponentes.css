@@ -1,0 +1,148 @@
+/* Misc */
+
+.badgeCategoria {
+    color: black;
+    background-color: var(--corPrimaria);
+    padding: 0.3rem;
+    border-radius: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+}
+
+.estiloTexto {
+    font-family: Poppins, sans-serif;
+}
+
+.conteudo {
+    background-color: var(--bgSecundaria);
+    color: white;
+}
+
+/* Misc END */
+
+/* mainNav */
+
+.mainNav {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    align-items: center;
+    padding: 0 !important;
+}
+
+.mainNavBackground {
+    background-color: var(--bgPrimaria);
+    padding: 1rem;
+    border-bottom: 1px solid var(--corSecundaria);
+}
+
+.mainNavBackgroundTransparente {
+    background-color: transparent !important;
+    padding: 1rem;
+}
+
+.mainNavBackgroundTransition {
+    transition: 0.4s;
+}
+
+.mainNavBorder {
+    width: 100%;
+    height: 2%;
+    background-color: var(--corSecundaria);
+}
+
+.mainContent {
+    transition: width 0.3s;
+    padding: 0 !important;
+}
+
+.mainContentFloat {
+    float:right;
+}
+
+/* mainNav END */
+
+
+/* Sidenav */
+
+.sideNav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+.sideNavHide {
+    display: none !important;
+}
+
+.sideNavShow {
+    background-color: var(--bgPrimaria);
+}
+
+.sideNavTransition {
+    transition: 1s;
+}
+
+/* Sidenav END */
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bgPrimaria);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--corSecundaria);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--corSecundaria);
+}
+
+/* Scrollbar END */
+
+/* Search */
+.searchBarOut {
+    margin-right: 2rem;
+    background-color: var(--bgSecundaria);
+    border: 2px solid var(--bgTerciaria);
+    border-radius: 15px;
+    width: 50%;
+    transition: 0.4s
+}
+
+.searchBarIn {
+    background: transparent;
+    border: 0px solid;
+    border-radius: 15px;
+    width: 100%;
+    color: white;
+}
+
+.searchBarIn:focus {
+    box-shadow: 0 0 0 5px rgb(152, 69, 14, 0.8);
+    transition: 50ms box-shadow ease-in-out;
+    outline: 2px solid var(--corSecundaria);
+}
+
+.searchSvg {
+    position: absolute;
+    height: 1.5rem;
+    padding-right: 0.5rem;
+    align-self: center;
+}
+
+/* Search END */

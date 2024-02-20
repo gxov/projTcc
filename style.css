@@ -2,8 +2,9 @@
 :root {
     --corPrimaria: rgb(255, 128, 0);
     --corSecundaria: rgb(152, 69, 14);
-    --bgPrimaria: rgb(52, 47, 43);
-    --bgSecundaria: rgb(21, 18, 14);
+    --bgPrimaria: rgb(21, 18, 14);
+    --bgSecundaria: rgb(52, 47, 43);
+    --bgTerciaria: rgb(79, 79, 79);
     --navHeight: 3.5rem;
 }
 
@@ -11,127 +12,58 @@
     display: flex;
 }
 
-.badgeCategoria {
-    color: black;
-    background-color: var(--corPrimaria);
-    padding: 0.3rem;
-    border-radius: 0.35rem;
-    font-size: 0.75rem;
-    font-weight: bold;
-    display: inline-block;
-    line-height: 1;
-    text-align: center;
+.justifyContEnd {
+    justify-content: end !important;
 }
 
-.estiloTexto {
-    font-family: Poppins, sans-serif;
+.alignCenter {
+    align-items: center !important;
 }
 
-.mainNav {
-    position: sticky;
-    top: 0px;
-    height: var(--navHeight);
+.contFluid {
+    --paddingX: 1.5rem;
+    padding-right: calc(var(--paddingX) * .5);
+    padding-left: calc(var(--) * .5);
     width: 100%;
-    padding: 0 1rem 0 1rem;
-    align-items: center;
-    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.mainNavBackground {
-    height: var(--navHeight);
-    background-color: var(--bgSecundaria);
+.contSection {
+    --paddingX: 1.5rem;
+    --paddingY: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x))
 }
 
-.navTransparente {
-    background-color: transparent !important;
+.pZero {
+    padding: 0 !important;
 }
 
-.conteudo {
-    background-color: var(--bgPrimaria);
-    color: white;
+.size2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
 }
 
-.sideNav{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: -2;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    transition: 0.3s;
+.size3 {
+    flex: 0 0 auto;
+    width: 25%;
 }
 
-.sideNavHide {
-    display: none;
-}
-
-.sideNavShow {
-    background-color: var(--bgSecundaria);
-}
-
-.mainNavBorder {
-    width: 100%;
-    height: 2%;
-    background-color: var(--corPrimaria);
-}
-
-.mainContent {
-    transition: width 0.3s;
-    padding: 0;
-}
-
-.mainContentFloat {
-    float:right;
-}
-
-/* Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--corPrimaria);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--corSecundaria);
-}
-
-/* Scrollbar END */
-
-/* Search */
-.searchBarOut {
-    margin-right: 2rem;
-    background-color: rgb(47, 45, 45);
-    border: 2px solid rgb(79, 79, 79);
-    border-radius: 15px;
+.size6 {
+    flex: 0 0 auto;
     width: 50%;
 }
 
-.searchBarIn {
-    background: transparent;
-    border: 0px solid;
-    border-radius: 15px;
+.size8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+}
+
+.size12 {
+    flex: 0 0 auto;
     width: 100%;
-    color: white;
-}
-
-.searchBarIn:focus {
-    box-shadow: 0 0 0 5px rgb(152, 69, 14, 0.8);
-    transition: 50ms box-shadow ease-in-out;
-    outline: 2px solid var(--corPrimaria);
-}
-
-.searchSvg {
-    position: absolute;
-    height: 1.5rem;
-    padding-right: 0.5rem;
-    align-self: center;
 }

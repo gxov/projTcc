@@ -1,23 +1,22 @@
 const mainNav = document.getElementById('mainNav');
+const mainNavBg = document.getElementById('mainNavBg');
 const sideNav = document.getElementById('sideNav');
 const mainCont = document.getElementById('main');
-const mainNavHgt = mainNav.offsetTop;
 
 function funct() {
-    if (window.scrollY == 0) {
-        mainNav.className = "container-fluid navTransparente"
-        mainNav.removeAttribute("mainNav")
+    if (window.scrollY <= 10) {
+        mainNavBg.className = "mainNavBackgroundTransition mainNavBackgroundTransparente"
     } else {
-        mainNav.removeAttribute("navTransparente")
-        mainNav.className = "container-fluid mainNav"
+        mainNavBg.className = "mainNavBackgroundTransition mainNavBackground"
     }
 }
 
+funct();
 window.onscroll = function () { funct() }
 
 function openNav() {
-    sideNav.className = sideNav.className + " sideNavShow"
-    mainCont.className = "container-fluid mainContent mainContentFloat"
+    sideNav.classList.remove("sideNavHide")
+    mainCont.className = "contFluid mainContent mainContentFloat"
     sideNav.style.width = "20%";
     mainCont.style.width = "80%";
 }
