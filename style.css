@@ -3,7 +3,12 @@
     --corPrimaria: rgb(255, 128, 0);
     --corSecundaria: rgb(152, 69, 14);
     --bgPrimaria: rgb(52, 47, 43);
-    --bgSecundaria: rgb(21, 18, 14)
+    --bgSecundaria: rgb(21, 18, 14);
+    --navHeight: 3.5rem;
+}
+
+.flex {
+    display: flex;
 }
 
 .badgeCategoria {
@@ -25,7 +30,15 @@
 .mainNav {
     position: sticky;
     top: 0px;
+    height: var(--navHeight);
     width: 100%;
+    padding: 0 1rem 0 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mainNavBackground {
+    height: var(--navHeight);
     background-color: var(--bgSecundaria);
 }
 
@@ -55,6 +68,12 @@
 
 .sideNavShow {
     background-color: var(--bgSecundaria);
+}
+
+.mainNavBorder {
+    width: 100%;
+    height: 2%;
+    background-color: var(--corPrimaria);
 }
 
 .mainContent {
