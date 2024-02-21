@@ -15,9 +15,16 @@ funct();
 window.onscroll = function () { funct() }
 
 function openNav() {
-    sideNav.classList.remove("sideNavHide")
-    mainCont.className = "contFluid mainContent mainContentFloat"
+    sideNav.style.opacity = 1;
     sideNav.style.width = "20%";
+    mainCont.className = "contFluid mainContent mainContentFloat"
     mainCont.style.width = "80%";
+}
+
+function closeNav() {
+    sideNav.style.width = "0%";
+    mainCont.className = "contFluid mainContent mainContentFloat"
+    mainCont.style.width = "100%";
+    sideNav.style.opacity = 0;
 }
 

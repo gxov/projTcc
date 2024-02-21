@@ -17,9 +17,33 @@
 }
 
 .conteudo {
-    background-color: var(--bgSecundaria);
+    background-color: var(--bgPrimaria);
     color: white;
 }
+
+.contBackground {
+    background-image: url("media/backgrounds/wallpaper1.jpg");
+    top: 0;
+    height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(4px) contrast(1.3);
+    margin: -1%;
+}
+
+.contMain {
+    border-top: 2px solid var(--bgTerciaria);
+    background-color: var(--bgSecundaria);
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    margin-top: 0% !important;
+    z-index: 1;
+    padding: 1.5%;
+}
+
 
 /* Misc END */
 
@@ -29,6 +53,7 @@
     position: sticky;
     top: 0px;
     width: 100%;
+    z-index: 1;
     align-items: center;
     padding: 0 !important;
 }
@@ -36,7 +61,7 @@
 .mainNavBackground {
     background-color: var(--bgPrimaria);
     padding: 1rem;
-    border-bottom: 1px solid var(--corSecundaria);
+    border-bottom: 2px solid var(--corSecundaria);
 }
 
 .mainNavBackgroundTransparente {
@@ -70,24 +95,22 @@
 
 .sideNav{
     height: 100%;
-    width: 0;
+    width: 0px;
     position: fixed;
     z-index: -2;
     top: 0;
     left: 0;
     overflow-x: hidden;
-}
-
-.sideNavHide {
-    display: none !important;
+    padding: 0 !important;
 }
 
 .sideNavShow {
+    width: 100%;
     background-color: var(--bgPrimaria);
 }
 
 .sideNavTransition {
-    transition: 1s;
+    transition: 0.3s;
 }
 
 /* Sidenav END */
@@ -104,7 +127,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--corSecundaria);
+    background: var(--corPrimaria);
     border-radius: 10px;
 }
 
@@ -133,9 +156,9 @@
 }
 
 .searchBarIn:focus {
-    box-shadow: 0 0 0 5px rgb(152, 69, 14, 0.8);
+    box-shadow: 0 0 0 5px var(--corSecundaria);
     transition: 50ms box-shadow ease-in-out;
-    outline: 2px solid var(--corSecundaria);
+    outline: 2px solid var(--corPrimaria);
 }
 
 .searchSvg {

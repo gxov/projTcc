@@ -13,15 +13,21 @@
 
 <body class="conteudo">
     <!-- side nav -->
-    <div class="container-fluid sideNav sideNavHide" id="sideNav">
-        teste
+    <div class="sideNavTransition sideNav contFluid sideNavHide flex sideNavShow" id="sideNav"
+        style="opacity: 1; width: 0;">
+        <div class="sideNavClose">
+            <span onclick="closeNav()">close</span>
+        </div>
+        <div class="contSection">
+
+        </div>
     </div>
-    <div class="container-fluid mainContent" id="main">
+    <div class="contFluid mainContent" id="main">
         <!-- cabeçalho -->
-        <div class="container-fluid mainNav" id="mainNav">
+        <div class="contFluid mainNav" id="mainNav">
             <div class="mainNavBackground" id="mainNavBg">
-                <div class="row align-items-center">
-                    <div class="col-2 flex">
+                <div class="contSection alignCenter">
+                    <div class="size2 flex">
                         <div class="sideNavBtn">
                             <span onclick="openNav()">open</span>
                         </div>
@@ -29,27 +35,27 @@
                             logo
                         </div>
                     </div>
-                    <div class="col-8 flex justifyContEnd">
+                    <div class="size8 flex justifyContEnd">
                         <div class="searchBarOut flex justifyContEnd">
                             <input class="searchBarIn" type="text">
                             <img class="searchSvg " src="media/svg/search.svg" />
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="size2">
                         acesso
                     </div>
-                    <div class="col-12 mainNavBorder">
+                    <div class="size12 mainNavBorder">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="contFluid">
             <!-- conteúdo -->
-            <div class="row">
-                <div class="col-2 p-0">
+            <div class="contSection contMain">
+                <div class="size2 pZero">
                     filtros
                 </div>
-                <div class="col-6 p-0">
+                <div class="size7 pZero">
                     Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
                     concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
                     eum.
@@ -111,12 +117,12 @@
                     eum.
                     Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
                 </div>
-                <div class="col-3 p-0">
+                <div class="size3 pZero">
                     outros
                 </div>
             </div>
             <!-- rodapé -->
-            <div class="row">
+            <div class="contSection">
                 rodapé
             </div>
         </div>

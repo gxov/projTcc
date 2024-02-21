@@ -1,10 +1,10 @@
 
 :root {
-    --corPrimaria: rgb(255, 128, 0);
-    --corSecundaria: rgb(152, 69, 14);
-    --bgPrimaria: rgb(21, 18, 14);
-    --bgSecundaria: rgb(52, 47, 43);
-    --bgTerciaria: rgb(79, 79, 79);
+    --corPrimaria: #ea4f36;
+    --corSecundaria: #b33831;
+    --bgPrimaria: #090a14;
+    --bgSecundaria: #10141f;
+    --bgTerciaria: #151d28;
     --navHeight: 3.5rem;
 }
 
@@ -16,14 +16,23 @@
     justify-content: end !important;
 }
 
+.justifySelfCenter {
+    justify-self: center;
+}
+
 .alignCenter {
     align-items: center !important;
+}
+
+.overflowHide {
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .contFluid {
     --paddingX: 1.5rem;
     padding-right: calc(var(--paddingX) * .5);
-    padding-left: calc(var(--) * .5);
+    padding-left: calc(var(--paddingX) * .5);
     width: 100%;
     margin-right: auto;
     margin-left: auto;
@@ -34,9 +43,9 @@
     --paddingY: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-top: calc(-1 * var(--bs-gutter-y));
-    margin-right: calc(-.5 * var(--bs-gutter-x));
-    margin-left: calc(-.5 * var(--bs-gutter-x))
+    margin-top: calc(-1 * var(--paddingY));
+    margin-right: calc(-.5 * var(--paddingX));
+    margin-left: calc(-.5 * var(--paddingX))
 }
 
 .pZero {
@@ -56,6 +65,11 @@
 .size6 {
     flex: 0 0 auto;
     width: 50%;
+}
+
+.size7 {
+    flex: 0 0 auto;
+    width: 58.33333333%
 }
 
 .size8 {

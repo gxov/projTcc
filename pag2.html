@@ -13,10 +13,17 @@
 
 <body class="conteudo">
     <!-- side nav -->
-    <div class="contFluid sideNav sideNavShow sideNavTransition sideNavHide" id="sideNav">
-        teste
+    <div class="sideNavTransition sideNav contFluid sideNavHide flex sideNavShow" id="sideNav"
+        style="opacity: 1; width: 0;">
+        <div class="sideNavClose">
+            <span onclick="closeNav()">close</span>
+        </div>
+        <div class="contSection">
+
+        </div>
     </div>
-    <div class="contFluid mainContent" id="main">
+    <div class="contFluid mainContent overflowHide" id="main">
+        
         <!-- cabeçalho -->
         <div class="contFluid mainNav" id="mainNav">
             <div class="mainNavBackground" id="mainNavBg">
@@ -43,13 +50,16 @@
                 </div>
             </div>
         </div>
+        <div class="contBackground overflowHide">
+        </div>
+        <!-- conteúdo -->
         <div class="contFluid">
-            <!-- conteúdo -->
-            <div class="contSection">
+            
+            <div class="contMain contSection">
                 <div class="size2 pZero">
                     filtros
                 </div>
-                <div class="size6 pZero">
+                <div class="size7 pZero">
                     Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
                     concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
                     eum.
