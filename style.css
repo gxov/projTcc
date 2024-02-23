@@ -1,10 +1,9 @@
-
 :root {
     --corPrimaria: #ea4f36;
     --corSecundaria: #b33831;
     --bgPrimaria: #090a14;
     --bgSecundaria: #10141f;
-    --bgTerciaria: #151d28;
+    --bgTerciaria: #202e37;
     --navHeight: 3.5rem;
 }
 
@@ -60,6 +59,11 @@
 .size3 {
     flex: 0 0 auto;
     width: 25%;
+}
+
+.size5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
 }
 
 .size6 {

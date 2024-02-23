@@ -1,21 +1,5 @@
 /* Misc */
 
-.badgeCategoria {
-    color: black;
-    background-color: var(--corPrimaria);
-    padding: 0.3rem;
-    border-radius: 0.35rem;
-    font-size: 0.75rem;
-    font-weight: bold;
-    display: inline-block;
-    line-height: 1;
-    text-align: center;
-}
-
-.estiloTexto {
-    font-family: Poppins, sans-serif;
-}
-
 .conteudo {
     background-color: var(--bgPrimaria);
     color: white;
@@ -29,6 +13,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
     z-index: -1;
     filter: blur(4px) contrast(1.3);
     margin: -1%;
@@ -50,12 +35,12 @@
 /* mainNav */
 
 .mainNav {
-    position: sticky;
+    position: fixed;
     top: 0px;
     width: 100%;
-    z-index: 1;
     align-items: center;
     padding: 0 !important;
+    z-index: 10;
 }
 
 .mainNavBackground {
@@ -86,6 +71,11 @@
 
 .mainContentFloat {
     float:right;
+}
+
+.svgMenu {
+    width: 100%;
+    margin-left: 50%;
 }
 
 /* mainNav END */
@@ -156,12 +146,12 @@
 }
 
 .searchBarIn:focus {
-    box-shadow: 0 0 0 5px var(--corSecundaria);
+    box-shadow: 0 0 0 5px rgba(179, 56, 49, 0.6);
     transition: 50ms box-shadow ease-in-out;
     outline: 2px solid var(--corPrimaria);
 }
 
-.searchSvg {
+.svgSearch {
     position: absolute;
     height: 1.5rem;
     padding-right: 0.5rem;
@@ -169,3 +159,84 @@
 }
 
 /* Search END */
+
+/* Capa */
+
+.capaPadrao {
+    width: 90%;
+    padding-left: 10%;
+    margin-top: -25%;
+    position:relative;
+}
+
+.livroTitulo {
+    font-family: 'Gotham Black';
+    font-size: 350%;
+}
+
+.livroAutor {
+    display: flex;
+    font-family: 'Gotham Light';
+    padding-left: 70%;
+}
+
+.livroInfoMain {
+    padding: 0 2.5% 0 1%;
+}
+
+.livroRowCategorias {
+    gap: 2.5%;
+}
+
+.livroTituloSection {
+    padding-bottom: 2.5%;
+}
+
+.livroUserInfo {
+    display: flex;
+    align-items: center;
+}
+
+.livroAvaliacaoSection {
+    color: var(--corPrimaria);
+    font-size: 1.3rem;
+    padding-left: 0.6rem;
+    font-family: 'Gotham Thin';
+    gap: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.svgAvaliacao {
+    height: 1.6rem;
+    width: 1.6rem;
+    fill: var(--corPrimaria);
+}
+
+.badgeCategoria {
+    color: black;
+    background-color: var(--corSecundaria);
+    padding: 0.3rem;
+    border-radius: 0.35rem;
+    font-family: 'Gotham Light';
+    font-size: 0.8rem;
+    font-weight: 650; 
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+}
+
+.badgeCategoriaExtra {
+    color: black;
+    background-color: var(--corPrimaria);
+    padding: 0.4rem;
+    border-radius: 0.35rem;
+    font-family: 'Gotham Light';
+    font-size: 0.85rem;
+    font-weight: 650; 
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+}
+
+/* Capa END */
