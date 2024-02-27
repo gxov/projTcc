@@ -7,46 +7,132 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="styleComponentes.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <script src="nav.js"></script>
 </head>
 
-<body>
-    <!-- cabeçalho -->
-    <div class="row align-items-center border bg-light">
-        <div class="col-2">
-            
-            <div class="logo">
-                logo
+<body class="conteudo">
+    <!-- side nav -->
+    <div class="sideNavTransition sideNav contFluid sideNavHide flex sideNavShow" id="sideNav"
+        style="opacity: 1; width: 0;">
+        <div class="sideNavClose">
+            <span onclick="closeNav()">close</span>
+        </div>
+        <div class="contSection">
+
+        </div>
+    </div>
+    <div class="contFluid mainContent" id="main">
+        <!-- cabeçalho -->
+        <div class="contFluid mainNav" id="mainNav">
+            <div class="mainNavBackground" id="mainNavBg">
+                <div class="contSection alignCenter">
+                    <div class="size2 flex">
+                        <div class="sideNavBtn">
+                            <span onclick="openNav()">open</span>
+                        </div>
+                        <div class="logo">
+                            logo
+                        </div>
+                    </div>
+                    <div class="size8 flex justifyContEnd">
+                        <div class="searchBarOut flex justifyContEnd">
+                            <input class="searchBarIn" type="text">
+                            <img class="searchSvg " src="media/svg/search.svg" />
+                        </div>
+                    </div>
+                    <div class="size2" style="display: flex;">
+                        <div class="acessoUser">
+                            <span onlclick="openUserNav()">
+                                <img class="acessoUserFoto" src="media/fotos/fotoPerfil.jpg">
+                            </span>
+                        </div>
+                        <img class="svgBiblioteca" src="media/svg/biblioteca.svg">
+                    </div>
+                    <div class="size12 mainNavBorder">
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-8">
-            <div class="barra">
-                barra de pesquisa
+        <div class="contFluid">
+            <!-- conteúdo -->
+            <div class="contSection contMain">
+                <div class="size2 pZero">
+                    filtros
+                </div>
+                <div class="size7 pZero">
+                    Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum.
+                    Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                    Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum.
+                    Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                    Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum.
+                    Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                    Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum.
+                    Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                    Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum.
+                    Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                    Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum.
+                    Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                    Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum.
+                    Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                    Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum.
+                    Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                    Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum.
+                    Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                    Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum.
+                    Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                    Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum.
+                    Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                    Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum.
+                    Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                    Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum.
+                    Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                    Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum.
+                    Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                    Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+                    concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur
+                    eum.
+                    Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+                </div>
+                <div class="size3 pZero">
+                    outros
+                </div>
+            </div>
+            <!-- rodapé -->
+            <div class="contSection">
+                rodapé
             </div>
         </div>
-        <div class="col-2">
-            acesso
-        </div>
     </div>
-    <!-- conteúdo -->
-    <div class="row border bg-light">
-        <div class="col-2">
-            filtros
-        </div>
-        <div class="col-6">
-            conteúdo
-        </div>
-        <div class="col-4">
-            outros
-        </div>
-    </div>
-    <!-- rodapé -->
-    <div class="row">
-        rodapé
-    </div>
-    <span class="badge text-bg-info">info</span>
-    <span class="badgeCategoria">info2</span>
+    <script src="header.js"></script>
 </body>
 
 </html>
