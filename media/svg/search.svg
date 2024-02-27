@@ -7,7 +7,7 @@
    viewBox="0 0 16 16"
    version="1.1"
    id="svg1"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="search.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,8 +25,8 @@
      inkscape:document-units="px"
      showgrid="true"
      inkscape:zoom="19.1875"
-     inkscape:cx="9.2247557"
-     inkscape:cy="9.3811075"
+     inkscape:cx="8.3387622"
+     inkscape:cy="9.4071661"
      inkscape:window-width="1440"
      inkscape:window-height="837"
      inkscape:window-x="-8"
@@ -68,13 +68,13 @@
     <g
        id="g4"
        transform="matrix(0.70830592,-0.70695741,0.70830592,0.70695741,-3.166258,11.952102)"
-       style="stroke:#202e37;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:56.3;stroke-dasharray:none;stroke-opacity:1;paint-order:normal">
+       style="stroke:#243542;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:56.3;stroke-dasharray:none;stroke-opacity:1;paint-order:normal">
       <g
          id="g3"
          transform="translate(-3.2052117,-0.33876222)"
-         style="stroke:#202e37;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:56.3;stroke-dasharray:none;stroke-opacity:1;paint-order:normal">
+         style="stroke:#243542;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:56.3;stroke-dasharray:none;stroke-opacity:1;paint-order:normal">
         <rect
-           style="opacity:1;fill:#565656;fill-opacity:1;stroke:#202e37;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:56.3;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           style="opacity:1;fill:#565656;fill-opacity:1;stroke:#243542;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:56.3;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
            id="rect2"
            width="1.6677523"
            height="5.0056844"
@@ -84,7 +84,7 @@
     </g>
     <path
        id="path2"
-       style="opacity:1;fill:#202e37;fill-opacity:1;stroke:none;stroke-width:2.19656;stroke-linecap:round;stroke-dasharray:none;paint-order:stroke fill markers"
+       style="opacity:1;fill:#243542;fill-opacity:1;stroke:none;stroke-width:2.19656;stroke-linecap:round;stroke-dasharray:none;paint-order:stroke fill markers"
        d="M 6.5 0 A 6.5 6.5 0 0 0 0 6.5 A 6.5 6.5 0 0 0 6.5 13 A 6.5 6.5 0 0 0 13 6.5 A 6.5 6.5 0 0 0 6.5 0 z M 6.5 2 A 4.5 4.5 0 0 1 11 6.5 A 4.5 4.5 0 0 1 6.5 11 A 4.5 4.5 0 0 1 2 6.5 A 4.5 4.5 0 0 1 6.5 2 z " />
   </g>
 </svg>

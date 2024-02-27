@@ -9,14 +9,15 @@
     background-image: url("media/backgrounds/wallpaper1.jpg");
     top: 0;
     height: 300px;
+    width: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: -1;
-    filter: blur(4px) contrast(1.3);
-    margin: -1%;
+    filter: contrast(1.4);
+    margin-bottom: -1%;
 }
 
 .contMain {
@@ -41,6 +42,7 @@
     align-items: center;
     padding: 0 !important;
     z-index: 10;
+    transition: 0.4s;
 }
 
 .mainNavBackground {
@@ -74,7 +76,7 @@
 }
 
 .svgMenu {
-    width: 100%;
+    width: 1.5rem;
     margin-left: 50%;
 }
 
@@ -83,14 +85,13 @@
 /* Acesso */
 
 .acessoUser {
-
-    width: 50px;
-    height: 50px;
+    margin-left:30%;
+    height: 2.5rem;
+    width: 2.5rem;
   }
 
 .acessoUserFoto {
-    max-width: 90%;
-    max-height: 90%;
+    width: 100%;
     border-radius: 50%;
     vertical-align: middle;
 }
@@ -114,15 +115,24 @@
     left: 0;
     overflow-x: hidden;
     padding: 0 !important;
+    background-color: var(--bgPrimaria) !important;
 }
 
 .sideNavShow {
     width: 100%;
-    background-color: var(--bgPrimaria);
 }
 
 .sideNavTransition {
     transition: 0.3s;
+}
+
+.sideNavClose {
+    padding-top: 1rem;
+    padding-left: 75%;
+}
+
+.svgSideNavClose {
+    color: var(--bgTerciaria);
 }
 
 /* Sidenav END */
@@ -155,7 +165,7 @@
     background-color: var(--bgSecundaria);
     border: 2px solid var(--bgTerciaria);
     border-radius: 15px;
-    width: 50%;
+    width: 40%;
     transition: 0.4s
 }
 
@@ -206,6 +216,13 @@ padding-left: 55%;
     padding-top: 1.75rem;
     font-family: 'Gotham Book';
     font-size: 1em;
+}
+
+.livroContent {
+    width: 90;
+    margin: 3% 5% 0 5%;
+    border-top: 2px solid var(--bgTerciaria);
+    padding-top: 2%;
 }
 
 .livroInfoMain {

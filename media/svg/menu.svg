@@ -7,7 +7,7 @@
    viewBox="0 0 32 32"
    version="1.1"
    id="svg1"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="menu.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,14 +24,15 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      inkscape:zoom="8"
-     inkscape:cx="35.375"
-     inkscape:cy="5.375"
+     inkscape:cx="33.25"
+     inkscape:cy="5.4375"
      inkscape:window-width="1440"
      inkscape:window-height="837"
      inkscape:window-x="-8"
      inkscape:window-y="96"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     showgrid="false" />
   <defs
      id="defs1" />
   <g
@@ -39,21 +40,21 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#202e37;fill-opacity:1;stroke:#202e37;stroke-width:1.72702;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:56.3;stroke-opacity:1"
+       style="fill:#243542;fill-opacity:1;stroke:#243542;stroke-width:1.72702;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:56.3;stroke-opacity:1"
        id="rect3"
        width="30.26158"
        height="3.2729802"
        x="0.86921024"
        y="3.8635101" />
     <rect
-       style="fill:#202e37;fill-opacity:1;stroke:#202e37;stroke-width:1.55832;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:56.3;stroke-opacity:1"
+       style="fill:#243542;fill-opacity:1;stroke:#243542;stroke-width:1.55832;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:56.3;stroke-opacity:1"
        id="rect4"
        width="23.430679"
        height="3.4416773"
        x="0.77916139"
        y="14.279161" />
     <rect
-       style="fill:#202e37;fill-opacity:1;stroke:#202e37;stroke-width:1.31814;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:56.3;stroke-opacity:1"
+       style="fill:#243542;fill-opacity:1;stroke:#243542;stroke-width:1.31814;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:56.3;stroke-opacity:1"
        id="rect5"
        width="15.67086"
        height="3.681865"
