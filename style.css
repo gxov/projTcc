@@ -1,12 +1,3 @@
-:root {
-    --corPrimaria: #ea4f36;
-    --corSecundaria: #b33831;
-    --bgPrimaria: #090a14;
-    --bgSecundaria: #10141f;
-    --bgTerciaria: #202e37;
-    --navHeight: 3.5rem;
-}
-
 .flex {
     display: flex;
 }
@@ -83,5 +74,11 @@
 
 .size12 {
     flex: 0 0 auto;
+    width: 100%;
+}
+
+.borderBottom {
+    border-bottom: 2px solid var(--bgTerciaria);
+    padding-bottom: 1rem;
     width: 100%;
 }

@@ -182,13 +182,13 @@
 
 /* Search END */
 
-/* Capa */
+/* Livro */
 
-.capaPadrao {
+.livroCapa {
     width: 90%;
     padding-left: 10%;
     margin-top: -25%;
-    position:relative;
+    position: relative;
 }
 
 .livroTitulo {
@@ -198,8 +198,14 @@
 
 .livroAutor {
     display: flex;
-    font-family: 'Gotham Light';
-    padding-left: 70%;
+padding-left: 55%;
+    font-family: 'Gotham Thin';
+}
+
+.livroDesc {
+    padding-top: 1.75rem;
+    font-family: 'Gotham Book';
+    font-size: 1em;
 }
 
 .livroInfoMain {
@@ -207,6 +213,7 @@
 }
 
 .livroRowCategorias {
+    max-width: 90% !important;
     gap: 2.5%;
 }
 
@@ -219,19 +226,41 @@
     align-items: center;
 }
 
+.livroBtn {
+    padding: 2.5%;
+    background-color: var(--corPrimaria);
+    border: solid 0px;
+    border-radius: 0.6rem
+}
+
+.livroBtn2 {
+    padding: 2.5%;
+    background-color: var(--bgTerciaria);
+    border: solid 0px;
+    border-radius: 0.6rem
+}
+
+.svgLivroBtn {
+    color: white;
+}
+
+.livroBtnRow {
+    padding-top: 2.5%;
+    gap: 2%;
+}
+
 .livroAvaliacaoSection {
     color: var(--corPrimaria);
-    font-size: 1.3rem;
-    padding-left: 0.6rem;
+    margin-right: 10%;
+    font-size: 1rem;
     font-family: 'Gotham Thin';
-    gap: 5%;
     display: flex;
     align-items: center;
 }
 
 .svgAvaliacao {
-    height: 1.6rem;
-    width: 1.6rem;
+    max-width: 20px;
+    height: 20px;
     fill: var(--corPrimaria);
 }
 
@@ -240,7 +269,7 @@
     background-color: var(--corSecundaria);
     padding: 0.3rem;
     border-radius: 0.35rem;
-    font-family: 'Gotham Light';
+    font-family: 'Gotham Book';
     font-size: 0.8rem;
     font-weight: 650; 
     display: inline-block;
@@ -253,7 +282,7 @@
     background-color: var(--corPrimaria);
     padding: 0.4rem;
     border-radius: 0.35rem;
-    font-family: 'Gotham Light';
+    font-family: 'Gotham Book';
     font-size: 0.85rem;
     font-weight: 650; 
     display: inline-block;
