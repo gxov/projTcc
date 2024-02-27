@@ -1,0 +1,38 @@
+:root {
+    --corPrimaria: #ea4f36;
+    --corSecundaria: #b33831;
+    --bgPrimaria: #090a14;
+    --bgSecundaria: #10141f;
+    --bgTerciaria: #202e37;
+    --navHeight: 3.5rem;
+}
+
+@font-face {
+    font-family: 'Gotham Black';
+    src: url('media/fontes/Gotham/Gotham-Black.otf');
+}
+
+@font-face {
+    font-family: 'Gotham Light';
+    src: url('media/fontes/Gotham/Gotham-Light.otf');
+}
+
+@font-face {
+    font-family: 'Gotham Thin';
+    src: url('media/fontes/Gotham/Gotham-Thin.otf');
+}
+
+@font-face {
+    font-family: 'Gotham Ultra';
+    src: url('media/fontes/Gotham/Gotham-Ultra.otf');
+}
+
+@font-face {
+    font-family: 'Gotham Medium';
+    src: url('media/fontes/Gotham/Gotham-Medium.otf');
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('media/fontes/Gotham/Gotham-Book.otf');
+}
