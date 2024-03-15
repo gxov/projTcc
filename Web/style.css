@@ -96,3 +96,51 @@
     padding-bottom: 1rem;
     width: 100%;
 }
+
+.caixadebusca{
+    display: flex;
+    justify-content: right;
+    transform: translate(-20%,0%);
+    background:linear-gradient(#001aff,#00c3ff);
+    height: 35px;
+    padding: 8px;
+    border-radius: 35px;
+    align-items: center;
+    border: 3px solid rgb(255, 255, 255);
+    margin-right: 10px;
+}
+
+.buscatxt{
+    border:none;
+    background: none;
+    outline: none;
+    padding: 0%;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0;
+    transition: .5s;
+}
+
+.buscabotao{
+    width: 15px;
+    height: 15px;
+    border-radius:line 70%;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    transition: .5s;
+}
+
+.caixadebusca:hover >.buscatxt{
+    width: 240px;
+    padding: 0 6px;
+}
+
+.caixadebusca:hover >.buscabotao{
+    border-radius: 50%;
+}
+
+::-webkit-input-placeholder{
+    color: rgb(255, 255, 255);
+}
