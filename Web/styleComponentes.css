@@ -3,6 +3,7 @@
 .conteudo {
     background-color: var(--bgPrimaria);
     color: white;
+    max-width: 100%;
 }
 
 .contBackground {
@@ -20,7 +21,14 @@
     margin-bottom: -1%;
 }
 
-.contMain {
+.contMain{
+    background-color: var(--bgSecundaria);
+    margin-top: 0% !important;
+    z-index: 1;
+    padding: 7.5% 5% 5% 5%;
+}
+
+.contMainBorder {
     border-top: 2px solid var(--bgTerciaria);
     background-color: var(--bgSecundaria);
     border-top-left-radius: 2rem;
@@ -72,7 +80,7 @@
 }
 
 .mainContentFloat {
-    float:right;
+    float: right;
 }
 
 .svgMenu {
@@ -85,10 +93,10 @@
 /* Acesso */
 
 .acessoUser {
-    margin-left:30%;
+    margin-left: 30%;
     height: 2.5rem;
     width: 2.5rem;
-  }
+}
 
 .acessoUserFoto {
     width: 100%;
@@ -103,10 +111,22 @@
 
 /* Acesso END */
 
+/* Login */
+
+.loginSection{
+    padding: 5%;
+    border: 2px solid var(--corPrimaria);
+}
+
+.loginSectionBorder{
+    border: 2px solid rgba(179, 56, 49, 0.6);
+}
+
+/* Login END */
 
 /* Sidenav */
 
-.sideNav{
+.sideNav {
     height: 100%;
     width: 0px;
     position: fixed;
@@ -159,7 +179,7 @@
 
 /* Scrollbar END */
 
-/* Search */
+/* Search Módulo */
 .searchBarOut {
     margin-right: 2rem;
     background-color: var(--bgSecundaria);
@@ -190,7 +210,95 @@
     align-self: center;
 }
 
+/* Search Módulo END */
+
+/* Search Page */
+
+/* Filtro */
+
+.pgSearchMove {
+    height: 50%;
+}
+
+.pgSearchFiltro {
+    padding: 1%;
+    margin: 1%;
+    height: 100rem;
+    border: solid 2px var(--bgTerciaria);
+    border-radius: 0.7rem;
+}
+
+/* Filtro END */
+
+/* Search */
+
+.pgSearchOut {
+    background-color: var(--bgSecundaria);
+    border: 2px solid var(--bgTerciaria);
+    border-radius: 15px;
+    width: 100%;
+    transition: 0.4s
+}
+
+.pgSearchIn {
+    background: transparent;
+    border: 0px solid;
+    border-radius: 15px;
+    width: 100%;
+    color: white;
+}
+
 /* Search END */
+
+/* Itens */
+
+.pgSearchItemStyle {
+    border: 2px solid var(--bgTerciaria);
+    border-radius: 0.7rem;
+    padding: 1%;
+    margin: 2rem;
+}
+
+.pgSearchTitle {
+    font-family: 'Gotham Black';
+    font-size: 1.5em;
+    height: fit-content;
+}
+
+.pgSearchLivroCapa{
+    width: 50%;
+    padding-left: 10%;
+}
+
+.pgSearchRating {
+    justify-content: end;
+    padding-right: 5%;
+    color: var(--corPrimaria);
+    height: fit-content;
+}
+
+.svgPgSearchRating {
+    height: 1.5rem;
+    color: var(--corPrimaria);
+    fill: var(--corPrimaria);
+}
+
+.pgSearchCategoria {
+    color: black;
+    background-color: var(--corPrimaria);
+    padding: 0.15rem;
+    border-radius: 0.2rem;
+    font-family: 'Gotham Book';
+    font-size: 0.6rem;
+    font-weight: 550;
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+}
+
+/* Itens END */
+
+/* Search Page END */
 
 /* Livro */
 
@@ -208,7 +316,7 @@
 
 .livroAutor {
     display: flex;
-padding-left: 55%;
+    padding-left: 55%;
     font-family: 'Gotham Thin';
 }
 
@@ -218,12 +326,10 @@ padding-left: 55%;
     font-size: 1em;
 }
 
-.livroContent {
-    width: 90;
+/*.livroContent {
     margin: 3% 5% 0 5%;
-    border-top: 2px solid var(--bgTerciaria);
     padding-top: 2%;
-}
+}*/
 
 .livroInfoMain {
     padding: 0 2.5% 0 1%;
@@ -288,7 +394,7 @@ padding-left: 55%;
     border-radius: 0.35rem;
     font-family: 'Gotham Book';
     font-size: 0.8rem;
-    font-weight: 650; 
+    font-weight: 650;
     display: inline-block;
     line-height: 1;
     text-align: center;
@@ -301,7 +407,7 @@ padding-left: 55%;
     border-radius: 0.35rem;
     font-family: 'Gotham Book';
     font-size: 0.85rem;
-    font-weight: 650; 
+    font-weight: 650;
     display: inline-block;
     line-height: 1;
     text-align: center;

@@ -19,6 +19,10 @@
     overflow-y: hidden;
 }
 
+.fitContent {
+    height: fit-content;
+}
+
 .contFluid {
     --paddingX: 1.5rem;
     padding-right: calc(var(--paddingX) * .5);
@@ -52,6 +56,11 @@
     width: 25%;
 }
 
+.size4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+}
+
 .size5 {
     flex: 0 0 auto;
     width: 41.66666667%;
@@ -70,6 +79,11 @@
 .size8 {
     flex: 0 0 auto;
     width: 66.66666667%;
+}
+
+.size9 {
+    flex: 0 0 auto;
+    width: 75%;
 }
 
 .size12 {
