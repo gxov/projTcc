@@ -30,5 +30,3 @@ function closeNav() {
     sideNav.style.opacity = 0;
 }
 
-// Para página de search
-var pageName = location.pathname.split("/").slice(-1);
