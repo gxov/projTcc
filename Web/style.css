@@ -98,16 +98,7 @@
 }
 
 .caixadebusca{
-    display: flex;
-    justify-content: right;
-    transform: translate(-20%,0%);
-    background:linear-gradient(#001aff,#00c3ff);
-    height: 35px;
-    padding: 8px;
-    border-radius: 35px;
-    align-items: center;
-    border: 3px solid rgb(255, 255, 255);
-    margin-right: 10px;
+    
 }
 
 .buscatxt{

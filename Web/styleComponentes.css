@@ -21,7 +21,7 @@
     margin-bottom: -1%;
 }
 
-.contMain{
+.contMain {
     background-color: var(--bgSecundaria);
     margin-top: 0% !important;
     z-index: 1;
@@ -113,12 +113,12 @@
 
 /* Login */
 
-.loginSection{
+.loginSection {
     padding: 5%;
     border: 2px solid var(--corPrimaria);
 }
 
-.loginSectionBorder{
+.loginSectionBorder {
     border: 2px solid rgba(179, 56, 49, 0.6);
 }
 
@@ -181,11 +181,15 @@
 
 /* Search Módulo */
 .searchBarOut {
+    display: flex;
+    justify-content: right;
+    transform: translate(-20%,0%);
+    align-items: center;
     margin-right: 2rem;
     background-color: var(--bgSecundaria);
     border: 2px solid var(--bgTerciaria);
     border-radius: 15px;
-    width: 40%;
+    width: 20%;
     transition: 0.4s
 }
 
@@ -265,7 +269,7 @@
     height: fit-content;
 }
 
-.pgSearchLivroCapa{
+.pgSearchLivroCapa {
     width: 50%;
     padding-left: 10%;
 }

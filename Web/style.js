@@ -1,0 +1,1 @@
+const estilo = (corPrimaria, corSecundaria, bgPrimario) => {}
