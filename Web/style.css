@@ -2,11 +2,20 @@
     display: flex;
 }
 
+.flexColumn {
+    flex-direction: column;
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
 .justifyContEnd {
     justify-content: end !important;
 }
 
-.justifySelfCenter {
+.justifySlfCent {
     justify-self: center;
 }
 
@@ -95,43 +104,4 @@
     border-bottom: 2px solid var(--bgTerciaria);
     padding-bottom: 1rem;
     width: 100%;
-}
-
-.caixadebusca{
-    
-}
-
-.buscatxt{
-    border:none;
-    background: none;
-    outline: none;
-    padding: 0%;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 40px;
-    width: 0;
-    transition: .5s;
-}
-
-.buscabotao{
-    width: 15px;
-    height: 15px;
-    border-radius:line 70%;
-    display: flex;
-    justify-content:center ;
-    align-items: center;
-    transition: .5s;
-}
-
-.caixadebusca:hover >.buscatxt{
-    width: 240px;
-    padding: 0 6px;
-}
-
-.caixadebusca:hover >.buscabotao{
-    border-radius: 50%;
-}
-
-::-webkit-input-placeholder{
-    color: rgb(255, 255, 255);
 }

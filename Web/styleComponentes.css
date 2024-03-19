@@ -7,7 +7,7 @@
 }
 
 .contBackground {
-    background-image: url("media/backgrounds/wallpaper1.jpg");
+    background-image: linear-gradient(var(--bgSecundaria), var(--corPrimaria));
     top: 0;
     height: 300px;
     width: 100%;
@@ -50,7 +50,7 @@
     align-items: center;
     padding: 0 !important;
     z-index: 10;
-    transition: 0.4s;
+    transition: 0.5s;
 }
 
 .mainNavBackground {
@@ -65,7 +65,7 @@
 }
 
 .mainNavBackgroundTransition {
-    transition: 0.4s;
+    transition: 0.5s;
 }
 
 .mainNavBorder {
@@ -93,9 +93,10 @@
 /* Acesso */
 
 .acessoUser {
-    margin-left: 30%;
+    justify-self: end;
     height: 2.5rem;
     width: 2.5rem;
+    margin-right: 20%;
 }
 
 .acessoUserFoto {
@@ -115,11 +116,86 @@
 
 .loginSection {
     padding: 5%;
-    border: 2px solid var(--corPrimaria);
+    background-color: var(--bgSecundaria);
+    display: flex;
+    flex-direction: column;
 }
 
 .loginSectionBorder {
-    border: 2px solid rgba(179, 56, 49, 0.6);
+    border-top: 3px solid var(--corPrimaria);
+    border-radius: 3px;
+}
+
+.loginTitle {
+    font-family: 'Gotham Medium';
+    font-size: 1.5rem;
+    align-self: center;
+    padding-bottom: 2%;
+}
+
+.loginInputSection {
+    font-family: 'Gotham Light';
+    font-size: 0.9rem;
+    margin: 3% 5% 3% 5%;
+}
+
+.loginInputBox {
+    padding: 1%;
+    margin-top: 1%;
+    width: 100%;
+    background-color: var(--bgInput);
+    border: none;
+    border-radius: 3px;
+    transition: .5s;
+    color: white;
+    font-family: 'Gotham Book';
+}
+
+.loginInputBox:focus {
+    box-shadow: 0 0 0 5px var(--corSecundaria2);
+    transition: 50ms box-shadow ease-in-out;
+    outline: 2px solid var(--corPrimaria);
+}
+
+.loginSenhaResetSection {
+    justify-self: end;
+    margin-right: 5%;
+}
+
+.loginLink {
+    color: var(--corPrimaria);
+    font-family: 'Gotham Bold';
+}
+
+.loginLink:hover {
+    color: var(--corSecundaria);
+}
+
+.loginBtnSection {
+    margin: 3% 5% 3% 5%;
+}
+
+.loginBtn {
+    border-radius: 5px;
+    justify-content: center;
+    background-color: var(--corPrimaria);
+    color: white;
+    font-family: 'Gotham Medium';
+    padding: 2%;
+    margin: 0 5% 0 5%;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+}
+
+.loginCadSection {
+    padding: 5%;
+    background-color: var(--bgLogin);
+    display: flex;
+    justify-content: center;
+    font-family: 'Gotham Medium';
+    gap: 1%;
 }
 
 /* Login END */
@@ -157,6 +233,28 @@
 
 /* Sidenav END */
 
+/* User Menu */
+
+.userMenuDiv {
+    position: relative;
+}
+
+.userMenuCont {
+    /* display: none; */
+    position: absolute;
+    right: 0;
+    background-color: var(--bgSecundaria);
+    width: 13rem;
+    margin-top: 0.5rem;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.userMenuItem {
+    padding: 1rem;
+}
+
+/* User Menu END */
 
 /* Scrollbar */
 ::-webkit-scrollbar {
@@ -183,32 +281,38 @@
 .searchBarOut {
     display: flex;
     justify-content: right;
-    transform: translate(-20%,0%);
     align-items: center;
     margin-right: 2rem;
     background-color: var(--bgSecundaria);
     border: 2px solid var(--bgTerciaria);
-    border-radius: 15px;
+    border-radius: 10px;
     width: 20%;
-    transition: 0.4s
+    transition: .5s;
+    position: relative;
+}
+
+.searchBarOut:hover {
+    width: 30%;
 }
 
 .searchBarIn {
     background: transparent;
     border: 0px solid;
-    border-radius: 15px;
-    width: 100%;
+    border-radius: 10px;
     color: white;
+    transition: .5s;
+    width: 100%;
 }
 
 .searchBarIn:focus {
-    box-shadow: 0 0 0 5px rgba(179, 56, 49, 0.6);
+    box-shadow: 0 0 0 5px var(--corSecundaria2);
     transition: 50ms box-shadow ease-in-out;
     outline: 2px solid var(--corPrimaria);
 }
 
 .svgSearch {
     position: absolute;
+    right: 0;
     height: 1.5rem;
     padding-right: 0.5rem;
     align-self: center;
@@ -241,7 +345,7 @@
     border: 2px solid var(--bgTerciaria);
     border-radius: 15px;
     width: 100%;
-    transition: 0.4s
+    transition: 0.5s
 }
 
 .pgSearchIn {

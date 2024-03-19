@@ -44,17 +44,36 @@
                         <div class="logo">
                         </div>
                     </div>
-                    <div class="col-9 flex justifyContEnd">
-                        <div class="searchBarOut flex justifyContEnd">
-                            <input class="searchBarIn" type="text">
-                            <img class="svgSearch " src="media/svg/search.svg" />
+                    <div class="size9 flex justifyContEnd">
+                        <div class="searchBarOut">
+                            <input type="text" class="searchBarIn">
+                            <a href="#" class="flex" style="position: absolute;">
+                                <img src="media/svg/search.svg" class="svgSearch" alt="lupa de pesquisa">
+                            </a>
                         </div>
                     </div>
-                    <div class="size1">
+                    <div class="size1 grid">
                         <div class="acessoUser">
-                            <span onlclick="openUserNav()">
+                            <a onlclick="openUserNav()">
                                 <img class="acessoUserFoto" src="media/fotos/fotoPerfil.jpg">
-                            </span>
+                            </a>
+                        </div>
+                        <div class="userMenuDiv">
+                            <div class="userMenuCont">
+                                <div class="userMenuItem">
+                                    <span onclick="mudarTema('Azul')">
+                                        tema1
+                                    </span>
+                                </div>
+                                <div class="userMenuItem">
+                                    <span onclick="mudarTema('Laranja')">
+                                        tema2
+                                    </span>
+                                </div>
+                                <div class="userMenuItem">
+                                    teste
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -63,7 +82,7 @@
         <div class="contBackground overflowHide">
         </div>
         <!-- conteúdo -->
-        <div class="contFluid">
+        <div class="contFluid" style="margin-top: -5%;">
             <div class="contMainBorder contSection">
                 <div class="size6 pZero">
                     <img class="livroCapa" src="media/capas/capa.jpg">
@@ -143,6 +162,7 @@
         </div>
     </div>
     <script src="header.js"></script>
+    <script src="user.js"></script>
 </body>
 
 </html>

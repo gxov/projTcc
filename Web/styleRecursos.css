@@ -1,10 +1,24 @@
 :root {
-    --corPrimaria: #dcd88c;
-    --corSecundaria: #dcd88c;
-    --bgPrimaria: #0b0d0e;
-    --bgSecundaria: #181b1e;
-    --bgTerciaria: #9fbfb7;
     --navHeight: 3.5rem;
+
+    --corPrimaria: #ea4f36;
+    --corSecundaria: #bc3131;
+    --corSecundaria2: #bc31318e;
+    --bgPrimaria: #090a14;
+    --bgSecundaria: #10141f;
+    --bgTerciaria: #243542;
+    --bgLogin: #1d2230;
+    --bgInput: #4d4948;
+
+/*     
+    --corPrimaria: #3fa0a4;
+    --corSecundaria: #286080;
+    --corSecundaria2: #2860808e;
+    --bgPrimaria: #0b1014;
+    --bgSecundaria: #1d242a;
+    --bgTerciaria: #324955;
+    --bgLogin: #2e3b43;
+    --bgInput: #3b454a; */
 }
 
 @font-face {
@@ -35,4 +49,9 @@
 @font-face {
     font-family: 'Gotham Book';
     src: url('media/fontes/Gotham/Gotham-Book.otf');
+}
+
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url('media/fontes/Gotham/Gotham-Bold.otf');
 }

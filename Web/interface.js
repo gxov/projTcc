@@ -32,3 +32,18 @@ function closeNav() {
 
 // Para página de search
 var pageName = location.pathname.split("/").slice(-1);
+
+
+
+// Para temas
+
+function mudarTema(tipo) {
+    switch (tipo) {
+        case 'Azul':
+
+            break;
+        case 'Laranja':
+            
+            break;
+    }
+}
