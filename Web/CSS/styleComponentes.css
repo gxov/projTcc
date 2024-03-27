@@ -7,17 +7,15 @@
 }
 
 .contBackground {
-    background-image: linear-gradient(var(--bgSecundaria), var(--corPrimaria));
+    background-image: linear-gradient(var(--bgPrimaria), var(--corPrimaria));
     top: 0;
     height: 300px;
     width: 100%;
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: -1;
-    filter: contrast(1.4);
     margin-bottom: -1%;
 }
 
@@ -522,3 +520,29 @@ a:-webkit-any-link {
 }
 
 /* Capa END */
+
+/* Página Principal */
+
+/* Seções de conteúdo */
+
+.sectionTitle {
+    font-family: 'Gotham Bold';
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding-bottom: 3px;
+}
+
+.sectionTitle::after {
+    content: "";
+    background-color: var(--corPrimaria);
+    width: 35px;
+    height: 2px;
+    margin: 0 0 0 10px;
+}
+
+/* Seções de conteúdo END */
+
+/* Página Principal END */
