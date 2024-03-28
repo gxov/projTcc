@@ -369,24 +369,29 @@ a:-webkit-any-link {
 
 .pgSearchTitle {
     font-family: 'Gotham Black';
-    font-size: 1.5em;
+    font-size: 1.5rem;
     height: fit-content;
+}
+
+.pgSearchAuthor {
+    font-family: 'Gotham Thin';
+    font-size: 0.8rem;
 }
 
 .pgSearchLivroCapa {
-    width: 50%;
-    padding-left: 10%;
+    width: 80%;
+    justify-self: center;
 }
 
 .pgSearchRating {
-    justify-content: end;
     padding-right: 5%;
     color: var(--corPrimaria);
     height: fit-content;
+    gap: 10px;
 }
 
 .svgPgSearchRating {
-    height: 1.5rem;
+    height: 1.2rem;
     color: var(--corPrimaria);
     fill: var(--corPrimaria);
 }

@@ -95,6 +95,11 @@
     width: 75%;
 }
 
+.size10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+}
+
 .size12 {
     flex: 0 0 auto;
     width: 100%;
