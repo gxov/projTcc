@@ -7,17 +7,15 @@
 }
 
 .contBackground {
-    background-image: linear-gradient(var(--bgSecundaria), var(--corPrimaria));
+    background-image: linear-gradient(var(--bgPrimaria), var(--corPrimaria));
     top: 0;
     height: 300px;
     width: 100%;
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: -1;
-    filter: contrast(1.4);
     margin-bottom: -1%;
 }
 
@@ -527,3 +525,77 @@ a:-webkit-any-link {
 }
 
 /* Capa END */
+
+/* Página Principal */
+
+/* Seções de conteúdo */
+
+.sectionTitle {
+    font-family: 'Gotham Bold';
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 0;
+    padding: 0 0 3px 10px;
+}
+
+.sectionTitle::after {
+    content: "";
+    background-color: var(--corPrimaria);
+    width: 50px;
+    height: 3px;
+    margin: 0 0 0 10px;
+}
+
+.sectionWrapper{
+    padding: 1%;
+    width: 100%;
+}
+
+.sectionContent {
+    width: 100%;
+    display: flex;
+}
+
+.sectionCard {
+    /* border: 2px solid var(--bgTerciaria); */
+    border-radius: 5px;
+    display: grid;
+}
+
+.sectionCapa {
+    height: 250px;
+    justify-self: center;
+    padding: 5%;
+}
+
+.sectionCapaPadrao {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: var(--bgTerciaria);
+    justify-self: center;
+}
+
+.sectionCapaTitulo {
+    font-family: 'Gotham Book';
+    margin: auto;
+}
+
+.sectionCapaRowPadrao {
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: var(--bgTerciaria);
+    justify-self: center;
+}
+
+.sectionRowTitulo {
+    font-family: 'Gotham Book';
+    margin: auto;
+}
+
+/* Seções de conteúdo END */
+
+/* Página Principal END */
