@@ -2,6 +2,8 @@ const mainNav = document.getElementById('mainNav');
 const mainNavBg = document.getElementById('mainNavBg');
 const sideNav = document.getElementById('sideNav');
 const mainCont = document.getElementById('main');
+var r = document.querySelector(':root');
+var toggle = false;
 
 function funct() {
     if (window.scrollY <= 10) {
@@ -33,17 +35,44 @@ function closeNav() {
 // Para página de search
 var pageName = location.pathname.split("/").slice(-1);
 
-
+// Menu de acesso
+function openUserNav() {
+    contdiv = document.getElementById("userAccess");
+    switch (toggle) {
+        case true:
+            contdiv.style.display = "none";
+            toggle = false;
+            break;
+        case false:
+            contdiv.style.display = "block";
+            toggle = true;
+            break;
+    }
+}
 
 // Para temas
-
 function mudarTema(tipo) {
+    var rs = getComputedStyle(r);
     switch (tipo) {
         case 'Azul':
-
+            r.style.setProperty('--corPrimaria', '#3fa0a4');
+            r.style.setProperty('--corSecundaria', '#286080');
+            r.style.setProperty('--corSecundaria2', '#2860808e');
+            r.style.setProperty('--bgPrimaria', '#0b1014');
+            r.style.setProperty('--bgSecundaria', '#1d242a');
+            r.style.setProperty('--bgTerciaria', '#324955');
+            r.style.setProperty('--bgLogin', '#2e3b43');
+            r.style.setProperty('--bgInput', '#3b454a');
             break;
         case 'Laranja':
-            
+            r.style.setProperty('--corPrimaria', '#ea4f36');
+            r.style.setProperty('--corSecundaria', '#bc3131');
+            r.style.setProperty('--corSecundaria2', '#bc31318e');
+            r.style.setProperty('--bgPrimaria', '#090a14');
+            r.style.setProperty('--bgSecundaria', '#10141f');
+            r.style.setProperty('--bgTerciaria', '#243542');
+            r.style.setProperty('--bgLogin', '#1d2230');
+            r.style.setProperty('--bgInput', '#4d4948');
             break;
     }
 }

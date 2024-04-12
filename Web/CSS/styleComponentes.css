@@ -126,10 +126,17 @@
     margin-right: 20%;
 }
 
+.acessoUserFoto:hover {
+    cursor: pointer;
+    background-color: var(--bgTerciaria);
+}
+
 .acessoUserFoto {
     width: 100%;
     border-radius: 50%;
     vertical-align: middle;
+    transition: 0.2s;
+    padding: 2px;
 }
 
 .svgBiblioteca {
@@ -263,11 +270,13 @@ a:-webkit-any-link {
 /* User Menu */
 
 .userMenuDiv {
+    z-index: 1000;
     position: relative;
+    transition: display 0.4s linear;
 }
 
 .userMenuCont {
-    /* display: none; */
+    box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.52);
     position: absolute;
     right: 0;
     background-color: var(--bgSecundaria);
@@ -279,6 +288,23 @@ a:-webkit-any-link {
 
 .userMenuItem {
     padding: 1rem;
+}
+
+.userMenuAccess{
+    border-radius: 10px;
+    transition: 0.2s;   
+    margin: 20px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.userMenuAccess:hover{
+    background-color: var(--bgTerciaria);
+}
+
+.userMenuPicture{
+    margin: 0px 40px;
+    border-radius: 50%;
 }
 
 /* User Menu END */

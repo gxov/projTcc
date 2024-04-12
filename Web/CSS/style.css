@@ -32,6 +32,10 @@
     height: fit-content;
 }
 
+.hide{
+    display: none;
+}
+
 .contFluid {
     --paddingX: 1.5rem;
     padding-right: calc(var(--paddingX) * .5);
