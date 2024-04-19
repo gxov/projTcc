@@ -287,7 +287,7 @@ a:-webkit-any-link {
 }
 
 .userMenuItem {
-    padding: 1rem;
+    margin: 1rem;
 }
 
 .userMenuAccess{
@@ -296,6 +296,7 @@ a:-webkit-any-link {
     margin: 20px;
     justify-content: center;
     gap: 10px;
+    font-size: 1.2rem;
 }
 
 .userMenuAccess:hover{
@@ -305,6 +306,14 @@ a:-webkit-any-link {
 .userMenuPicture{
     margin: 0px 40px;
     border-radius: 50%;
+}
+
+.userConfigAccess{
+    font-size: 0.9rem;
+}
+
+.svgConfigAccess{
+    height: 30px;
 }
 
 /* User Menu END */

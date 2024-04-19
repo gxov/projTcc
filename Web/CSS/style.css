@@ -11,6 +11,10 @@
     display: grid;
 }
 
+.justifyContCent{
+    justify-content: center;
+}
+
 .justifyContEnd {
     justify-content: end !important;
 }
