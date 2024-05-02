@@ -136,3 +136,65 @@ body {
 }
 
 /* Tags END */
+
+
+.containerComplement{
+    display: flex;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #243542;
+    font-weight: 700;
+    border: 3px solid var(--bgTerciaria);
+}
+
+.livroRow{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 10% 60% 20%;
+    background-color: var(--bgSecundaria);
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--bgTerciaria);
+}
+
+.livroRow:hover{
+    background-color: var(--bgHover);
+    transition: 0.2s;
+}
+
+.livrosSection{
+    border: 3px solid var(--bgTerciaria);
+}
+
+.livroCodMin{
+    padding: 2px 5px;
+}
+
+.livroAutorMin{
+    padding: 2px 5px;
+}
+
+.livroTituloMin{
+    border-left: 2px solid var(--bgTerciaria);
+    border-right: 2px solid var(--bgTerciaria);
+    padding: 2px 5px;
+}
+
+.containerControle{
+    margin: 2% 0 2% 8%;
+    border-left: 3px solid var(--bgTerciaria);
+}
+
+.svgAccordeon{
+    height: 32px;
+    fill: var(--font);
+}
+
+.accordeonTrigger{
+    background-color: transparent;
+    border: 0;
+    color: var(--font);
+}
+
+.accordeonDesc{
+    transition: 0.4s;
+    background-color: var(--bgTerciaria);
+}

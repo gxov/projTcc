@@ -76,3 +76,20 @@ function mudarTema(tipo) {
             break;
     }
 }
+
+
+var acc = document.getElementsByClassName("accordeonTrigger");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        var panel = this.nextElementSibling;
+        if (panel.style.height === "100%") {
+            panel.style.height = "0%";
+            panel.style.opacity = "0";
+        } else {
+            panel.style.height = "100%";
+            panel.style.opacity = "1";
+        }
+    });
+}
