@@ -15,12 +15,12 @@ $sql = "SELECT isbn, titulo, autor FROM tb_livros";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "<div class='livroRow'><div class='livroCodMin'> " . $row["isbn"]. " </div><div class='livroTituloMin'> " . $row["titulo"]. " </div><div class='livroAutorMin'> " . $row["autor"]. "</div></div>";
+  while ($row = $result->fetch_assoc()) {
+    echo "<div class='livroRow'><div class='livroCodMin'> " . $row["isbn"] . " </div><div class='livroTituloMin'> " . $row["titulo"] . " </div><div class='livroAutorMin'> " . $row["autor"] . "</div></div>";
   }
 } else {
   echo "0 results";
 }
 $conn->close();
+
 ?>

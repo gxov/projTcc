@@ -178,8 +178,9 @@ body {
     padding: 2px 5px;
 }
 
-.containerControle{
-    margin: 2% 0 2% 8%;
+.controleContainer{
+    margin: 1% 0 1% 4%;
+    padding: 1% 0 1% 4%;
     border-left: 3px solid var(--bgTerciaria);
 }
 
@@ -197,4 +198,36 @@ body {
 .accordeonDesc{
     transition: 0.4s;
     background-color: var(--bgTerciaria);
+}
+
+.controleInput{
+    padding: 1%;
+    margin-top: 1%;
+    width: 100%;
+    background-color: var(--bgInput);
+    border: none;
+    border-radius: 3px;
+    transition: .5s;
+    color: var(--font);
+    font-family: 'Gotham Book';
+}
+
+.controleLabel{
+    font-size: 0.9rem;
+    font-family: 'Gotham Book';
+}
+
+.controleBtn{
+    border-radius: 5px;
+    justify-content: center;
+    background-color: var(--bgTerciaria);
+    font-family: 'Gotham Medium';
+    color: var(--font);
+    border: 0;
+    padding: 1.25%;
+    margin-left: 2%;
+}
+
+.controleInputSection{
+    margin: 2% 0;
 }

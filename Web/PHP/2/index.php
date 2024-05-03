@@ -129,8 +129,8 @@
                             ?>
                         </div>
                     </div>
-                    <div class="size4 containerControle">
-                        <div class="accordeonItem flexColumn">
+                    <div class="size4 controleContainer">
+                        <!-- <div class="accordeonItem flexColumn">
                             <button class="accordeonTrigger flex">
                                 <div class="accordeonTitle flex alignCenter">
                                     <div class="accordeonText">
@@ -149,7 +149,29 @@
                                     teste
                                 </div>
                             </div>
+                        </div> -->
+
+                        <div class="controleTitulo">
                         </div>
+                        <form action="insert.php" method="POST" class="controleForm flexColumn">
+                            <div class="controleInputSection">
+                                <label class="controleLabel" for="titulo">Título:</label>
+                                <input class="controleInput" type="text" name="titulo" id="titulo" required>
+                            </div>
+                            <div class="controleInputSection">
+                                <label class="controleLabel" for="autor">Autor:</label>
+                                <input class="controleInput" type="text" name="autor" id="autor" required>
+                            </div>
+                            <div class="controleInputSection flexColumn">
+                                <label class="controleLabel" for="isbn">Isbn:</label>
+                                <div>
+                                    <input class="controleInput size6" type="text" name="isbn" id="isbn" required
+                                        style="width: 40%">
+                                    <input class="controleBtn" type="submit" value="Criar">
+                                    <input class="controleBtn" type="reset" value="Limpar">
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
