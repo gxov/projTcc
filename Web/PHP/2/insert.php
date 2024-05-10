@@ -15,13 +15,12 @@
   $autor = mysqli_real_escape_string($conn, $_POST["autor"]);
 
 
-  $sql = "INSERT INTO tb_livros VALUES ('$isbn', '$titulo', '$autor')";
-  $ex = $conn->prepare($sql);
+  $ex = $conn->prepare("INSERT INTO tb_livros VALUES ('$isbn', '$titulo', '$autor')");
   $ex->execute();
 
-  if ($conn->query($sql) === TRUE) {
-    echo "<script>window.location.reload();</script>";
-  }
+  // if ($conn->query($sql) === TRUE) {
+  //   echo "<script>window.location.reload();</script>";
+  // }
 
   $conn->close();
 }

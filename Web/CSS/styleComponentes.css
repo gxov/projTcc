@@ -309,11 +309,13 @@ a:-webkit-any-link {
 }
 
 .userConfigAccess{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    font-family: 'Gotham Book';
 }
 
 .svgConfigAccess{
-    height: 30px;
+    margin-right: 10px;
+    height: 20px;
 }
 
 /* User Menu END */
