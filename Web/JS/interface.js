@@ -18,10 +18,10 @@ window.onscroll = function () { funct() }
 
 function openNav() {
     sideNav.style.opacity = 1;
-    sideNav.style.width = "20%";
+    sideNav.style.width = "15%";
     mainCont.className = "contFluid mainContent mainContentFloat"
-    mainCont.style.width = "80%";
-    mainNav.style.width = "80%";
+    mainCont.style.width = "85%";
+    mainNav.style.width = "85%";
 }
 
 function closeNav() {

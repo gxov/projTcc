@@ -14,13 +14,14 @@
 
     
     /* --corPrimaria: #3fa0a4;
-    --corSecundaria: #286080;
-    --corSecundaria2: #2860808e;
-    --bgPrimaria: #0b1014;
-    --bgSecundaria: #1d242a;
-    --bgTerciaria: #324955;
-    --bgLogin: #2e3b43;
-    --bgInput: #3b454a; */
+    --corSecundaria: #387497;
+    --corSecundaria2: #3874978e;
+    --bgPrimaria: #111418;
+    --bgSecundaria: #181c1f;
+    --bgTerciaria: #313c42;
+    --bgLogin: #303b42;
+    --bgInput: #3f4649;
+    --bgHover: #24333b; */
 }
 
 @font-face {
@@ -57,3 +58,4 @@
     font-family: 'Gotham Bold';
     src: url('../SRC/fontes/Gotham/Gotham-Bold.otf');
 }
+

@@ -27,6 +27,14 @@
     align-items: center !important;
 }
 
+.alignSlfEnd{
+    align-self: flex-end;
+}
+
+.alignSlfCent{
+    align-self: center;
+}
+
 .overflowHide {
     overflow-x: hidden;
     overflow-y: hidden;
@@ -61,6 +69,16 @@
 
 .pZero {
     padding: 0 !important;
+}
+
+.size1 {
+    flex: 0 0 auto;
+    width: 8.33333333%;
+}
+
+.size1-5 {
+    flex: 0 0 auto;
+    width: 12.499999995%;
 }
 
 .size2 {

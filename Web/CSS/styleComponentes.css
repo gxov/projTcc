@@ -36,7 +36,6 @@
     padding: 1.5%;
 }
 
-
 /* Misc END */
 
 /* mainNav */
@@ -87,12 +86,16 @@
     margin-top: 20%;
 }
 
+.svgMenu:hover {
+    cursor: pointer;
+}
+
 .logoSection {
     margin-left: 30px;
     position: relative;
 }
 
-.logoText{
+.logoText {
     padding-left: 52px;
     align-self: flex-end;
     color: var(--bgTerciaria);
@@ -106,7 +109,7 @@
     font-family: 'Gotham Black';
 }
 
-.logoSvgSection{
+.logoSvgSection {
     position: absolute;
     top: -5px;
 }
@@ -256,13 +259,30 @@ a:-webkit-any-link {
     transition: 0.3s;
 }
 
-.sideNavClose {
-    padding-top: 1rem;
-    padding-left: 75%;
-}
+.sideNavClose {}
 
 .svgSideNavClose {
     color: var(--bgTerciaria);
+    transition: 0.2s;
+    height: 2rem;
+    width: 2rem;
+    margin: 15px;
+}
+
+.svgSideNavClose:hover {
+    color: var(--corPrimaria);
+    cursor: pointer;
+}
+
+.sideNavSection {
+    padding: 25px 0 0 25px;
+    font-size: 1.3rem;
+    transition: 0.2s;
+}
+
+.sideNavSection:hover{
+    cursor: pointer;
+    color: var(--corPrimaria);
 }
 
 /* Sidenav END */
@@ -276,9 +296,9 @@ a:-webkit-any-link {
 }
 
 .userMenuCont {
-    box-shadow: 3px 3px 6px 3px rgba(0,0,0,0.52);
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.52);
     position: absolute;
-    right: 0;
+    right: 5%;
     background-color: var(--bgSecundaria);
     width: 13rem;
     margin-top: 0.5rem;
@@ -287,35 +307,49 @@ a:-webkit-any-link {
 }
 
 .userMenuItem {
-    margin: 1rem;
+    margin: 0.1rem 1rem;
 }
 
-.userMenuAccess{
+.userMenuAccess {
     border-radius: 10px;
-    transition: 0.2s;   
-    margin: 20px;
+    transition: 0.2s;
+    padding: 20px;
+    margin: 0px;
     justify-content: center;
     gap: 10px;
     font-size: 1.2rem;
+    background: linear-gradient(150deg,var(--corSecundaria) 0%, var(--bgTerciaria) 40%, var(--bgSecundaria) 80%);
 }
 
-.userMenuAccess:hover{
-    background-color: var(--bgTerciaria);
+.userMenuAccess:hover {
+    background-color: var(--bgHover);
+    color: var(--corPrimaria);
+    cursor: pointer;
 }
 
-.userMenuPicture{
+.userMenuPicture {
     margin: 0px 40px;
     border-radius: 50%;
 }
 
-.userConfigAccess{
-    font-size: 0.8rem;
+.userConfigAccess {
+    font-size: 1rem;
     font-family: 'Gotham Book';
+    padding: 8px;
+    width: fit-content;
+    border-radius: 5px;
+    transition: 0.2s;
 }
 
-.svgConfigAccess{
-    margin-right: 10px;
-    height: 20px;
+.userConfigAccess:hover {
+    color: var(--corPrimaria);
+    background-color: var(--bgHover);
+    cursor: pointer;
+}
+
+.svgConfigAccess {
+    margin-right: 8px;
+    height: 26px;
 }
 
 /* User Menu END */
@@ -534,11 +568,17 @@ a:-webkit-any-link {
 }
 
 .livroBtn {
-    padding: 2.5%;
+    padding: 2%;
     background-color: var(--corPrimaria);
     font-family: "Gotham Book";
     border: solid 0px;
-    border-radius: 0.6rem
+    border-radius: 0.6rem;
+    transition: 0.2s;
+}
+
+.livroBtn:hover{
+    cursor: pointer;
+    background-color: var(--corSecundaria);
 }
 
 .livroBtn2 {
@@ -547,6 +587,12 @@ a:-webkit-any-link {
     border: solid 0px;
     border-radius: 0.6rem
 }
+
+.livroBtn2:hover{
+    cursor: pointer;
+    background-color: var(--bgHover);
+}
+
 
 .svgLivroBtn {
     color: white;
@@ -622,8 +668,8 @@ a:-webkit-any-link {
     margin: 0 0 0 10px;
 }
 
-.sectionWrapper{
-    padding: 1%;
+.sectionWrapper {
+    margin: 1%;
     width: 100%;
 }
 
@@ -638,18 +684,26 @@ a:-webkit-any-link {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 0.6%;
+    height: fit-content;
+    transition: 0.2s;
 }
 
-.sectionCardRow{
+.sectionCard:hover {
+    background-color: var(--bgHover);
+    cursor: pointer;
+}
+
+.sectionCardRow {
     padding: 5px 10px 5px 10px;
-    gap: 20px;    
+    gap: 20px;
     margin: 5px;
-    border: 2   px solid var(--bgTerciaria);
+    border: 2 px solid var(--bgTerciaria);
     border-radius: 10px;
-    transition: 0.4s;
+    transition: 0.2s;
 }
 
-.sectionCardRow:hover{
+.sectionCardRow:hover {
     background-color: var(--bgHover);
 }
 
@@ -667,7 +721,14 @@ a:-webkit-any-link {
 
 .sectionCapaTitulo {
     font-family: 'Gotham Book';
-    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: 0.2s;
+}
+
+.sectionCapaTitulo:hover {
+    color: var(--corSecundaria);
+    cursor: pointer;
 }
 
 .sectionCardColumnCapa {
@@ -686,11 +747,11 @@ a:-webkit-any-link {
 .sectionCardRowTitulo {
     font-family: 'Gotham Medium';
     font-size: 1.2rem;
-    margin: auto;
+    width: fit-content;
     transition: 0.2s;
 }
 
-.sectionCardRowTitulo:hover{
+.sectionCardRowTitulo:hover {
     color: var(--corSecundaria);
     cursor: pointer;
 }
@@ -700,7 +761,7 @@ a:-webkit-any-link {
     font-family: 'Gotham Book';
 }
 
-.sectionCardRowCategories{
+.sectionCardRowCategories {
     gap: 4px;
     display: flex;
     align-content: center;
