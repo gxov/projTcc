@@ -809,7 +809,45 @@ a:-webkit-any-link {
     background-color: var(--bgSecundaria);
     border: 2px solid var(--bgTerciaria);
     border-radius: 10px;
-    width: 80%;
+    width: 100%;
     transition: .5s;
     position: relative;
+}
+
+.searchPageBarContainer{
+    margin: 10px;
+}
+
+.searchFilterContainer{
+    border: 2px solid var(--bgTerciaria);
+    background-color: var(--bgPrimaria);
+    border-radius: 15px;
+    margin: 10px 20px;
+    padding: 8px;
+}
+
+.searchResultsContainer{
+    margin: 20px;
+}
+
+.searchResultTitle{
+    font-family: 'Gotham Medium';
+    font-size: 1.2rem;
+    width: fit-content;
+    transition: 0.2s;
+}
+
+.searchResultTitle:hover{
+    color: var(--corSecundaria);
+    cursor: pointer;
+}
+
+.searchResultAuthor{
+    display: flex;
+    font-family: 'Gotham Thin';
+    margin-bottom: 10px;
+}
+
+.searchResultDescription{
+    font-family: 'Gotham Book';
 }
