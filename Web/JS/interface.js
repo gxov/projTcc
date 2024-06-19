@@ -92,4 +92,47 @@ for (i = 0; i < acc.length; i++) {
             panel.style.opacity = "1";
         }
     });
-}
+};
+
+
+//Botões tela de adm
+
+function controlShow(tipo) {
+    let createDiv = document.getElementById("adminCreate");
+    let updateDiv = document.getElementById("adminUpdate");
+    let deleteDiv = document.getElementById("adminDelete");
+
+    let createBtn = document.getElementById("adminCreateBtn");
+    let updateBtn = document.getElementById("adminUpdateBtn");
+    let deleteBtn = document.getElementById("adminDeleteBtn");
+
+    switch (tipo) {
+        case 'create':
+            createDiv.style.display = 'block';
+            updateDiv.style.display = 'none';
+            deleteDiv.style.display = 'none';
+
+            createBtn.style.zIndex = '8';
+            updateBtn.style.zIndex = '7';
+            deleteBtn.style.zIndex = '6';
+            break;
+        case 'update':
+            updateDiv.style.display = 'block';
+            createDiv.style.display = 'none';
+            deleteDiv.style.display = 'none';
+
+            updateBtn.style.zIndex = '8';
+            createBtn.style.zIndex = '7';
+            deleteBtn.style.zIndex = '6';
+            break;
+        case 'delete':
+            deleteDiv.style.display = 'block';
+            createDiv.style.display = 'none';
+            updateDiv.style.display = 'none';
+
+            deleteBtn.style.zIndex = '8';
+            updateBtn.style.zIndex = '7';
+            createBtn.style.zIndex = '6';
+            break;
+    }
+};

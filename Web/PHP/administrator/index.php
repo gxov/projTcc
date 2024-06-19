@@ -8,6 +8,7 @@
     <link href="../../CSS/styleRecursos.css" rel="stylesheet">
     <link href="../../CSS/styleComponentes.css" rel="stylesheet">
     <link href="../../CSS/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -126,6 +127,24 @@
                         <div class="livrosSection">
                             <?php
                             include ("connect.php");
+                            $sql = "SELECT * FROM tb_livros";
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<div class='livroRow'>";
+                                    foreach ($row as $key => $dado) {
+                                        echo $dado;
+                                        echo "<div class='livroCodMin'> " . $row[$dado] . " </div>";
+                                    }
+                                    ;
+                                    echo "</div>";
+                                }
+                                ;
+                            } else {
+                                echo "<div class='livroRow'><div class='livroCodMin'> NULL </div><div class='livroTituloMin'> NULL </div><div class='livroAutorMin'> NULL </div></div>";
+                            }
+                            $conn->close();
                             ?>
                         </div>
                     </div>
