@@ -11,10 +11,6 @@
     <link rel="icon" href="../../SRC/svg/logo.png" />
     <?php include_once ("utils/read.php"); ?>
 
-    <?php
-
-    ?>
-
 </head>
 
 <body class="conteudo">
@@ -207,12 +203,6 @@
                                 nome
                             </div>
                             <div class="tableAutorMin">
-                                codautor
-                            </div>
-                            <div class="tableAutorMin">
-                                codpublicador
-                            </div>
-                            <div class="tableAutorMin">
                                 ativo
                             </div>
                             <div class="tableAutorMin">
@@ -258,13 +248,10 @@
                                 <input class="controlInput size12" type="text" name="titulo" id="titulo" required>
                             </div>
                             <div class="controlInputSection flex">
-                                <div class="size6">
-                                    <label class="controlLabel" for="autor">Código do autor:</label>
-                                    <input class="controlInput size10" type="text" name="autor" id="autor" required>
-                                </div>
-                                <div class="size6">
-                                    <label class="controlLabel" for="isbn">Código do publicador:</label>
-                                    <input class="controlInput size10" type="text" name="isbn" id="isbn" required>
+                                <div class="size11 flexColumn">
+                                    <label class="controlLabel" for="imagem">Imagem da capa:</label>
+                                    <input class="controlInput size11" type="file" name="imagem" id="imagem" required>
+                                    <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
                                 </div>
                             </div>
                             <div class="controlInputSection flexColumn">
@@ -275,7 +262,7 @@
                             </div>
                         </form>
                     </div>
-                    <div id="adminUpdate" class="controlEditContainer controlBackgroundMiddle">
+                    <div id="adminUpdate" style="display: none;" class="controlEditContainer controlBackgroundMiddle">
                         <div class="controlTitulo">
                             Atualizar
                         </div>
@@ -302,7 +289,7 @@
                             </div>
                         </form>
                     </div>
-                    <div id="adminDelete" class="controlEditContainer controlBackgroundEnd">
+                    <div id="adminDelete" style="display: none;" class="controlEditContainer controlBackgroundEnd">
                         <div class="controlTitulo">
                             Deletar
                         </div>

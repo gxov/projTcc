@@ -9,13 +9,13 @@ function select($table)
     $items = "";
 
     if ($result->num_rows > 0) {
-        $items .= "<div class='tableBookRow'>";
         while ($row = $result->fetch_assoc()) {
+            $items .= "<div class='tableBookRow'>";
             foreach ($row as $dado) {
                 $items .= "<div class='tableValue'> " . $dado . " </div>";
             };
+            $items .= "</div>";
         };
-        $items .= "</div>";
     } else {
         $items .= "<div class='tableBookRow'>";
         $items = "<div><div class='tableValue'> NULL </div><div class='tableValue'> NULL </div><div class='tableValue'> NULL </div></div>";
@@ -46,7 +46,7 @@ function selectFiltered($table)
             $tsql->execute();
             $result = $tsql->get_result();
         } else {
-            $sql = 'SELECT * FROM '. $table . ' WHERE nome LIKE ' . "'%" . $filteredValue . "%';";
+            $sql = 'SELECT * FROM '. $table . ' WHERE nome LIKE ' . "'%" . $filteredValue . "%' OR cod LIKE " . "'%". $filteredValue . "%';";
 
             $tsql = $conn->prepare($sql);
             $tsql->execute();
@@ -57,20 +57,18 @@ function selectFiltered($table)
         $filteredItems = '';
 
         if ($result->num_rows > 0) {
-            $filteredItems .= "<div class='tableBookRow'>";
             while ($row = $result->fetch_assoc()) {
+                $filteredItems .= "<div class='tableBookRow'>";
                 foreach ($row as $dado) {
                     $filteredItems .= "<div class='tableValue'> " . $dado . " </div>";
                 }
                 ;
+                $filteredItems .= "</div>";
             }
             ;
-            $filteredItems .= "</div>";
         } else {
             $filteredItems .= "<div class='tableBookRow'>";
             $filteredItems .= "
-            <div class='tableValue'> NULL </div>
-            <div class='tableValue'> NULL </div>
             <div class='tableValue'> NULL </div>
             <div class='tableValue'> NULL </div>
             <div class='tableValue'> NULL </div>
