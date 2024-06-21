@@ -10,9 +10,17 @@ function select($table)
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
+
             $items .= "<div class='tableBookRow'>";
-            foreach ($row as $dado) {
-                $items .= "<div class='tableValue'> " . $dado . " </div>";
+            foreach ($row as $key => $dado) {
+                if ($key == 'ativo' && $dado == '1'){
+                    $dado = 'true';
+                }elseif($key == 'ativo' && $dado == '0'){
+                    $dado = 'false';
+                };
+
+
+                $items .= "<div id='".$key."' class='tableValue'> " . $dado . " </div>";
             };
             $items .= "</div>";
         };

@@ -166,7 +166,7 @@ body {
 .tableBookRow{
     display: grid;
     width: 100%;
-    grid-template-columns: 15% 45% 15% 45%;
+    grid-template-columns: 10% 45% 10% 45%;
     background-color: var(--bgSecundaria);
     font-size: 1.1rem;
     border-bottom: 1px solid var(--bgTerciaria);

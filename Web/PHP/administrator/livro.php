@@ -9,7 +9,10 @@
     <link href="../../CSS/styleComponentes.css" rel="stylesheet">
     <link href="../../CSS/style.css" rel="stylesheet">
     <link rel="icon" href="../../SRC/svg/logo.png" />
-    <?php include_once ("utils/read.php"); ?>
+    <?php 
+    include_once ("utils/read.php"); 
+    include_once ("utils/insert.php"); 
+    ?>
 
 </head>
 
