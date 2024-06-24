@@ -12,7 +12,10 @@
     <?php 
     include_once ("utils/read.php"); 
     include_once ("utils/insert.php"); 
+    
+    $table = "tb_livros"
     ?>
+
 
 </head>
 
@@ -245,15 +248,19 @@
                         <div class="controlTitulo">
                             Criar
                         </div>
-                        <form method="GET" class="controlForm flexColumn">
+                        <form method="POST" action="livro.php" class="controlForm flexColumn">
                             <div class="controlInputSection">
-                                <label class="controlLabel" for="titulo">Título:</label>
-                                <input class="controlInput size12" type="text" name="titulo" id="titulo" required>
+                                <label class="controlLabel" for="tituloLivro">Título:</label>
+                                <input class="controlInput size12" type="text" name="tituloLivro" id="tituloLivro" required>
+                            </div>
+                            <div class="controlInputSection">
+                                <label class="controlLabel" for="descricaoLivro">Descrição</label>
+                                <input class="controlInput size12" type="text" name="descricaoLivro" id="descricaoLivro" required>
                             </div>
                             <div class="controlInputSection flex">
                                 <div class="size11 flexColumn">
-                                    <label class="controlLabel" for="imagem">Imagem da capa:</label>
-                                    <input class="controlInput size11" type="file" name="imagem" id="imagem" required>
+                                    <label class="controlLabel" for="capaLivro">Imagem da capa:</label>
+                                    <input class="controlInputTransparent size11" type="file" name="capaLivro" id="capaLivro" required>
                                     <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
                                 </div>
                             </div>
@@ -269,7 +276,7 @@
                         <div class="controlTitulo">
                             Atualizar
                         </div>
-                        <form method="GET" class="controlForm flexColumn">
+                        <form method="POST" action="livro.php" class="controlForm flexColumn">
                             <div class="controlInputSection">
                                 <label class="controlLabel" for="titulo">Título:</label>
                                 <input class="controlInput size12" type="text" name="titulo" id="titulo" required>
@@ -296,7 +303,7 @@
                         <div class="controlTitulo">
                             Deletar
                         </div>
-                        <form method="GET" class="controlForm flexColumn">
+                        <form method="POST" action="livro.php" class="controlForm flexColumn">
                             <div class="controlInputSection">
                                 <label class="controlLabel" for="titulo">Título:</label>
                                 <input class="controlInput size12" type="text" name="titulo" id="titulo" required>
