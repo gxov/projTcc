@@ -9,11 +9,10 @@
     <link href="../../CSS/styleComponentes.css" rel="stylesheet">
     <link href="../../CSS/style.css" rel="stylesheet">
     <link rel="icon" href="../../SRC/svg/logo.png" />
-    <?php 
-    include_once ("utils/read.php"); 
-    include_once ("utils/insert.php"); 
-    
-    $table = "tb_livros"
+    <?php
+    include_once ("utils/read.php");
+    include_once ("utils/livro/insert.php");
+    include_once ("utils/livro/show.php")
     ?>
 
 
@@ -214,6 +213,9 @@
                             <div class="tableAutorMin">
                                 imagem
                             </div>
+                            <div class="tableAutorMin">
+                                descricao
+                            </div>
                         </div>
                     </div>
                     <div id="results">
@@ -248,25 +250,28 @@
                         <div class="controlTitulo">
                             Criar
                         </div>
-                        <form method="POST" action="livro.php" class="controlForm flexColumn">
+                        <form method="POST" enctype="multipart/form-data" action="" class="controlForm flexColumn">
                             <div class="controlInputSection">
                                 <label class="controlLabel" for="tituloLivro">Título:</label>
-                                <input class="controlInput size12" type="text" name="tituloLivro" id="tituloLivro" required>
+                                <input class="controlInput size12" type="text" name="tituloLivro" id="tituloLivro"
+                                    required>
                             </div>
                             <div class="controlInputSection">
                                 <label class="controlLabel" for="descricaoLivro">Descrição</label>
-                                <input class="controlInput size12" type="text" name="descricaoLivro" id="descricaoLivro" required>
+                                <textarea class="controlInput size12" name="descricaoLivro" id="descricaoLivro"
+                                    required> </textarea>
                             </div>
                             <div class="controlInputSection flex">
                                 <div class="size11 flexColumn">
                                     <label class="controlLabel" for="capaLivro">Imagem da capa:</label>
-                                    <input class="controlInputTransparent size11" type="file" name="capaLivro" id="capaLivro" required>
+                                    <input class="controlInputTransparent size11" type="file" name="capaLivro"
+                                        id="capaLivro" required>
                                     <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
                                 </div>
                             </div>
                             <div class="controlInputSection flexColumn">
                                 <div>
-                                    <input class="controlBtn" type="submit" value="Criar">
+                                    <input class="controlBtn" type="submit" name="submit" value="Criar">
                                     <input class="controlBtn" type="reset" value="Limpar">
                                 </div>
                             </div>
@@ -304,23 +309,24 @@
                             Deletar
                         </div>
                         <form method="POST" action="livro.php" class="controlForm flexColumn">
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="titulo">Título:</label>
-                                <input class="controlInput size12" type="text" name="titulo" id="titulo" required>
-                            </div>
                             <div class="controlInputSection flex">
                                 <div class="size6">
-                                    <label class="controlLabel" for="autor">Código do autor:</label>
-                                    <input class="controlInput size10" type="text" name="autor" id="autor" required>
+                                    <label class="controlLabel" for="codDelete">Código do livro:</label>
+                                    <input class="controlInput size10" type="text" name="codDelete" onchange="show()">
                                 </div>
-                                <div class="size6">
-                                    <label class="controlLabel" for="isbn">Código do publicador:</label>
-                                    <input class="controlInput size10" type="text" name="isbn" id="isbn" required>
+                                <div class="size6 flexColumn">
+                                    <label class="controlLabel" for="ativoDelete">Ativo:</label>
+                                    <input class="controlInput size10" type="text" name="ativoDelete" readonly required>
                                 </div>
                             </div>
+                            <div class="controlInputSection">
+                                <label class="controlLabel" for="tituloDelete">Título:</label>
+                                <input class="controlInput size12" type="text" name="tituloDelete" id="tituloDelete" required>
+                            </div>
+
                             <div class="controlInputSection flexColumn">
                                 <div>
-                                    <input class="controlBtn" type="submit" value="Criar">
+                                    <input class="controlBtn" type="submit" name="delete" value="Criar">
                                     <input class="controlBtn" type="reset" value="Limpar">
                                 </div>
                             </div>

@@ -13,17 +13,23 @@ function select($table)
 
             $items .= "<div class='tableBookRow'>";
             foreach ($row as $key => $dado) {
-                if ($key == 'ativo' && $dado == '1'){
+                if ($key == 'ativo' && $dado == '1') {
                     $dado = 'true';
-                }elseif($key == 'ativo' && $dado == '0'){
+                } elseif ($key == 'ativo' && $dado == '0') {
                     $dado = 'false';
-                };
+                }
+                ;
 
-
-                $items .= "<div id='".$key."' class='tableValue'> " . $dado . " </div>";
-            };
+                if ($key == 'imagem') {
+                    $items .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='http://localhost:8089/projTcc/Web/src/capas/" . $dado . "'>" . $dado . " </a></div>";
+                } else {
+                    $items .= "<div id='" . $key . "' class='tableValue'> " . $dado . " </div>";
+                }
+            }
+            ;
             $items .= "</div>";
-        };
+        }
+        ;
     } else {
         $items .= "<div class='tableBookRow'>";
         $items = "<div><div class='tableValue'> NULL </div><div class='tableValue'> NULL </div><div class='tableValue'> NULL </div></div>";
@@ -36,56 +42,63 @@ function select($table)
 ;
 
 function selectFiltered($table)
-    {
+{
 
-        $dom = new DOMDocument('1.0', 'iso-8859-1');
-        $dom->validateOnParse = true;
+    $dom = new DOMDocument('1.0', 'iso-8859-1');
+    $dom->validateOnParse = true;
 
-        $filteredValue = $_GET["search"];
-        $conn = connect();
+    $filteredValue = $_GET["search"];
+    $conn = connect();
 
-        $split = explode('=', $filteredValue, 6);
+    $split = explode('=', $filteredValue, 6);
 
-        if (count($split) > 1) {
-            $sql = '';
-            $sql = 'SELECT * FROM '. $table . ' WHERE ' . $split[0] . ' LIKE ' . "'%" . $split[1] . "%';";
+    if (count($split) > 1) {
+        $sql = '';
+        $sql = 'SELECT * FROM ' . $table . ' WHERE ' . $split[0] . ' LIKE ' . "'%" . $split[1] . "%';";
 
-            $tsql = $conn->prepare($sql);
-            $tsql->execute();
-            $result = $tsql->get_result();
-        } else {
-            $sql = 'SELECT * FROM '. $table . ' WHERE nome LIKE ' . "'%" . $filteredValue . "%' OR cod LIKE " . "'%". $filteredValue . "%';";
+        $tsql = $conn->prepare($sql);
+        $tsql->execute();
+        $result = $tsql->get_result();
+    } else {
+        $sql = 'SELECT * FROM ' . $table . ' WHERE nome LIKE ' . "'%" . $filteredValue . "%' OR cod LIKE " . "'%" . $filteredValue . "%';";
 
-            $tsql = $conn->prepare($sql);
-            $tsql->execute();
-            $result = $tsql->get_result();
-        }
+        $tsql = $conn->prepare($sql);
+        $tsql->execute();
+        $result = $tsql->get_result();
+    }
 
 
-        $filteredItems = '';
+    $filteredItems = '';
 
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $filteredItems .= "<div class='tableBookRow'>";
-                foreach ($row as $dado) {
-                    $filteredItems .= "<div class='tableValue'> " . $dado . " </div>";
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $filteredItems .= "<div class='tableBookRow'>";
+            foreach ($row as $dado) {
+                if ($key == 'ativo' && $dado == '1') {
+                    $dado = 'true';
+                } elseif ($key == 'ativo' && $dado == '0') {
+                    $dado = 'false';
                 }
                 ;
-                $filteredItems .= "</div>";
+
+                $filteredItems .= "<div class='tableValue'> " . $dado . " </div>";
             }
             ;
-        } else {
-            $filteredItems .= "<div class='tableBookRow'>";
-            $filteredItems .= "
+            $filteredItems .= "</div>";
+        }
+        ;
+    } else {
+        $filteredItems .= "<div class='tableBookRow'>";
+        $filteredItems .= "
             <div class='tableValue'> NULL </div>
             <div class='tableValue'> NULL </div>
             <div class='tableValue'> NULL </div>
             <div class='tableValue'> NULL </div>";
-            $filteredItems .= "</div>";
-        }
-        ;
-
-        echo $filteredItems;
+        $filteredItems .= "</div>";
     }
     ;
+
+    echo $filteredItems;
+}
+;
 

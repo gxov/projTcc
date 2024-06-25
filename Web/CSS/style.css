@@ -152,6 +152,16 @@ body {
     box-sizing: border-box;
 }
 
+a:-webkit-any-link{
+    color: var(--font);
+    text-decoration: underline;
+    text-decoration-color: var(--corPrimaria);
+}
+
+a:hover{
+    text-decoration-color: var(--corSecundaria);
+}
+
 /* Tags END */
 
 
@@ -166,10 +176,12 @@ body {
 .tableBookRow{
     display: grid;
     width: 100%;
-    grid-template-columns: 10% 45% 10% 45%;
+    grid-template-columns: 10% 25% 10% 40% 25%;
     background-color: var(--bgSecundaria);
     font-size: 1.1rem;
     border-bottom: 1px solid var(--bgTerciaria);
+    padding: 2px;
+    max-height: 100px;
 }
 
 .tableBookRow:hover{
