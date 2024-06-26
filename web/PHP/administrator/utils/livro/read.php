@@ -1,5 +1,6 @@
 <?php
-include_once ("connect.php");
+include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
+
 function select($table)
 {
     $conn = connect();
@@ -14,14 +15,14 @@ function select($table)
             $items .= "<div class='tableBookRow'>";
             foreach ($row as $key => $dado) {
                 if ($key == 'ativo' && $dado == '1') {
-                    $dado = 'true';
+                    $dado = 'sim';
                 } elseif ($key == 'ativo' && $dado == '0') {
-                    $dado = 'false';
+                    $dado = 'não';
                 }
                 ;
 
                 if ($key == 'imagem') {
-                    $items .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='http://localhost:8089/projTcc/Web/src/capas/" . $dado . "'>" . $dado . " </a></div>";
+                    $items .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='http://localhost/projTcc/Web/src/capas/" . $dado . "'>" . $dado . " </a></div>";
                 } else {
                     $items .= "<div id='" . $key . "' class='tableValue'> " . $dado . " </div>";
                 }
@@ -73,7 +74,7 @@ function selectFiltered($table)
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $filteredItems .= "<div class='tableBookRow'>";
-            foreach ($row as $dado) {
+            foreach ($row as $key => $dado) {
                 if ($key == 'ativo' && $dado == '1') {
                     $dado = 'true';
                 } elseif ($key == 'ativo' && $dado == '0') {
@@ -81,7 +82,11 @@ function selectFiltered($table)
                 }
                 ;
 
-                $filteredItems .= "<div class='tableValue'> " . $dado . " </div>";
+                if ($key == 'imagem') {
+                    $filteredItems .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='http://localhost/projtcc/web/src/capas/" . $dado . "'>" . $dado . " </a></div>";
+                } else {
+                    $filteredItems .= "<div id='" . $key . "' class='tableValue'> " . $dado . " </div>";
+                }
             }
             ;
             $filteredItems .= "</div>";
@@ -90,6 +95,7 @@ function selectFiltered($table)
     } else {
         $filteredItems .= "<div class='tableBookRow'>";
         $filteredItems .= "
+            <div class='tableValue'> NULL </div>
             <div class='tableValue'> NULL </div>
             <div class='tableValue'> NULL </div>
             <div class='tableValue'> NULL </div>

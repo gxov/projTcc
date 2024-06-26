@@ -10,7 +10,7 @@
     <link href="../../CSS/style.css" rel="stylesheet">
     <link rel="icon" href="../../SRC/svg/logo.png" />
     <?php
-    include_once ("utils/read.php");
+    include_once ("utils/livro/read.php");
     include_once ("utils/livro/insert.php");
     include_once ("utils/livro/show.php")
     ?>
@@ -311,8 +311,10 @@
                         <form method="POST" action="livro.php" class="controlForm flexColumn">
                             <div class="controlInputSection flex">
                                 <div class="size6">
+                                    <form method="GET">
                                     <label class="controlLabel" for="codDelete">Código do livro:</label>
-                                    <input class="controlInput size10" type="text" name="codDelete" onchange="show()">
+                                    <input class="controlInput size10" type="text" name="codDelete">
+                                    </form>
                                 </div>
                                 <div class="size6 flexColumn">
                                     <label class="controlLabel" for="ativoDelete">Ativo:</label>

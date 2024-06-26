@@ -5,7 +5,7 @@ include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php")
 
 
 if (isset($_POST['submit'])) {
-  $titulo = $_POST["titulo"];
+  $titulo = $_POST["tituloLivro"];
   $desc = $_POST["descricaoLivro"];
 
   $filename = $_FILES["capaLivro"]["name"];
@@ -20,9 +20,7 @@ if (isset($_POST['submit'])) {
   $tsql->execute();
 
   if (move_uploaded_file($tempname, $folder)) {
-    echo "<h3>  Image uploaded successfully!</h3>";
   } else {
-    echo "<h3>  Failed to upload image!</h3>";
   }
 }
 
