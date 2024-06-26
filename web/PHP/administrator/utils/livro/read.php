@@ -22,7 +22,7 @@ function select($table)
                 ;
 
                 if ($key == 'imagem') {
-                    $items .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='http://localhost/projTcc/Web/src/capas/" . $dado . "'>" . $dado . " </a></div>";
+                    $items .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='http://localhost:8089/projTcc/Web/src/capas/" . $dado . "'>" . $dado . " </a></div>";
                 } else {
                     $items .= "<div id='" . $key . "' class='tableValue'> " . $dado . " </div>";
                 }
@@ -83,7 +83,7 @@ function selectFiltered($table)
                 ;
 
                 if ($key == 'imagem') {
-                    $filteredItems .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='http://localhost/projtcc/web/src/capas/" . $dado . "'>" . $dado . " </a></div>";
+                    $filteredItems .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='http://localhost:8089/projtcc/web/src/capas/" . $dado . "'>" . $dado . " </a></div>";
                 } else {
                     $filteredItems .= "<div id='" . $key . "' class='tableValue'> " . $dado . " </div>";
                 }

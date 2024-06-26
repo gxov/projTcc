@@ -238,25 +238,9 @@ a:hover{
     padding: 0% 1%;
 }
 
-.svgAccordeon{
-    height: 32px;
-    fill: var(--font);
-}
-
-.accordeonTrigger{
-    background-color: transparent;
-    border: 0;
-    color: var(--font);
-}
-
-.accordeonDesc{
-    transition: 0.4s;
-    background-color: var(--bgTerciaria);
-}
-
 .controlInput{
     padding: 4px;
-    margin-top: 2%;
+    margin-top: 1%;
     background-color: var(--bgInput);
     border: none;
     border-radius: 3px;
@@ -304,7 +288,7 @@ a:hover{
 }
 
 .controlInputSection{
-    margin: 2% 0;
+    margin: 1% 0;
 }
 
 .controlShowBtn{
@@ -320,7 +304,6 @@ a:hover{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-
 
 t3{
     font-size: 1.2rem;

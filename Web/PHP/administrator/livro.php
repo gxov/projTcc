@@ -12,7 +12,9 @@
     <?php
     include_once ("utils/livro/read.php");
     include_once ("utils/livro/insert.php");
-    include_once ("utils/livro/show.php")
+    include_once ("utils/livro/delete.php");
+    $_GET["search"] = "";
+    $_GET["codUpdate"] = "";
     ?>
 
 
@@ -248,7 +250,7 @@
 
                     <div id="adminCreate" class="controlEditContainer controlBackgroundStart">
                         <div class="controlTitulo">
-                            Criar
+                            <t3>Criar</t3>
                         </div>
                         <form method="POST" enctype="multipart/form-data" action="" class="controlForm flexColumn">
                             <div class="controlInputSection">
@@ -279,26 +281,44 @@
                     </div>
                     <div id="adminUpdate" style="display: none;" class="controlEditContainer controlBackgroundMiddle">
                         <div class="controlTitulo">
-                            Atualizar
+                            <t3>Atualizar</t3>
                         </div>
-                        <form method="POST" action="livro.php" class="controlForm flexColumn">
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="titulo">Título:</label>
-                                <input class="controlInput size12" type="text" name="titulo" id="titulo" required>
-                            </div>
+                        <form method="POST" action="" class="controlForm flexColumn">
                             <div class="controlInputSection flex">
                                 <div class="size6">
-                                    <label class="controlLabel" for="autor">Código do autor:</label>
-                                    <input class="controlInput size10" type="text" name="autor" id="autor" required>
+                                    <form method="GET">
+                                        <label class="controlLabel" for="codUpd">Código do livro:</label>
+                                        <input class="controlInput size10" type="text" name="codUpd">
+                                        <form>
                                 </div>
-                                <div class="size6">
-                                    <label class="controlLabel" for="isbn">Código do publicador:</label>
-                                    <input class="controlInput size10" type="text" name="isbn" id="isbn" required>
+                            </div>
+
+                            <div class="controlInputSection">
+                                <label class="controlLabel" for="tituloUpd">Título:</label>
+                                <input class="controlInput size12" type="text" name="tituloUpd" id="tituloUpd"
+                                    required>
+                            </div>
+                            <div class="controlInputSection">
+                                <label class="controlLabel" for="descricaoLivroUpd">Descrição</label>
+                                <textarea class="controlInput size12" name="descricaoLivroUpd" id="descricaoLivro"
+                                    required> </textarea>
+                            </div>
+                            <div class="controlInputSection flex">
+                                <div class="size5 flexColumn">
+                                    <label class="controlLabel" for="ativo">Ativo:</label>
+                                    <input class="controlInput size10" type="text" name="ativo" id="ativo" required>
+                                </div>
+
+                                <div class="size7 flexColumn">
+                                    <label class="controlLabel" for="capaLivroUpd">Imagem da capa:</label>
+                                    <input class="controlInputTransparent size11" type="file" name="capaLivroUpd"
+                                        id="capaLivro" required>
+                                    <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
                                 </div>
                             </div>
                             <div class="controlInputSection flexColumn">
                                 <div>
-                                    <input class="controlBtn" type="submit" value="Criar">
+                                    <input class="controlBtn" type="submit" name="update" value="Atualizar">
                                     <input class="controlBtn" type="reset" value="Limpar">
                                 </div>
                             </div>
@@ -306,29 +326,18 @@
                     </div>
                     <div id="adminDelete" style="display: none;" class="controlEditContainer controlBackgroundEnd">
                         <div class="controlTitulo">
-                            Deletar
+                            <t3>Deletar</t3>
                         </div>
                         <form method="POST" action="livro.php" class="controlForm flexColumn">
                             <div class="controlInputSection flex">
                                 <div class="size6">
-                                    <form method="GET">
                                     <label class="controlLabel" for="codDelete">Código do livro:</label>
                                     <input class="controlInput size10" type="text" name="codDelete">
-                                    </form>
-                                </div>
-                                <div class="size6 flexColumn">
-                                    <label class="controlLabel" for="ativoDelete">Ativo:</label>
-                                    <input class="controlInput size10" type="text" name="ativoDelete" readonly required>
                                 </div>
                             </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="tituloDelete">Título:</label>
-                                <input class="controlInput size12" type="text" name="tituloDelete" id="tituloDelete" required>
-                            </div>
-
                             <div class="controlInputSection flexColumn">
                                 <div>
-                                    <input class="controlBtn" type="submit" name="delete" value="Criar">
+                                    <input class="controlBtn" type="submit" name="delete" value="Deletar">
                                     <input class="controlBtn" type="reset" value="Limpar">
                                 </div>
                             </div>
