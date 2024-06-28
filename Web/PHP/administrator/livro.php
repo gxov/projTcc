@@ -13,8 +13,8 @@
     include_once ("utils/livro/read.php");
     include_once ("utils/livro/insert.php");
     include_once ("utils/livro/delete.php");
+    include_once ("utils/livro/update.php");
     $_GET["search"] = "";
-    $_GET["codUpdate"] = "";
     ?>
 
 
@@ -201,8 +201,8 @@
                             </input>
                         </form>
                     </div>
-                    <div class="containerComplement tableSection">
-                        <div class="tableBookRow">
+                    <div class=" tableSection">
+                        <div class="containerComplement">
                             <div class="tableCodMin">
                                 cod
                             </div>
@@ -300,19 +300,25 @@
                             </div>
                             <div class="controlInputSection">
                                 <label class="controlLabel" for="descricaoLivroUpd">Descrição</label>
-                                <textarea class="controlInput size12" name="descricaoLivroUpd" id="descricaoLivro"
+                                <textarea class="controlInput size12" name="descricaoLivroUpd" id="descricaoLivroUpd"
                                     required> </textarea>
                             </div>
                             <div class="controlInputSection flex">
                                 <div class="size5 flexColumn">
-                                    <label class="controlLabel" for="ativo">Ativo:</label>
-                                    <input class="controlInput size10" type="text" name="ativo" id="ativo" required>
+                                    <label class="controlLabel" for="ativoUpd">Ativo:</label>
+                                    <div class="flex">
+                                    Sim 
+                                    <input class="controlRadio size10" type="radio" value="true" name="ativoUpd" id="ativoUpd" required>
+                                    </div><div class="flex">
+                                    Não
+                                    <input class="controlRadio size10" type="radio" value="false" name="ativoUpd" id="ativoUpd" required>
+                                    </div>
                                 </div>
 
                                 <div class="size7 flexColumn">
                                     <label class="controlLabel" for="capaLivroUpd">Imagem da capa:</label>
                                     <input class="controlInputTransparent size11" type="file" name="capaLivroUpd"
-                                        id="capaLivro" required>
+                                        id="capaLivroUpd" required>
                                     <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
                                 </div>
                             </div>
