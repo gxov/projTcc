@@ -108,6 +108,7 @@ function controlShow(tipo) {
 
     switch (tipo) {
         case 'create':
+            console.log(createDiv);
             createDiv.style.display = 'block';
             updateDiv.style.display = 'none';
             deleteDiv.style.display = 'none';
@@ -117,6 +118,7 @@ function controlShow(tipo) {
             deleteBtn.style.zIndex = '6';
             break;
         case 'update':
+            console.log(updateDiv);
             updateDiv.style.display = 'block';
             createDiv.style.display = 'none';
             deleteDiv.style.display = 'none';
@@ -126,6 +128,7 @@ function controlShow(tipo) {
             deleteBtn.style.zIndex = '6';
             break;
         case 'delete':
+            console.log(deleteDiv);
             deleteDiv.style.display = 'block';
             createDiv.style.display = 'none';
             updateDiv.style.display = 'none';
