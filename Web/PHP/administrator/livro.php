@@ -10,11 +10,12 @@
     <link href="../../CSS/style.css" rel="stylesheet">
     <link rel="icon" href="../../SRC/svg/logo.png" />
     <?php
+    $_GET["search"] = "";
     include_once ("utils/livro/read.php");
     include_once ("utils/livro/insert.php");
     include_once ("utils/livro/delete.php");
     include_once ("utils/livro/update.php");
-    $_GET["search"] = "";
+    
     ?>
 
 
@@ -316,9 +317,9 @@
                                 </div>
 
                                 <div class="size7 flexColumn">
-                                    <label class="controlLabel" for="capaLivroUpd">Imagem da capa:</label>
-                                    <input class="controlInputTransparent size11" type="file" name="capaLivroUpd"
-                                        id="capaLivroUpd" required>
+                                    <label class="controlLabel" for="capaUpd">Imagem da capa:</label>
+                                    <input class="controlInputTransparent size11" type="file" name="capaUpd"
+                                        id="capaUpd" required>
                                     <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
                                 </div>
                             </div>

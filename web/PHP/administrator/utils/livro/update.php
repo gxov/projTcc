@@ -10,13 +10,20 @@ if (isset($_POST['update'])) {
   $ativo = $_POST["ativoUpd"];
   $desc = $_POST["descricaoLivroUpd"];
 
-  $filename = $_FILES["capaLivroUpd"]["name"];
-  $tempname = $_FILES["capaLivroUpd"]["tmp_name"];
+  echo $_FILES;
+
+  $filename = $_FILES["capaUpd"]["name"];
+  $tempname = $_FILES["capaUpd"]["tmp_name"];
 
 
   $folder = "C:/xampp/htdocs/projtcc/web/src/capas/" . $filename;
 
-  
+  if (move_uploaded_file($tempname, $folder)) {
+    echo "success";
+  } else {
+    echo "fail";
+  }
+
   $sql = "UPDATE tb_livros
   SET nome ='" . $titulo . "', ativo = ". $ativo .", descricao = '" . $desc . "', imagem = '" . $filename . "' 
   WHERE cod = ".$cod;
@@ -25,11 +32,7 @@ if (isset($_POST['update'])) {
   $tsql = $conn->prepare($sql);
   $tsql->execute();
 
-  if (move_uploaded_file($tempname, $folder)) {
-    echo "success";
-  } else {
-    echo "fail";
-  }
+  
 }
 
 ?>

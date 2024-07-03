@@ -33,17 +33,17 @@
         <div class="contFluid">
             <div class="contSection contMain" style="background: none ;justify-content: center;">
                 <div class="size5 loginSectionBorder">
-                    <div class="size12 loginSection grid">
+                    <form action="" method="POST" class="size12 loginSection grid">
                         <div class="loginTitle justifySlfCent">
                             Entre na sua conta
                         </div>
                         <div class="loginInputSection flexColumn">
                             <label for="email">E-mail</label>
-                            <input type="text" class="loginInputBox">
+                            <input type="text" name="loginEmail" class="loginInputBox">
                         </div>
                         <div class="loginInputSection flexColumn">
                             <label for="senha">Senha</label>
-                            <input type="text" class="loginInputBox">
+                            <input type="text" name="loginSenha" class="loginInputBox">
                         </div>
                         <div class="loginSenhaResetSection">
                             <a href="#" class="loginLink">
@@ -51,13 +51,9 @@
                             </a>
                         </div>
                         <div class="loginBtnSection">
-                            <a href="#">
-                                <div class="loginBtn flex">
-                                    Entrar
-                                </div>
-                            </a>
+                                <input type="submit" value="Entrar" class="loginBtn size11 flex">
                         </div>
-                    </div>
+                    </form>
                     <div class="loginCadSection">
                         Novo aqui? <a class="loginLink" href="#">Crie uma conta</a>
                     </div>

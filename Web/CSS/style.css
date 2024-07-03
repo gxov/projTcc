@@ -126,6 +126,11 @@
     width: 83.33333333%;
 }
 
+.size11 {
+    flex: 0 0 auto;
+    width: 91.6666666667%;
+}
+
 .size12 {
     flex: 0 0 auto;
     width: 100%;
