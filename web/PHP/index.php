@@ -9,6 +9,11 @@
     <link href="../CSS/styleComponentes.css" rel="stylesheet">
     <link href="../CSS/style.css" rel="stylesheet">
     <link rel="icon" href="../SRC/svg/logo.png" />
+    <?php
+    include_once ("administrator/utils/user/register.php");
+    include_once ("administrator/utils/user/login.php");
+    ?>
+
 </head>
 
 <body class="conteudo">
@@ -111,7 +116,7 @@
                                             d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8">
                                         </path>
                                     </svg>
-                                    Usuário
+                                    <?php echo $_SESSION['username']?>
                                 </div>
                                 <div
                                     class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">

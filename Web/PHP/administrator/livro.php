@@ -10,12 +10,10 @@
     <link href="../../CSS/style.css" rel="stylesheet">
     <link rel="icon" href="../../SRC/svg/logo.png" />
     <?php
-    $_GET["search"] = "";
     include_once ("utils/livro/read.php");
     include_once ("utils/livro/insert.php");
     include_once ("utils/livro/delete.php");
     include_once ("utils/livro/update.php");
-    
     ?>
 
 
@@ -108,14 +106,14 @@
                         <div class="userMenuDiv" id="userAccess" style="display: none;">
                             <div class="userMenuCont flex">
                                 <div class="userMenuItem userMenuAccess flexColumn alignCenter">
-                                    <svg class="userMenuPicture" data-v-5cba5096="" data-v-dd104bd2=""
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    <img class="userMenuPicture" data-v-5cba5096="" data-v-dd104bd2=""
+                                        xmlns="http://www.w3.org/2000/img" fill="none" viewBox="0 0 24 24"
                                         class="icon large text-icon-contrast text-undefined" id="avatar">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                             stroke-width="2"
                                             d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8">
                                         </path>
-                                    </svg>
+                                    </img>
                                     Usuário
                                 </div>
                                 <div
