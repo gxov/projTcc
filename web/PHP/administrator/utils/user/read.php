@@ -21,9 +21,9 @@ function select($table)
                 }
                 ;
 
-                if ($key == 'imagem') {
+                if ($key == 'foto') {
                     $items .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='http://localhost:8089/projTcc/Web/src/fotos/usuario/" . $dado . "'>" . $dado . " </a></div>";
-                } elseif ($key != 'senha') {
+                } elseif ($key != 'senha' and $key != 'dtnasc') {
                     $items .= "<div id='" . $key . "' class='tableValue'> " . $dado . " </div>";
                 }
             }
@@ -81,9 +81,9 @@ function selectFiltered($table)
                     $dado = 'false';
                 };
                 
-                if ($key == 'imagem') {
+                if ($key == 'foto') {
                     $filteredItems .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='http://localhost:8089/projtcc/web/src/fotos/usuario/" . $dado . "'>" . $dado . " </a></div>";
-                } elseif ($key != 'senha') {
+                } elseif ($key != 'senha' and $key != 'dtnasc') {
                     $filteredItems .= "<div id='" . $key . "' class='tableValue'> " . $dado . " </div>";
                 }
             };

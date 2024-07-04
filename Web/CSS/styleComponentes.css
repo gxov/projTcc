@@ -317,6 +317,7 @@
     justify-content: center;
     gap: 10px;
     font-size: 1.2rem;
+    text-align: center;
     background: linear-gradient(150deg,var(--corSecundaria) 0%, var(--bgTerciaria) 40%, var(--bgSecundaria) 80%);
 }
 

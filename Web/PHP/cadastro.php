@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div class="loginCadSection">
-                        Já tem uma conta? <a class="loginLink" href="#">Faça login</a>
+                        Já tem uma conta? <a class="loginLink" href="login.php">Faça login</a>
                     </div>
                 </div>
             </div>

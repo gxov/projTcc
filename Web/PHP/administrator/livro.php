@@ -58,7 +58,7 @@
                                 <img class="svgMenu" src="../../SRC/svg/menu.svg" />
                             </span>
                         </div>
-                        <a class="logoLink flex" href="../index.html">
+                        <a class="logoLink flex" href="../index.php">
                             <div class="logoSection flex">
                                 <svg class="logoSvgSection" width="60px" height="50px" viewBox="0 0 76.636292 60.752193"
                                     version="1.1" id="svg1" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"

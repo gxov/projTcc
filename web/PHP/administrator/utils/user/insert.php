@@ -14,10 +14,10 @@ if (isset($_POST['submit'])) {
 
   $filename = $_FILES["fotoUser"]["name"];
   $tempname = $_FILES["fotoUser"]["tmp_name"];
-  $folder = "C:/xampp/htdocs/projtcc/web/src/fotos/" . $filename;
+  $folder = "C:/xampp/htdocs/projtcc/web/src/fotos/usuario/" . $filename;
 
   $conn = connect();
-  $sql = "INSERT INTO tb_usuarios(nome, username, cpf, email, senha, tipo, foto, ativo) VALUES ('" . $nome . "', '" . $user . "', " . $cpf . ", '" . $email . "', '" . $senha . "', '" . $tipo . "', '" . $filename . "', true);";
+  $sql = "INSERT INTO tb_usuarios (nome, username, cpf, email, senha, tipo, foto, ativo) VALUES ('" . $nome . "', '" . $user . "', " . $cpf . ", '" . $email . "', '" . $senha . "', '" . $tipo . "', '" . $filename . "', true);";
 
 
   $tsql = $conn->prepare($sql);
