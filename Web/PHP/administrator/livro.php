@@ -58,7 +58,7 @@
                                 <img class="svgMenu" src="../../SRC/svg/menu.svg" />
                             </span>
                         </div>
-                        <a class="logoLink flex" href="../index.php">
+                        <a class="logoLink flex" href="index.php">
                             <div class="logoSection flex">
                                 <svg class="logoSvgSection" width="60px" height="50px" viewBox="0 0 76.636292 60.752193"
                                     version="1.1" id="svg1" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -89,99 +89,16 @@
                         </a>
                     </div>
                     <div class="size9 flex justifyContEnd">
-                    </div>
-                    <div class="size1 grid">
-                        <div class="acessoUser">
-                            <a onclick="openUserNav()">
-                                <svg class="acessoUserFoto" data-v-5cba5096="" data-v-dd104bd2=""
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    class="icon large text-icon-contrast text-undefined" id="avatar">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8">
-                                    </path>
-                                </svg>
+                        <div class="searchBarOut">
+                            <input type="text" class="searchBarIn">
+                            <a href="#" class="flex" style="position: absolute;">
+                                <img src="../../SRC/svg/search.svg" class="svgSearch" alt="lupa de pesquisa">
                             </a>
                         </div>
-                        <div class="userMenuDiv" id="userAccess" style="display: none;">
-                            <div class="userMenuCont flex">
-                                <div class="userMenuItem userMenuAccess flexColumn alignCenter">
-                                    <img class="userMenuPicture" data-v-5cba5096="" data-v-dd104bd2=""
-                                        xmlns="http://www.w3.org/2000/img" fill="none" viewBox="0 0 24 24"
-                                        class="icon large text-icon-contrast text-undefined" id="avatar">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8">
-                                    </path>
-                                    </img>
-                                    Usuário
-                                </div>
-                                <div
-                                    class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
-                                    <svg class="svgConfigAccess" data-v-9ba4cb7e="" data-v-8a0f6996=""
-                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" class="feather feather-book-open icon" viewBox="0 0 24 24"
-                                        style="color: currentcolor;">
-                                        <path
-                                            d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zm20 0h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z">
-                                        </path>
-                                    </svg>
-                                    Bibliotecas
-                                </div>
-                                <div
-                                    class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
-                                    <svg class="svgConfigAccess" data-v-9ba4cb7e="" data-v-8a0f6996=""
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon"
-                                        style="color: currentcolor;">
-                                        <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-width="2"
-                                            d="m3 21 5-5m-4-4 8 8c3-3 1-5 1-5l6-6h2l-6-6v2l-6 6s-2-2-5 1"></path>
-                                    </svg>
-                                    Histórico
-                                </div>
-                                <div
-                                    class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
-                                    <svg class="svgConfigAccess" data-v-9ba4cb7e="" data-v-8a0f6996=""
-                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                                        viewBox="0 0 24 24" class="icon" style="color: currentcolor;">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z">
-                                        </path>
-                                    </svg>
-                                    Seguindo
-                                </div>
-                                <div
-                                    class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
-                                    <svg class="svgConfigAccess" data-v-5cba5096="" data-v-62f4b649=""
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        class="icon text-icon-contrast text-undefined mr-3">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6"></path>
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 3.417 1.415 2 2 0 0 1-.587 1.415l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1">
-                                        </path>
-                                    </svg>
-                                    Configurações
-                                </div>
-                                <!-- <div class="userMenuItem">
-                                    <span onclick="mudarTema('Azul')">
-                                        <div style="background-color: #3fa0a4;">
-                                            c1
-                                        </div>
-                                    </span>
-                                </div>
-                                <div class="userMenuItem">
-                                    <span onclick="mudarTema('Laranja')">
-                                        <div style="background-color: #bc3131;">
-                                            c2
-                                        </div>
-                                    </span>
-                                </div> -->
-                            </div>
-                        </div>
                     </div>
+                    <?php
+                    include_once ("C:/xampp/htdocs/projtcc/web/PHP/components/usermenu.php");
+                    ?>
                 </div>
             </div>
         </div>
@@ -196,7 +113,6 @@
                             <input type="text" name="search" class="searchPageBarIn">
                             <input type="submit" value="" class="flex"
                                 style="background:none; border: none; position: absolute;">
-                            <img src="../../SRC/svg/search.svg" class="svgSearch" alt="lupa de pesquisa">
                             </input>
                         </form>
                     </div>
@@ -229,136 +145,135 @@
                         }
                         ?>
                     </div>
-                    <div class="size4">
-                        <div class="controlAcessButtons flex">
-                            <div id="adminCreateBtn" class="controlShowBtn controlShowBorder" style="z-index: 7;"
-                                onclick="controlShow('create')">
-                                criar
-                            </div>
-                            <div id="adminUpdateBtn" class="controlShowBtn controlShowBorder"
-                                style="z-index: 6; margin-left: -2px" onclick="controlShow('update')">
-                                atualizar
-                            </div>
-                            <div id="adminDeleteBtn" class="controlShowBtn controlShowBorder"
-                                style="z-index: 5; margin-left: -2px" onclick="controlShow('delete')">
-                                deletar
-                            </div>
+                </div>
+                <div class="size4">
+                    <div class="controlAcessButtons flex">
+                        <div id="adminCreateBtn" class="controlShowBtn controlShowBorder" style="z-index: 7;"
+                            onclick="controlShow('create')">
+                            criar
                         </div>
+                        <div id="adminUpdateBtn" class="controlShowBtn controlShowBorder"
+                            style="z-index: 6; margin-left: -2px" onclick="controlShow('update')">
+                            atualizar
+                        </div>
+                        <div id="adminDeleteBtn" class="controlShowBtn controlShowBorder"
+                            style="z-index: 5; margin-left: -2px" onclick="controlShow('delete')">
+                            deletar
+                        </div>
+                    </div>
 
 
-                        <div id="adminCreate" class="controlEditContainer controlBackgroundStart">
-                            <div class="controlTitulo">
-                                <t3>Criar</t3>
-                            </div>
-                            <form method="POST" enctype="multipart/form-data" action="" class="controlForm flexColumn">
-                                <div class="controlInputSection">
-                                    <label class="controlLabel" for="tituloLivro">Título:</label>
-                                    <input class="controlInput size12" type="text" name="tituloLivro" id="tituloLivro"
-                                        required>
-                                </div>
-                                <div class="controlInputSection">
-                                    <label class="controlLabel" for="descricaoLivro">Descrição</label>
-                                    <textarea class="controlInput size12" name="descricaoLivro" id="descricaoLivro"
-                                        required> </textarea>
-                                </div>
-                                <div class="controlInputSection flex">
-                                    <div class="size11 flexColumn">
-                                        <label class="controlLabel" for="capaLivro">Imagem da capa:</label>
-                                        <input class="controlInputTransparent size11" type="file" name="capaLivro"
-                                            id="capaLivro" required>
-                                        <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
-                                    </div>
-                                </div>
-                                <div class="controlInputSection flexColumn">
-                                    <div>
-                                        <input class="controlBtn" type="submit" name="submit" value="Criar">
-                                        <input class="controlBtn" type="reset" value="Limpar">
-                                    </div>
-                                </div>
-                            </form>
+                    <div id="adminCreate" class="controlEditContainer controlBackgroundStart">
+                        <div class="controlTitulo">
+                            <t3>Criar</t3>
                         </div>
-                        <div id="adminUpdate" style="display: none;"
-                            class="controlEditContainer controlBackgroundMiddle">
-                            <div class="controlTitulo">
-                                <t3>Atualizar</t3>
+                        <form method="POST" enctype="multipart/form-data" action="" class="controlForm flexColumn">
+                            <div class="controlInputSection">
+                                <label class="controlLabel" for="tituloLivro">Título:</label>
+                                <input class="controlInput size12" type="text" name="tituloLivro" id="tituloLivro"
+                                    required>
                             </div>
-                            <form method="POST" action="" class="controlForm flexColumn">
-                                <div class="controlInputSection flex">
-                                    <div class="size6">
-                                        <form method="GET">
-                                            <label class="controlLabel" for="codUpd">Código do livro:</label>
-                                            <input class="controlInput size10" type="text" name="codUpd">
-                                            <form>
+                            <div class="controlInputSection">
+                                <label class="controlLabel" for="descricaoLivro">Descrição</label>
+                                <textarea class="controlInput size12" name="descricaoLivro" id="descricaoLivro"
+                                    required> </textarea>
+                            </div>
+                            <div class="controlInputSection flex">
+                                <div class="size11 flexColumn">
+                                    <label class="controlLabel" for="capaLivro">Imagem da capa:</label>
+                                    <input class="controlInputTransparent size11" type="file" name="capaLivro"
+                                        id="capaLivro" required>
+                                    <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
+                                </div>
+                            </div>
+                            <div class="controlInputSection flexColumn">
+                                <div>
+                                    <input class="controlBtn" type="submit" name="submit" value="Criar">
+                                    <input class="controlBtn" type="reset" value="Limpar">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="adminUpdate" style="display: none;" class="controlEditContainer controlBackgroundMiddle">
+                        <div class="controlTitulo">
+                            <t3>Atualizar</t3>
+                        </div>
+                        <form method="POST" action="" class="controlForm flexColumn">
+                            <div class="controlInputSection flex">
+                                <div class="size6">
+                                    <form method="GET">
+                                        <label class="controlLabel" for="codUpd">Código do livro:</label>
+                                        <input class="controlInput size10" type="text" name="codUpd">
+                                        <form>
+                                </div>
+                            </div>
+
+                            <div class="controlInputSection">
+                                <label class="controlLabel" for="tituloUpd">Título:</label>
+                                <input class="controlInput size12" type="text" name="tituloUpd" id="tituloUpd" required>
+                            </div>
+                            <div class="controlInputSection">
+                                <label class="controlLabel" for="descricaoLivroUpd">Descrição</label>
+                                <textarea class="controlInput size12" name="descricaoLivroUpd" id="descricaoLivroUpd"
+                                    required> </textarea>
+                            </div>
+                            <div class="controlInputSection flex">
+                                <div class="size5 flexColumn">
+                                    <label class="controlLabel" for="ativoUpd">Ativo:</label>
+                                    <div class="flex">
+                                        Sim
+                                        <input class="controlRadio size10" type="radio" value="true" name="ativoUpd"
+                                            id="ativoUpd" required>
+                                    </div>
+                                    <div class="flex">
+                                        Não
+                                        <input class="controlRadio size10" type="radio" value="false" name="ativoUpd"
+                                            id="ativoUpd" required>
                                     </div>
                                 </div>
 
-                                <div class="controlInputSection">
-                                    <label class="controlLabel" for="tituloUpd">Título:</label>
-                                    <input class="controlInput size12" type="text" name="tituloUpd" id="tituloUpd"
-                                        required>
+                                <div class="size7 flexColumn">
+                                    <label class="controlLabel" for="capaUpd">Imagem da capa:</label>
+                                    <input class="controlInputTransparent size11" type="file" name="capaUpd"
+                                        id="capaUpd" required>
+                                    <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
                                 </div>
-                                <div class="controlInputSection">
-                                    <label class="controlLabel" for="descricaoLivroUpd">Descrição</label>
-                                    <textarea class="controlInput size12" name="descricaoLivroUpd"
-                                        id="descricaoLivroUpd" required> </textarea>
-                                </div>
-                                <div class="controlInputSection flex">
-                                    <div class="size5 flexColumn">
-                                        <label class="controlLabel" for="ativoUpd">Ativo:</label>
-                                        <div class="flex">
-                                            Sim
-                                            <input class="controlRadio size10" type="radio" value="true" name="ativoUpd"
-                                                id="ativoUpd" required>
-                                        </div>
-                                        <div class="flex">
-                                            Não
-                                            <input class="controlRadio size10" type="radio" value="false"
-                                                name="ativoUpd" id="ativoUpd" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="size7 flexColumn">
-                                        <label class="controlLabel" for="capaUpd">Imagem da capa:</label>
-                                        <input class="controlInputTransparent size11" type="file" name="capaUpd"
-                                            id="capaUpd" required>
-                                        <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
-                                    </div>
-                                </div>
-                                <div class="controlInputSection flexColumn">
-                                    <div>
-                                        <input class="controlBtn" type="submit" name="update" value="Atualizar">
-                                        <input class="controlBtn" type="reset" value="Limpar">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div id="adminDelete" style="display: none;" class="controlEditContainer controlBackgroundEnd">
-                            <div class="controlTitulo">
-                                <t3>Deletar</t3>
                             </div>
-                            <form method="POST" action="livro.php" class="controlForm flexColumn">
-                                <div class="controlInputSection flex">
-                                    <div class="size6">
-                                        <label class="controlLabel" for="codDelete">Código do livro:</label>
-                                        <input class="controlInput size10" type="text" name="codDelete">
-                                    </div>
+                            <div class="controlInputSection flexColumn">
+                                <div>
+                                    <input class="controlBtn" type="submit" name="update" value="Atualizar">
+                                    <input class="controlBtn" type="reset" value="Limpar">
                                 </div>
-                                <div class="controlInputSection flexColumn">
-                                    <div>
-                                        <input class="controlBtn" type="submit" name="delete" value="Deletar">
-                                        <input class="controlBtn" type="reset" value="Limpar">
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="adminDelete" style="display: none;" class="controlEditContainer controlBackgroundEnd">
+                        <div class="controlTitulo">
+                            <t3>Deletar</t3>
                         </div>
+                        <form method="POST" action="livro.php" class="controlForm flexColumn">
+                            <div class="controlInputSection flex">
+                                <div class="size6">
+                                    <label class="controlLabel" for="codDelete">Código do livro:</label>
+                                    <input class="controlInput size10" type="text" name="codDelete">
+                                </div>
+                            </div>
+                            <div class="controlInputSection flexColumn">
+                                <div>
+                                    <input class="controlBtn" type="submit" name="delete" value="Deletar">
+                                    <input class="controlBtn" type="reset" value="Limpar">
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-            <!-- rodapé
+        </div>
+        <!-- rodapé
         <div class="contSection">
             rodapé
         </div> -->
-        </div>
+    </div>
     </div>
     <script src="../../JS/interface.js"></script>
     <script src="../../JS/user.js"></script>

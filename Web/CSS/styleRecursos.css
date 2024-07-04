@@ -1,7 +1,7 @@
 :root {
     --navHeight: 3.5rem;
 
-    --corPrimaria: #ea4f36;
+    /* --corPrimaria: #ea4f36;
     --corSecundaria: #bc3131;
     --corSecundaria2: #bc31318e;
     --bgPrimaria: #090a14;
@@ -9,19 +9,19 @@
     --bgTerciaria: #243542;
     --bgLogin: #1d2230;
     --bgInput: #343a3b;
-    --bgHover: #1c2635;
+    --bgHover: #1c2635; */
     --font: #eff1f3; 
 
     
-    /* --corPrimaria: #3fa0a4;
+    --corPrimaria: #3fa0a4;
     --corSecundaria: #387497;
     --corSecundaria2: #3874978e;
     --bgPrimaria: #111418;
     --bgSecundaria: #181c1f;
     --bgTerciaria: #313c42;
     --bgLogin: #303b42;
-    --bgInput: #3f4649;
-    --bgHover: #24333b; */
+    --bgInput: #2d3538;
+    --bgHover: #0d161b;
 }
 
 @font-face {

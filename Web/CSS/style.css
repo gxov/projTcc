@@ -233,15 +233,15 @@ a:hover{
 }
 
 .controlBackgroundStart{
-    background: linear-gradient(150deg, rgba(188,49,49,1) 0%, rgba(16,20,31,1) 35%);
+    background: linear-gradient(150deg, var(--corSecundaria) 0%, var(--bgPrimaria) 35%);
 }
 
 .controlBackgroundMiddle{
-    background: linear-gradient(160deg, rgba(188,49,49,1) 0%, rgba(16,20,31,1) 40%);
+    background: linear-gradient(160deg, var(--corSecundaria) 0%, var(--bgPrimaria) 40%);
 }
 
 .controlBackgroundEnd{
-    background: linear-gradient(170deg, rgba(188,49,49,1) 0%, rgba(16,20,31,1) 45%);
+    background: linear-gradient(170deg, var(--corSecundaria) 0%, var(--bgPrimaria) 45%);
 }
 
 
@@ -258,6 +258,10 @@ a:hover{
     transition: .5s;
     color: var(--font);
     font-family: 'Gotham Book';
+}
+
+.controlInput:focus{
+    border: 2px solid var(--corSecundaria);
 }
 
 .controlInputTransparent{
