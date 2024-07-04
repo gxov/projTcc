@@ -109,10 +109,10 @@
                                     <img class="userMenuPicture" data-v-5cba5096="" data-v-dd104bd2=""
                                         xmlns="http://www.w3.org/2000/img" fill="none" viewBox="0 0 24 24"
                                         class="icon large text-icon-contrast text-undefined" id="avatar">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8">
-                                        </path>
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8">
+                                    </path>
                                     </img>
                                     Usuário
                                 </div>
@@ -229,133 +229,136 @@
                         }
                         ?>
                     </div>
-                </div>
-                <div class="size4">
-                    <div class="controlAcessButtons flex">
-                        <div id="adminCreateBtn" class="controlShowBtn controlShowBorder" style="z-index: 7;"
-                            onclick="controlShow('create')">
-                            criar
+                    <div class="size4">
+                        <div class="controlAcessButtons flex">
+                            <div id="adminCreateBtn" class="controlShowBtn controlShowBorder" style="z-index: 7;"
+                                onclick="controlShow('create')">
+                                criar
+                            </div>
+                            <div id="adminUpdateBtn" class="controlShowBtn controlShowBorder"
+                                style="z-index: 6; margin-left: -2px" onclick="controlShow('update')">
+                                atualizar
+                            </div>
+                            <div id="adminDeleteBtn" class="controlShowBtn controlShowBorder"
+                                style="z-index: 5; margin-left: -2px" onclick="controlShow('delete')">
+                                deletar
+                            </div>
                         </div>
-                        <div id="adminUpdateBtn" class="controlShowBtn controlShowBorder"
-                            style="z-index: 6; margin-left: -2px" onclick="controlShow('update')">
-                            atualizar
-                        </div>
-                        <div id="adminDeleteBtn" class="controlShowBtn controlShowBorder"
-                            style="z-index: 5; margin-left: -2px" onclick="controlShow('delete')">
-                            deletar
-                        </div>
-                    </div>
 
 
-                    <div id="adminCreate" class="controlEditContainer controlBackgroundStart">
-                        <div class="controlTitulo">
-                            <t3>Criar</t3>
+                        <div id="adminCreate" class="controlEditContainer controlBackgroundStart">
+                            <div class="controlTitulo">
+                                <t3>Criar</t3>
+                            </div>
+                            <form method="POST" enctype="multipart/form-data" action="" class="controlForm flexColumn">
+                                <div class="controlInputSection">
+                                    <label class="controlLabel" for="tituloLivro">Título:</label>
+                                    <input class="controlInput size12" type="text" name="tituloLivro" id="tituloLivro"
+                                        required>
+                                </div>
+                                <div class="controlInputSection">
+                                    <label class="controlLabel" for="descricaoLivro">Descrição</label>
+                                    <textarea class="controlInput size12" name="descricaoLivro" id="descricaoLivro"
+                                        required> </textarea>
+                                </div>
+                                <div class="controlInputSection flex">
+                                    <div class="size11 flexColumn">
+                                        <label class="controlLabel" for="capaLivro">Imagem da capa:</label>
+                                        <input class="controlInputTransparent size11" type="file" name="capaLivro"
+                                            id="capaLivro" required>
+                                        <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
+                                    </div>
+                                </div>
+                                <div class="controlInputSection flexColumn">
+                                    <div>
+                                        <input class="controlBtn" type="submit" name="submit" value="Criar">
+                                        <input class="controlBtn" type="reset" value="Limpar">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <form method="POST" enctype="multipart/form-data" action="" class="controlForm flexColumn">
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="tituloLivro">Título:</label>
-                                <input class="controlInput size12" type="text" name="tituloLivro" id="tituloLivro"
-                                    required>
+                        <div id="adminUpdate" style="display: none;"
+                            class="controlEditContainer controlBackgroundMiddle">
+                            <div class="controlTitulo">
+                                <t3>Atualizar</t3>
                             </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="descricaoLivro">Descrição</label>
-                                <textarea class="controlInput size12" name="descricaoLivro" id="descricaoLivro"
-                                    required> </textarea>
-                            </div>
-                            <div class="controlInputSection flex">
-                                <div class="size11 flexColumn">
-                                    <label class="controlLabel" for="capaLivro">Imagem da capa:</label>
-                                    <input class="controlInputTransparent size11" type="file" name="capaLivro"
-                                        id="capaLivro" required>
-                                    <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
-                                </div>
-                            </div>
-                            <div class="controlInputSection flexColumn">
-                                <div>
-                                    <input class="controlBtn" type="submit" name="submit" value="Criar">
-                                    <input class="controlBtn" type="reset" value="Limpar">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div id="adminUpdate" style="display: none;" class="controlEditContainer controlBackgroundMiddle">
-                        <div class="controlTitulo">
-                            <t3>Atualizar</t3>
-                        </div>
-                        <form method="POST" action="" class="controlForm flexColumn">
-                            <div class="controlInputSection flex">
-                                <div class="size6">
-                                    <form method="GET">
-                                        <label class="controlLabel" for="codUpd">Código do livro:</label>
-                                        <input class="controlInput size10" type="text" name="codUpd">
-                                        <form>
-                                </div>
-                            </div>
-
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="tituloUpd">Título:</label>
-                                <input class="controlInput size12" type="text" name="tituloUpd" id="tituloUpd"
-                                    required>
-                            </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="descricaoLivroUpd">Descrição</label>
-                                <textarea class="controlInput size12" name="descricaoLivroUpd" id="descricaoLivroUpd"
-                                    required> </textarea>
-                            </div>
-                            <div class="controlInputSection flex">
-                                <div class="size5 flexColumn">
-                                    <label class="controlLabel" for="ativoUpd">Ativo:</label>
-                                    <div class="flex">
-                                    Sim 
-                                    <input class="controlRadio size10" type="radio" value="true" name="ativoUpd" id="ativoUpd" required>
-                                    </div><div class="flex">
-                                    Não
-                                    <input class="controlRadio size10" type="radio" value="false" name="ativoUpd" id="ativoUpd" required>
+                            <form method="POST" action="" class="controlForm flexColumn">
+                                <div class="controlInputSection flex">
+                                    <div class="size6">
+                                        <form method="GET">
+                                            <label class="controlLabel" for="codUpd">Código do livro:</label>
+                                            <input class="controlInput size10" type="text" name="codUpd">
+                                            <form>
                                     </div>
                                 </div>
 
-                                <div class="size7 flexColumn">
-                                    <label class="controlLabel" for="capaUpd">Imagem da capa:</label>
-                                    <input class="controlInputTransparent size11" type="file" name="capaUpd"
-                                        id="capaUpd" required>
-                                    <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
+                                <div class="controlInputSection">
+                                    <label class="controlLabel" for="tituloUpd">Título:</label>
+                                    <input class="controlInput size12" type="text" name="tituloUpd" id="tituloUpd"
+                                        required>
                                 </div>
-                            </div>
-                            <div class="controlInputSection flexColumn">
-                                <div>
-                                    <input class="controlBtn" type="submit" name="update" value="Atualizar">
-                                    <input class="controlBtn" type="reset" value="Limpar">
+                                <div class="controlInputSection">
+                                    <label class="controlLabel" for="descricaoLivroUpd">Descrição</label>
+                                    <textarea class="controlInput size12" name="descricaoLivroUpd"
+                                        id="descricaoLivroUpd" required> </textarea>
                                 </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div id="adminDelete" style="display: none;" class="controlEditContainer controlBackgroundEnd">
-                        <div class="controlTitulo">
-                            <t3>Deletar</t3>
+                                <div class="controlInputSection flex">
+                                    <div class="size5 flexColumn">
+                                        <label class="controlLabel" for="ativoUpd">Ativo:</label>
+                                        <div class="flex">
+                                            Sim
+                                            <input class="controlRadio size10" type="radio" value="true" name="ativoUpd"
+                                                id="ativoUpd" required>
+                                        </div>
+                                        <div class="flex">
+                                            Não
+                                            <input class="controlRadio size10" type="radio" value="false"
+                                                name="ativoUpd" id="ativoUpd" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="size7 flexColumn">
+                                        <label class="controlLabel" for="capaUpd">Imagem da capa:</label>
+                                        <input class="controlInputTransparent size11" type="file" name="capaUpd"
+                                            id="capaUpd" required>
+                                        <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
+                                    </div>
+                                </div>
+                                <div class="controlInputSection flexColumn">
+                                    <div>
+                                        <input class="controlBtn" type="submit" name="update" value="Atualizar">
+                                        <input class="controlBtn" type="reset" value="Limpar">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <form method="POST" action="livro.php" class="controlForm flexColumn">
-                            <div class="controlInputSection flex">
-                                <div class="size6">
-                                    <label class="controlLabel" for="codDelete">Código do livro:</label>
-                                    <input class="controlInput size10" type="text" name="codDelete">
-                                </div>
+                        <div id="adminDelete" style="display: none;" class="controlEditContainer controlBackgroundEnd">
+                            <div class="controlTitulo">
+                                <t3>Deletar</t3>
                             </div>
-                            <div class="controlInputSection flexColumn">
-                                <div>
-                                    <input class="controlBtn" type="submit" name="delete" value="Deletar">
-                                    <input class="controlBtn" type="reset" value="Limpar">
+                            <form method="POST" action="livro.php" class="controlForm flexColumn">
+                                <div class="controlInputSection flex">
+                                    <div class="size6">
+                                        <label class="controlLabel" for="codDelete">Código do livro:</label>
+                                        <input class="controlInput size10" type="text" name="codDelete">
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                                <div class="controlInputSection flexColumn">
+                                    <div>
+                                        <input class="controlBtn" type="submit" name="delete" value="Deletar">
+                                        <input class="controlBtn" type="reset" value="Limpar">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- rodapé
+            <!-- rodapé
         <div class="contSection">
             rodapé
         </div> -->
-    </div>
+        </div>
     </div>
     <script src="../../JS/interface.js"></script>
     <script src="../../JS/user.js"></script>

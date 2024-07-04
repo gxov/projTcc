@@ -54,11 +54,9 @@
                             <input type="text" class="loginInputBox">
                         </div>
                         <div class="loginBtnSection">
-                            <a href="#">
-                                <div class="loginBtn flex">
-                                    Criar
-                                </div>
-                            </a>
+                            <div class="loginBtnSection">
+                                <input type="submit" value="" name="login" class="loginBtn size11 flex">
+                            </div>
                         </div>
                     </div>
                     <div class="loginCadSection">

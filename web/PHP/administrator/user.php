@@ -238,189 +238,193 @@
                         }
                         ?>
                     </div>
-                </div>
-                <div class="size4">
-                    <div class="controlAcessButtons flex">
-                        <div id="adminCreateBtn" class="controlShowBtn controlShowBorder" style="z-index: 7;"
-                            onclick="controlShow('create')">
-                            criar
+                    <div class="size4">
+                        <div class="controlAcessButtons flex">
+                            <div id="adminCreateBtn" class="controlShowBtn controlShowBorder" style="z-index: 7;"
+                                onclick="controlShow('create')">
+                                criar
+                            </div>
+                            <div id="adminUpdateBtn" class="controlShowBtn controlShowBorder"
+                                style="z-index: 6; margin-left: -2px" onclick="controlShow('update')">
+                                atualizar
+                            </div>
+                            <div id="adminDeleteBtn" class="controlShowBtn controlShowBorder"
+                                style="z-index: 5; margin-left: -2px" onclick="controlShow('delete')">
+                                deletar
+                            </div>
                         </div>
-                        <div id="adminUpdateBtn" class="controlShowBtn controlShowBorder"
-                            style="z-index: 6; margin-left: -2px" onclick="controlShow('update')">
-                            atualizar
-                        </div>
-                        <div id="adminDeleteBtn" class="controlShowBtn controlShowBorder"
-                            style="z-index: 5; margin-left: -2px" onclick="controlShow('delete')">
-                            deletar
-                        </div>
-                    </div>
-                    <div id="adminCreate" class="controlEditContainer controlBackgroundStart">
-                        <div class="controlTitulo">
-                            <t3>Criar</t3>
-                        </div>
-                        <form method="POST" enctype="multipart/form-data" action="" class="controlForm flexColumn">
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="nomeUser">Nome:</label>
-                                <input class="controlInput size12" type="text" name="nomeUser" id="nomeUser" required>
+                        <div id="adminCreate" class="controlEditContainer controlBackgroundStart">
+                            <div class="controlTitulo">
+                                <t3>Criar</t3>
                             </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="usernameUser">Username:</label>
-                                <input class="controlInput size12" type="text" name="usernameUser" id="usernameUser"
-                                    required>
-                            </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="cpfUser">CPF</label>
-                                <input class="controlInput size12" type="text" name="cpfUser" id="cpfUser" required>
-                            </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="emailUser">E-mail:</label>
-                                <input class="controlInput size12" type="text" name="emailUser" id="emailUser" required>
-                            </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="senhaUser">Senha:</label>
-                                <input class="controlInput size12" type="text" name="senhaUser" id="senhaUser" required>
-                            </div>
-                            <div class="controlInputSection flex">
-                                <div class="size7 flexColumn">
-                                    <label class="controlLabel" for="fotoUser">Foto de perfil:</label>
-                                    <input class="controlInputTransparent size11" type="file" name="fotoUser"
-                                        id="fotoUser" required>
+                            <form method="POST" enctype="multipart/form-data" action="" class="controlForm flexColumn">
+                                <div class="controlInputSection">
+                                    <label class="controlLabel" for="nomeUser">Nome:</label>
+                                    <input class="controlInput size12" type="text" name="nomeUser" id="nomeUser"
+                                        required>
                                 </div>
-                                <div class="size5 flexColumn">
-                                    <label class="controlLabel" for="tipoUser">Tipo:</label>
-                                    <div class="flex">
-                                        Administrador
-                                        <input class="controlRadio size10" type="radio" value="ADM" name="tipoUser"
-                                            id="tipoUser" required>
+                                <div class="controlInputSection">
+                                    <label class="controlLabel" for="usernameUser">Username:</label>
+                                    <input class="controlInput size12" type="text" name="usernameUser" id="usernameUser"
+                                        required>
+                                </div>
+                                <div class="controlInputSection">
+                                    <label class="controlLabel" for="cpfUser">CPF</label>
+                                    <input class="controlInput size12" type="text" name="cpfUser" id="cpfUser" required>
+                                </div>
+                                <div class="controlInputSection">
+                                    <label class="controlLabel" for="emailUser">E-mail:</label>
+                                    <input class="controlInput size12" type="text" name="emailUser" id="emailUser"
+                                        required>
+                                </div>
+                                <div class="controlInputSection">
+                                    <label class="controlLabel" for="senhaUser">Senha:</label>
+                                    <input class="controlInput size12" type="text" name="senhaUser" id="senhaUser"
+                                        required>
+                                </div>
+                                <div class="controlInputSection flex">
+                                    <div class="size7 flexColumn">
+                                        <label class="controlLabel" for="fotoUser">Foto de perfil:</label>
+                                        <input class="controlInputTransparent size11" type="file" name="fotoUser"
+                                            id="fotoUser" required>
                                     </div>
-                                    <div class="flex">
-                                        Usuário Verificado
-                                        <input class="controlRadio size10" type="radio" value="VER" name="tipoUser"
-                                            id="tipoUser" required>
-                                    </div>
-                                    <div class="flex">
-                                        Usuário Regular
-                                        <input class="controlRadio size10" type="radio" value="USR" name="tipoUser"
-                                            id="tipoUser" required>
+                                    <div class="size5 flexColumn">
+                                        <label class="controlLabel" for="tipoUser">Tipo:</label>
+                                        <div class="flex">
+                                            Administrador
+                                            <input class="controlRadio size10" type="radio" value="ADM" name="tipoUser"
+                                                id="tipoUser" required>
+                                        </div>
+                                        <div class="flex">
+                                            Usuário Verificado
+                                            <input class="controlRadio size10" type="radio" value="VER" name="tipoUser"
+                                                id="tipoUser" required>
+                                        </div>
+                                        <div class="flex">
+                                            Usuário Regular
+                                            <input class="controlRadio size10" type="radio" value="USR" name="tipoUser"
+                                                id="tipoUser" required>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="controlInputSection flexColumn">
-                                <div>
-                                    <input class="controlBtn" type="submit" name="submit" value="Criar">
-                                    <input class="controlBtn" type="reset" value="Limpar">
+                                <div class="controlInputSection flexColumn">
+                                    <div>
+                                        <input class="controlBtn" type="submit" name="submit" value="Criar">
+                                        <input class="controlBtn" type="reset" value="Limpar">
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div id="adminUpdate" style="display: none;" class="controlEditContainer controlBackgroundMiddle">
-                        <div class="controlTitulo">
-                            <t3>Atualizar</t3>
+                            </form>
                         </div>
-                        <form method="POST" enctype="multipart/form-data" action="" class="controlForm flexColumn">
-                            <div class="controlInputSection flex">
-                                <div class="size6">
-                                    <form method="GET">
-                                        <label class="controlLabel" for="codUpd">Código do Usuário:</label>
-                                        <input class="controlInput size10" type="text" name="codUpd">
-                                        <form>
-                                </div>
+                        <div id="adminUpdate" style="display: none;"
+                            class="controlEditContainer controlBackgroundMiddle">
+                            <div class="controlTitulo">
+                                <t3>Atualizar</t3>
                             </div>
+                            <form method="POST" enctype="multipart/form-data" action="" class="controlForm flexColumn">
+                                <div class="controlInputSection flex">
+                                    <div class="size6">
+                                        <form method="GET">
+                                            <label class="controlLabel" for="codUpd">Código do Usuário:</label>
+                                            <input class="controlInput size10" type="text" name="codUpd">
+                                            <form>
+                                    </div>
+                                </div>
 
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="nomeUpd">Nome:</label>
-                                <input class="controlInput size12" type="text" name="nomeUpd" id="nomeUpd" required>
-                            </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="usernameUpd">Username:</label>
-                                <input class="controlInput size12" type="text" name="usernameUpd" id="usernameUpd"
-                                    required>
-                            </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="cpfUpd">CPF:</label>
-                                <input class="controlInput size12" type="text" name="cpfUpd" id="cpfUpd" required>
-                            </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="emailUpd">E-mail:</label>
-                                <input class="controlInput size12" type="text" name="emailUpd" id="emailUpd" required>
-                            </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="senhaUpd">senha:</label>
-                                <input class="controlInput size12" type="password" name="senhaUpd" id="senhaUpd"
-                                    required>
-                            </div>
-                            <div class="controlInputSection flex">
-                                <div class="size5 flexColumn">
-                                    <label class="controlLabel" for="ativoUpd">Ativo:</label>
-                                    <div class="flex">
-                                        Sim
-                                        <input class="controlRadio size10" type="radio" value="true" name="ativoUpd"
-                                            id="ativoUpd" required>
+                                <div class="controlInputSection">
+                                    <label class="controlLabel" for="nomeUpd">Nome:</label>
+                                    <input class="controlInput size12" type="text" name="nomeUpd" id="nomeUpd" required>
+                                </div>
+                                <div class="controlInputSection">
+                                    <label class="controlLabel" for="usernameUpd">Username:</label>
+                                    <input class="controlInput size12" type="text" name="usernameUpd" id="usernameUpd"
+                                        required>
+                                </div>
+                                <div class="controlInputSection">
+                                    <label class="controlLabel" for="cpfUpd">CPF:</label>
+                                    <input class="controlInput size12" type="text" name="cpfUpd" id="cpfUpd" required>
+                                </div>
+                                <div class="controlInputSection">
+                                    <label class="controlLabel" for="emailUpd">E-mail:</label>
+                                    <input class="controlInput size12" type="text" name="emailUpd" id="emailUpd"
+                                        required>
+                                </div>
+                                <div class="controlInputSection">
+                                    <label class="controlLabel" for="senhaUpd">senha:</label>
+                                    <input class="controlInput size12" type="password" name="senhaUpd" id="senhaUpd"
+                                        required>
+                                </div>
+                                <div class="controlInputSection flex">
+                                    <div class="size5 flexColumn">
+                                        <label class="controlLabel" for="ativoUpd">Ativo:</label>
+                                        <div class="flex">
+                                            Sim
+                                            <input class="controlRadio size10" type="radio" value="true" name="ativoUpd"
+                                                id="ativoUpd" required>
+                                        </div>
+                                        <div class="flex">
+                                            Não
+                                            <input class="controlRadio size10" type="radio" value="false"
+                                                name="ativoUpd" id="ativoUpd" required>
+                                        </div>
                                     </div>
-                                    <div class="flex">
-                                        Não
-                                        <input class="controlRadio size10" type="radio" value="false" name="ativoUpd"
-                                            id="ativoUpd" required>
+                                    <div class="size5 flexColumn">
+                                        <label class="controlLabel" for="tipoUpd">Tipo:</label>
+                                        <div class="flex">
+                                            Administrador
+                                            <input class="controlRadio size10" type="radio" value="ADM" name="tipoUpd"
+                                                id="tipoUpd" required>
+                                        </div>
+                                        <div class="flex">
+                                            Usuário Verificado
+                                            <input class="controlRadio size10" type="radio" value="VER" name="tipoUpd"
+                                                id="tipoUpd" required>
+                                        </div>
+                                        <div class="flex">
+                                            Usuário Regular
+                                            <input class="controlRadio size10" type="radio" value="USR" name="tipoUpd"
+                                                id="tipoUpd" required>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="size5 flexColumn">
-                                    <label class="controlLabel" for="tipoUpd">Tipo:</label>
-                                    <div class="flex">
-                                        Administrador
-                                        <input class="controlRadio size10" type="radio" value="ADM" name="tipoUpd"
-                                            id="tipoUpd" required>
-                                    </div>
-                                    <div class="flex">
-                                        Usuário Verificado
-                                        <input class="controlRadio size10" type="radio" value="VER" name="tipoUpd"
-                                            id="tipoUpd" required>
-                                    </div>
-                                    <div class="flex">
-                                        Usuário Regular
-                                        <input class="controlRadio size10" type="radio" value="USR" name="tipoUpd"
-                                            id="tipoUpd" required>
+                                <div class="controlInputSection flex">
+                                    <div class="size7 flexColumn">
+                                        <label class="controlLabel" for="fotoUserUpd">Foto de perfil:</label>
+                                        <input class="controlInputTransparent size11" type="file" name="fotoUserUpd"
+                                            id="fotoUserUpd" required>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="controlInputSection flex">
-                                <div class="size7 flexColumn">
-                                    <label class="controlLabel" for="fotoUserUpd">Foto de perfil:</label>
-                                    <input class="controlInputTransparent size11" type="file" name="fotoUserUpd"
-                                        id="fotoUserUpd" required>
+                                <div class="controlInputSection flexColumn">
+                                    <div>
+                                        <input class="controlBtn" type="submit" name="update" value="Atualizar">
+                                        <input class="controlBtn" type="reset" value="Limpar">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="controlInputSection flexColumn">
-                                <div>
-                                    <input class="controlBtn" type="submit" name="update" value="Atualizar">
-                                    <input class="controlBtn" type="reset" value="Limpar">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div id="adminDelete" style="display: none;" class="controlEditContainer controlBackgroundEnd">
-                        <div class="controlTitulo">
-                            <t3>Deletar</t3>
+                            </form>
                         </div>
-                        <form method="POST" action="" class="controlForm flexColumn">
-                            <div class="controlInputSection flex">
-                                <div class="size6">
-                                    <label class="controlLabel" for="codDelete">Código do livro:</label>
-                                    <input class="controlInput size10" type="text" name="codDelete">
-                                </div>
+                        <div id="adminDelete" style="display: none;" class="controlEditContainer controlBackgroundEnd">
+                            <div class="controlTitulo">
+                                <t3>Deletar</t3>
                             </div>
-                            <div class="controlInputSection flexColumn">
-                                <div>
-                                    <input class="controlBtn" type="submit" name="delete" value="Deletar">
-                                    <input class="controlBtn" type="reset" value="Limpar">
+                            <form method="POST" action="" class="controlForm flexColumn">
+                                <div class="controlInputSection flex">
+                                    <div class="size6">
+                                        <label class="controlLabel" for="codDelete">Código do livro:</label>
+                                        <input class="controlInput size10" type="text" name="codDelete">
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                                <div class="controlInputSection flexColumn">
+                                    <div>
+                                        <input class="controlBtn" type="submit" name="delete" value="Deletar">
+                                        <input class="controlBtn" type="reset" value="Limpar">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- rodapé
+        <!-- rodapé
         <div class="contSection">
             rodapé
         </div> -->
