@@ -60,6 +60,8 @@ echo '
             </svg>
             Configurações
         </div>
+        <div class="user">
+        </div>
     </div>
 </div>';
     }} else {

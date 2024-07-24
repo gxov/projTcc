@@ -9,6 +9,7 @@
     <link href="../CSS/styleComponentes.css" rel="stylesheet">
     <link href="../CSS/style.css" rel="stylesheet">
     <link rel="icon" href="../SRC/svg/logo.png" />
+    <?php include_once ("administrator/utils/user/register.php") ?>
 </head>
 
 <body class="conteudo">
@@ -51,11 +52,12 @@
                             </a>
                         </div>
                         <div class="loginBtnSection">
-                                <input type="submit" value="Entrar" name="login" class="loginBtn size11 flex">
+                            <input type="submit" value="Entrar" name="login" class="loginBtn size11 flex">
                         </div>
                     </form>
-                    <div class="loginCadSection">
-                        Novo aqui? <a class="loginLink" href="#">Crie uma conta</a>
+                    <div class="loginCadSection flexColumn textAlignCenter">
+                        <div>Novo aqui? <a class="loginLink" href="cadastro.php">Crie uma conta</a> </div>
+                        <div><a href="index.php">Voltar para a tela inicial</a></div>
                     </div>
                 </div>
             </div>

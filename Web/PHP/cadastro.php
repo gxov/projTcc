@@ -34,33 +34,32 @@
             <div class="contSection contMain" style="background: none ;justify-content: center;">
                 <div class="size5 loginSectionBorder">
                     <div class="size12 loginSection grid">
-                        <div class="loginTitle justifySlfCent">
-                            Crie sua conta
-                        </div>
-                        <div class="loginInputSection flexColumn">
-                            <label for="user">Nome de Usuário</label>
-                            <input type="text" class="loginInputBox">
-                        </div>
-                        <div class="loginInputSection flexColumn">
-                            <label for="email">E-mail</label>
-                            <input type="text" class="loginInputBox">
-                        </div>
-                        <div class="loginInputSection flexColumn">
-                            <label for="senha">Senha</label>
-                            <input type="text" class="loginInputBox">
-                        </div>
-                        <div class="loginInputSection flexColumn">
-                            <label for="senha">Confirme sua senha</label>
-                            <input type="text" class="loginInputBox">
-                        </div>
-                        <div class="loginBtnSection">
-                            <div class="loginBtnSection">
-                                <input type="submit" value="" name="login" class="loginBtn size11 flex">
+                        <form action="login.php" method="POST" class="size12 loginSection grid">
+                            <div class="loginTitle justifySlfCent">
+                                Crie sua conta
                             </div>
-                        </div>
+                            <div class="loginInputSection flexColumn">
+                                <label for="registerUsername">Nome de Usuário</label>
+                                <input type="text" name="registerUsername" class="loginInputBox">
+                            </div>
+                            <div class="loginInputSection flexColumn">
+                                <label for="email">E-mail</label>
+                                <input type="text" name="registerEmail" class="loginInputBox">
+                            </div>
+                            <div class="loginInputSection flexColumn">
+                                <label for="senha">Senha</label>
+                                <input type="text" name="registerPassword" class="loginInputBox">
+                            </div>
+                            <div class="loginBtnSection">
+                                <div class="loginBtnSection">
+                                    <input type="submit" value="Criar conta" name="register" class="loginBtn size11 flex">
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="loginCadSection">
-                        Já tem uma conta? <a class="loginLink" href="login.php">Faça login</a>
+                    <div class="loginCadSection flexColumn textAlignCenter">
+                        <div>Já tem uma conta? <a class="loginLink" href="login.php">Faça login</a> </div>
+                        <div><a href="index.php">Voltar para a tela inicial</a></div>
                     </div>
                 </div>
             </div>

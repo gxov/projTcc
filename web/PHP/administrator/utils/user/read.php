@@ -1,6 +1,5 @@
 <?php
 include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
-
 function select($table)
 {
     $conn = connect();
@@ -12,7 +11,7 @@ function select($table)
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
 
-            $items .= "<div class='tableBookRow'>";
+            $items .= "<div class='tableBookRow tableUserSpacing'>";
             foreach ($row as $key => $dado) {
                 if ($key == 'ativo' && $dado == '1') {
                     $dado = 'sim';
@@ -21,8 +20,8 @@ function select($table)
                 }
                 ;
 
-                if ($key == 'foto') {
-                    $items .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='http://localhost:8089/projTcc/Web/src/fotos/usuario/" . $dado . "'>" . $dado . " </a></div>";
+                if ($key == 'imagem') {
+                    $items .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='http://localhost/projTcc/Web/src/fotos/usuario/" . $dado . "'>" . $dado . " </a></div>";
                 } elseif ($key != 'senha' and $key != 'dtnasc') {
                     $items .= "<div id='" . $key . "' class='tableValue'> " . $dado . " </div>";
                 }
@@ -32,9 +31,6 @@ function select($table)
         }
         ;
     } else {
-        $items .= "<div class='tableBookRow'>";
-        $items = "<div><div class='tableValue'> NULL </div><div class='tableValue'> NULL </div><div class='tableValue'> NULL </div></div>";
-        $items .= "</div>";
     }
     ;
 
@@ -61,7 +57,7 @@ function selectFiltered($table)
         $tsql->execute();
         $result = $tsql->get_result();
     } else {
-        $sql = 'SELECT * FROM ' . $table . ' WHERE nome LIKE ' . "'%" . $filteredValue . "%' OR cod LIKE " . "'%" . $filteredValue . "%';";
+        $sql = 'SELECT * FROM ' . $table . " WHERE nome LIKE '%" . $filteredValue . "%' OR cod LIKE '%" . $filteredValue . "%' OR username LIKE '%" . $filteredValue . "%';";
 
         $tsql = $conn->prepare($sql);
         $tsql->execute();
@@ -73,7 +69,7 @@ function selectFiltered($table)
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            $filteredItems .= "<div class='tableBookRow'>";
+            $filteredItems .= "<div class='tableBookRow tableUserSpacing'>";
             foreach ($row as $key => $dado) {
                 if ($key == 'ativo' && $dado == '1') {
                     $dado = 'true';
@@ -81,8 +77,8 @@ function selectFiltered($table)
                     $dado = 'false';
                 };
                 
-                if ($key == 'foto') {
-                    $filteredItems .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='http://localhost:8089/projtcc/web/src/fotos/usuario/" . $dado . "'>" . $dado . " </a></div>";
+                if ($key == 'imagem') {
+                    $filteredItems .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='http://localhost/projtcc/web/src/fotos/usuario/" . $dado . "'>" . $dado . " </a></div>";
                 } elseif ($key != 'senha' and $key != 'dtnasc') {
                     $filteredItems .= "<div id='" . $key . "' class='tableValue'> " . $dado . " </div>";
                 }
@@ -90,14 +86,6 @@ function selectFiltered($table)
             $filteredItems .= "</div>";
         };
     } else {
-        $filteredItems .= "<div class='tableBookRow'>";
-        $filteredItems .= "
-            <div class='tableValue'> NULL </div>
-            <div class='tableValue'> NULL </div>
-            <div class='tableValue'> NULL </div>
-            <div class='tableValue'> NULL </div>
-            <div class='tableValue'> NULL </div>";
-        $filteredItems .= "</div>";
     }
     ;
 

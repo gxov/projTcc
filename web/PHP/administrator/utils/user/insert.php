@@ -12,12 +12,12 @@ if (isset($_POST['submit'])) {
   $senha = $_POST["senhaUser"];
   $tipo = $_POST["tipoUser"];
 
-  $filename = $_FILES["fotoUser"]["name"];
-  $tempname = $_FILES["fotoUser"]["tmp_name"];
+  $filename = $_FILES["imagemUser"]["name"];
+  $tempname = $_FILES["imagemUser"]["tmp_name"];
   $folder = "C:/xampp/htdocs/projtcc/web/src/fotos/usuario/" . $filename;
 
   $conn = connect();
-  $sql = "INSERT INTO tb_usuarios (nome, username, cpf, email, senha, tipo, foto, ativo) VALUES ('" . $nome . "', '" . $user . "', " . $cpf . ", '" . $email . "', '" . $senha . "', '" . $tipo . "', '" . $filename . "', true);";
+  $sql = "INSERT INTO tb_usuarios (nome, username, cpf, email, senha, tipo, imagem, ativo) VALUES ('" . $nome . "', '" . $user . "', " . $cpf . ", '" . $email . "', '" . $senha . "', '" . $tipo . "', '" . $filename . "', true);";
 
 
   $tsql = $conn->prepare($sql);

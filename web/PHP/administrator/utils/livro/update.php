@@ -10,10 +10,8 @@ if (isset($_POST['update'])) {
   $ativo = $_POST["ativoUpd"];
   $desc = $_POST["descricaoLivroUpd"];
 
-  echo $_FILES;
-
-  $filename = $_FILES["capaUpd"]["name"];
-  $tempname = $_FILES["capaUpd"]["tmp_name"];
+  $filename = $_FILES["capaLivroUpd"]["name"];
+  $tempname = $_FILES["capaLivroUpd"]["tmp_name"];
 
 
   $folder = "C:/xampp/htdocs/projtcc/web/src/capas/" . $filename;

@@ -2,6 +2,7 @@
 include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
 
 if (isset($_POST['register'])) {
+    $conn = connect();
     $username = $_POST['registerUsername'];
     $email = $_POST['registerEmail'];
     $password = password_hash($_POST['registerPassword'], PASSWORD_DEFAULT);

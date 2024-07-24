@@ -4,10 +4,10 @@ include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php")
 session_start();
 
 if (isset($_POST['login'])) {
+    $conn = connect();
     $value = $_POST['loginValue'];
     $password = $_POST['loginPassword'];
-    $conn = connect();
-
+    
     $sql = "SELECT cod, username, senha FROM tb_usuarios WHERE username = ? OR email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ss", $value, $value);
@@ -18,13 +18,10 @@ if (isset($_POST['login'])) {
         $stmt->bind_result($id, $username, $hashed_password);
         $stmt->fetch();
 
-        if ($hashed_password = $password) {
+        if (password_verify($password, $hashed_password)) {
             $_SESSION['username'] = $username;
         } else {
         }
     } else {
     }
-
-    $stmt->close();
-    $conn->close();
 }

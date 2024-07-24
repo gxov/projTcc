@@ -27,6 +27,10 @@
     align-items: center !important;
 }
 
+.textAlignCenter {
+    text-align: center !important;
+}
+
 .alignSlfEnd{
     align-self: flex-end;
 }
@@ -132,7 +136,7 @@
 }
 
 .size12 {
-    flex: 0 0 auto;
+    flex: 0 0 auto; 
     width: 100%;
 }
 
@@ -174,7 +178,6 @@ a:hover{
     margin-bottom: 5px;
     display: grid;
     width: 100%;
-    grid-template-columns: 5% 20% 15% 15% 20% 10% 5% 10%;
     background-color: var(--bgSecundaria);
     font-size: 1.1rem;
     border: 2px solid var(--bgTerciaria);
@@ -184,10 +187,17 @@ a:hover{
     padding: 5px;
 }
 
+.tableUserSpacing{
+    grid-template-columns: 5% 20% 15% 15% 20% 10% 5% 10%;
+}
+
+.tableBookSpacing{
+    grid-template-columns: 10% 15% 40% 15% 15% ;
+}
+
 .tableBookRow{
     display: grid;
     width: 100%;
-    grid-template-columns: 5% 20% 15% 15% 20% 10% 5% 10%;
     background-color: var(--bgSecundaria);
     font-size: 0.9rem;
     border: 1px solid var(--bgTerciaria);
@@ -233,15 +243,15 @@ a:hover{
 }
 
 .controlBackgroundStart{
-    background: linear-gradient(150deg, rgba(188,49,49,1) 0%, rgba(16,20,31,1) 35%);
+    background: linear-gradient(150deg, var(--corSecundaria) 0%, var(--bgPrimaria) 35%);
 }
 
 .controlBackgroundMiddle{
-    background: linear-gradient(160deg, rgba(188,49,49,1) 0%, rgba(16,20,31,1) 40%);
+    background: linear-gradient(160deg, var(--corSecundaria) 0%, var(--bgPrimaria) 40%);
 }
 
 .controlBackgroundEnd{
-    background: linear-gradient(170deg, rgba(188,49,49,1) 0%, rgba(16,20,31,1) 45%);
+    background: linear-gradient(170deg, var(--corSecundaria) 0%, var(--bgPrimaria) 45%);
 }
 
 
@@ -258,6 +268,10 @@ a:hover{
     transition: .5s;
     color: var(--font);
     font-family: 'Gotham Book';
+}
+
+.controlInput:focus{
+    border: 2px solid var(--corSecundaria);
 }
 
 .controlInputTransparent{
@@ -318,6 +332,16 @@ a:hover{
 
 .controlRadio{
     width: min-content;
+}
+
+.logoutBtn{
+    background-color: var(--corSecundaria);
+    color: var(--font);
+    font-size: 1.4rem;
+    padding: 6px 20px;
+    font-family: 'Gotham Bold';
+    border: none;
+    border-radius: 15px;
 }
 
 t3{

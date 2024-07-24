@@ -12,7 +12,7 @@ function select($table)
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
 
-            $items .= "<div class='tableBookRow'>";
+            $items .= "<div class='tableBookRow tableBookSpacing'>";
             foreach ($row as $key => $dado) {
                 if ($key == 'ativo' && $dado == '1') {
                     $dado = 'sim';
@@ -32,9 +32,6 @@ function select($table)
         }
         ;
     } else {
-        $items .= "<div class='tableBookRow'>";
-        $items = "<div><div class='tableValue'> NULL </div><div class='tableValue'> NULL </div><div class='tableValue'> NULL </div></div>";
-        $items .= "</div>";
     }
     ;
 
@@ -73,7 +70,7 @@ function selectFiltered($table)
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            $filteredItems .= "<div class='tableBookRow'>";
+            $filteredItems .= "<div class='tableBookRow tableBookSpacing'>";
             foreach ($row as $key => $dado) {
                 if ($key == 'ativo' && $dado == '1') {
                     $dado = 'true';
@@ -83,7 +80,7 @@ function selectFiltered($table)
                 ;
 
                 if ($key == 'imagem') {
-                    $filteredItems .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='http://localhost:8089/projtcc/web/src/capas/" . $dado . "'>" . $dado . " </a></div>";
+                    $filteredItems .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='http://localhost  /projtcc/web/src/capas/" . $dado . "'>" . $dado . " </a></div>";
                 } else {
                     $filteredItems .= "<div id='" . $key . "' class='tableValue'> " . $dado . " </div>";
                 }
@@ -93,14 +90,7 @@ function selectFiltered($table)
         }
         ;
     } else {
-        $filteredItems .= "<div class='tableBookRow'>";
-        $filteredItems .= "
-            <div class='tableValue'> NULL </div>
-            <div class='tableValue'> NULL </div>
-            <div class='tableValue'> NULL </div>
-            <div class='tableValue'> NULL </div>
-            <div class='tableValue'> NULL </div>";
-        $filteredItems .= "</div>";
+        
     }
     ;
 
