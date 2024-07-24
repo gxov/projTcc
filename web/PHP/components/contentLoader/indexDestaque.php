@@ -23,7 +23,7 @@ if ($stmtW->num_rows > 0) {
     $stmtW->bind_result($id, $title, $desc, $img);
     while ($row = $stmtW->fetch()) {
         $items .= '
-        <div class="sectionCardRow flex size12">
+        <div class="sectionCardRow flex size11">
         <div class="sectionCardColumnCapa">
             <img class="sectionCardColumnImg" src="../SRC/capas/' . $img . '">
         </div>
@@ -31,6 +31,9 @@ if ($stmtW->num_rows > 0) {
             <div class="sectionCardRowTitulo"><a href="produto.php?id=' . $id . '">
                     ' . $title . '
                 </a></div>
+            <div class="sectionCardAuthor">
+            Nome do autor
+            </div>
             <div class="sectionCardRowCategories">
             <div class="sectionCardRowBadge">
                         Categoria
@@ -66,7 +69,7 @@ if ($stmtM->num_rows > 0) {
     $stmtM->bind_result($id, $title, $desc, $img);
     while ($row = $stmtM->fetch()) {
         $items .= '
-        <div class="sectionCardRow flex size12">
+        <div class="sectionCardRow flex size11">
         <div class="sectionCardColumnCapa">
             <img class="sectionCardColumnImg" src="../SRC/capas/' . $img . '">
         </div>
@@ -74,6 +77,9 @@ if ($stmtM->num_rows > 0) {
             <div class="sectionCardRowTitulo"><a href="produto.php?id=' . $id . '">
                     ' . $title . '
                 </a></div>
+                <div class="sectionCardAuthor">
+            Nome do autor
+            </div>
             <div class="sectionCardRowCategories">
             <div class="sectionCardRowBadge">
                         Categoria

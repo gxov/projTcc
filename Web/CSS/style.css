@@ -71,6 +71,10 @@
     margin-left: calc(-.5 * var(--paddingX))
 }
 
+.widthMax{
+    width: max-content;
+}
+
 .pZero {
     padding: 0 !important;
 }

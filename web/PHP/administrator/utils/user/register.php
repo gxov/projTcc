@@ -5,7 +5,7 @@ if (isset($_POST['register'])) {
     $conn = connect();
     $username = $_POST['registerUsername'];
     $email = $_POST['registerEmail'];
-    $password = password_hash($_POST['registerPassword'], PASSWORD_DEFAULT);
+    $password = md5($_POST['registerPassword']);
 
     $sql = "INSERT INTO tb_usuarios 
     (username, email, senha, ativo, tipo) 

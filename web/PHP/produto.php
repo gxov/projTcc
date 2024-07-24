@@ -107,7 +107,13 @@
         <!-- conteúdo -->
         <div class="contFluid" style="margin-top: -8%;">
             <div class="contMainBorder contSection">
-                <div class="size5 pZero grid">
+
+                    <?php
+                    if ($_GET['id']) {
+                        include_once ("components/contentLoader/produtoInfo.php");
+                    } else {
+                        echo '
+                        <div class="size5 pZero grid">
                     <img class="livroCapa" src="../SRC/capas/capa.jpg">
                 </div>
                 <div class="size7 livroInfoMain">
@@ -115,6 +121,7 @@
                         <div class="livroTitulo">
                             O Mundo Como Idéia
                         </div>
+                        <div class="flexColumn widthMax">
                         <div class="livroUserInfo">
                             <div class="livroAvaliacaoSection">
                                 <svg data-v-4c681a64="" xmlns="http://www.w3.org/2000/svg" stroke="currentColor"
@@ -137,6 +144,7 @@
                         </div>
                         <div class="livroAutor">
                             Bruno Tolentino
+                        </div>
                         </div>
                     </div>
                     <div class="contSection borderBottom">
@@ -173,19 +181,22 @@
                         Essa coletânea percorre toda a tradição artística ocidental posterior ao século XV, poeticamente
                         dramatizando temas como a razão com poesia erudita.
                     </div>
-                </div>
-                <div class="size12 livroContent">
-                </div>
-            </div>
+                </div> 
+                                </div>';
+                    }
+                    ;
+                    ?>
+                    <div class="size12 livroContent">
+                    </div>
 
-            <!-- rodapé -->
-            <!-- <div class="contSection">
+                <!-- rodapé -->
+                <!-- <div class="contSection">
                 rodapé
             </div> -->
+            </div>
         </div>
-    </div>
-    <script src="../JS/interface.js"></script>
-    <script src="../JS/user.js"></script>
+        <script src="../JS/interface.js"></script>
+        <script src="../JS/user.js"></script>
 </body>
 
 </html>

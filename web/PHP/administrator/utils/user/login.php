@@ -6,7 +6,7 @@ session_start();
 if (isset($_POST['login'])) {
     $conn = connect();
     $value = $_POST['loginValue'];
-    $password = $_POST['loginPassword'];
+    $password = md5($_POST['loginPassword']);
     
     $sql = "SELECT cod, username, senha FROM tb_usuarios WHERE username = ? OR email = ?";
     $stmt = $conn->prepare($sql);
@@ -18,9 +18,10 @@ if (isset($_POST['login'])) {
         $stmt->bind_result($id, $username, $hashed_password);
         $stmt->fetch();
 
-        if (password_verify($password, $hashed_password)) {
+        if ($password == $hashed_password) {
             $_SESSION['username'] = $username;
         } else {
+            header("location: login.php");
         }
     } else {
     }
