@@ -338,14 +338,20 @@ a:hover{
     width: min-content;
 }
 
+.logoutBtn:hover{
+    cursor: pointer;
+    color: var(--corPrimaria);
+}
+
 .logoutBtn{
-    background-color: var(--corSecundaria);
     color: var(--font);
-    font-size: 1.4rem;
-    padding: 6px 20px;
-    font-family: 'Gotham Bold';
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: transparent;
+    font-family: 'Gotham Medium';
     border: none;
-    border-radius: 15px;
+    transition: 0.2s;
 }
 
 t3{

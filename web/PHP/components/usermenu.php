@@ -2,6 +2,7 @@
 include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
 
 if (isset($_SESSION['username'])) {
+
     $conn = connect();
     $sql = "SELECT imagem FROM tb_usuarios WHERE username = '" . $_SESSION['username'] . "'";
     $result = $conn->prepare($sql);
@@ -11,7 +12,6 @@ if (isset($_SESSION['username'])) {
     if ($result->num_rows > 0) {
         $result->bind_result($image);
         $result->fetch();
-
         ?>
         <div class="size1 grid">
             <div class="acessoUser">
@@ -28,7 +28,7 @@ if (isset($_SESSION['username'])) {
                     </svg>';
                     } else {
                         echo '
-        <img class="acessoUserFoto" src="http://localhost/projTcc/Web/src/fotos/usuario/' .
+        <img class="acessoUserFoto" src="http://localhost:8089/projTcc/Web/src/fotos/usuario/' .
                             $image .
                             '">
         </img>';
@@ -48,7 +48,7 @@ if (isset($_SESSION['username'])) {
                     </svg>';
                         } else {
                             echo '
-                <img style="height: 7rem; width: 7rem;" class="userMenuPicture" src="http://localhost/projTcc/Web/src/fotos/usuario/' .
+                <img style="height: 7rem; width: 7rem;" class="userMenuPicture" src="http://localhost:8089/projTcc/Web/src/fotos/usuario/' .
                                 $image .
                                 '">
                 </img>';
@@ -93,8 +93,13 @@ if (isset($_SESSION['username'])) {
                         </svg>
                         Configurações
                     </div>
-                    <div class="userMenuItem alignSlfCent justifyContCent flex userConfigAccess">
-                        <form action="administrator/utils/user/logout.php" method="$_POST">
+                    <div class="userMenuItem pZero flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
+                        <form action="administrator/utils/user/logout.php" class="flex" method="$_POST">
+                            <svg data-v-9ba4cb7e="" data-v-5866404a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                fill="none" viewBox="0 0 24 24" class="icon text-icon-contrast text-undefined mr-2">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4m7 14 5-5-5-5m5 5H9"></path>
+                            </svg>
                             <input type="submit" class="logoutBtn" value="SAIR">
                         </form>
                     </div>
@@ -102,6 +107,8 @@ if (isset($_SESSION['username'])) {
             </div>
         </div>
         <?php
+    } else {
+
     }
 } else {
     ?>
