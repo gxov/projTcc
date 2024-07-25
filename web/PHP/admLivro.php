@@ -10,6 +10,7 @@
     <link href="../CSS/style.css" rel="stylesheet">
     <link rel="icon" href="../SRC/svg/logo.png" />
     <?php
+    session_start();
     include_once ("administrator/utils/livro/read.php");
     include_once ("administrator/utils/livro/insert.php");
     include_once ("administrator/utils/livro/delete.php");
@@ -106,11 +107,12 @@
                         </div>
                     </div>
                     <?php
-                    include_once ("C:/xampp/htdocs/projtcc/web/PHP/components/usermenu.php");
+                    include_once ("components/usermenu.php");
                     ?>
                 </div>
             </div>
         </div>
+
         <div class="contBackground overflowHide">
         </div>
         <!-- conteúdo -->
@@ -243,7 +245,8 @@
 
                                 <div class="size7 flexColumn">
                                     <label class="controlLabel" for="capaLivroUpd">Imagem da capa:</label>
-                                    <input class="controlInputTransparent size11" type="file" name="capaLivroUpd" required>
+                                    <input class="controlInputTransparent size11" type="file" name="capaLivroUpd"
+                                        required>
                                     <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
                                 </div>
                             </div>

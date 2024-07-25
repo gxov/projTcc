@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
   $user = $_POST["usernameUser"];
   $cpf = $_POST["cpfUser"];
   $email = $_POST["emailUser"];
-  $senha = $_POST["senhaUser"];
+  $senha = md5($_POST["senhaUser"]);
   $tipo = $_POST["tipoUser"];
 
   $filename = $_FILES["imagemUser"]["name"];

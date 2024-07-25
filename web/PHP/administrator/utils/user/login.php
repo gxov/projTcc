@@ -1,8 +1,6 @@
 <?php
 include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
-
 session_start();
-
 if (isset($_POST['login'])) {
     $conn = connect();
     $value = $_POST['loginValue'];
@@ -19,6 +17,7 @@ if (isset($_POST['login'])) {
         $stmt->fetch();
 
         if ($password == $hashed_password) {
+            
             $_SESSION['username'] = $username;
         } else {
             header("location: login.php");

@@ -9,6 +9,9 @@
     <link href="../CSS/styleComponentes.css" rel="stylesheet">
     <link href="../CSS/style.css" rel="stylesheet">
     <link rel="icon" href="../SRC/svg/logo.png" />
+    <?php
+    session_start();
+    ?>
 </head>
 
 <body class="conteudo">
@@ -102,7 +105,8 @@
                 </div>
             </div>
         </div>
-        <div class="contBackground overflowHide" style="background-attachment: fixed;">
+
+        <div class="contBackground overflowHide">
         </div>
         <!-- conteúdo -->
         <div class="contFluid" style="margin-top: -8%;">
