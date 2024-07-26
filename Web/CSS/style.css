@@ -338,6 +338,12 @@ a:hover{
     width: min-content;
 }
 
+.logoutForm{
+    align-self: center;
+    width: 80%;
+    border-top: 3px solid var(--bgTerciaria);
+}
+
 .logoutBtn:hover{
     cursor: pointer;
     color: var(--corPrimaria);
