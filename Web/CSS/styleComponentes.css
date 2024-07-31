@@ -107,7 +107,11 @@
     line-height: 1.4;
 }
 
-.logoTextHighlight {
+.logoTextHighlight{
+    color: var(--corPrimaria);
+}
+
+.logoLink:hover .logoTextHighlight {
     color: var(--corSecundaria);
     font-family: 'Gotham Black';
 }
@@ -359,27 +363,6 @@
 }
 
 /* User Menu END */
-
-/* Scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: var(--bgPrimaria);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--corPrimaria);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--corSecundaria);
-}
-
-/* Scrollbar END */
 
 /* Search Módulo */
 .searchBarOut {
@@ -762,6 +745,17 @@
 .sectionRowDesc {
     font-size: 0.7rem;
     font-family: 'Gotham Book';
+    max-height: 50%;
+    overflow-y: scroll; 
+}
+
+.sectionRowDesc::-webkit-scrollbar{
+    width: 6px;
+}
+
+.sectionRowDesc::-webkit-scrollbar-track{
+    background-color: transparent;
+    
 }
 
 .sectionCardRowCategories {
@@ -788,10 +782,24 @@
 .sectionCardRow .sectionCardAuthor{
     font-size: 0.9rem;
     font-family: 'Gotham Thin';
-    padding-bottom: 5px;
 }
 
 /* Seções de conteúdo END */
+
+/* Fóruns */
+
+.forumStats{
+    gap: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    align-items: center;
+}
+
+.forumSection .sectionCardRow{
+    gap: 6px;
+}
+
+/* Fóruns END */
 
 /* Página Principal END */
 
@@ -864,3 +872,7 @@
 .searchResultDescription{
     font-family: 'Gotham Book';
 }
+
+/* Página de Search END */
+
+/* Fóruns */

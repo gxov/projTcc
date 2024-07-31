@@ -20,36 +20,7 @@
     <!-- side nav -->
     <div class="sideNavTransition sideNav contFluid sideNavHide flexColumn sideNavShow" id="sideNav"
         style="opacity: 1; width: 0;">
-        <div class="sideNavClose alignSlfEnd">
-            <span onclick="closeNav()">
-                <svg data-v-4c681a64="" data-v-a31e942f="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    fill="none" viewBox="0 0 24 24" class="svgSideNavClose">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M18 6 6 18M6 6l12 12"></path>
-                </svg>
-            </span>
-        </div>
-        <div class="contSection sideNavSection size10">
-            <a href="index.php">
-                Início
-            </a>
-        </div>
-        <div class="contSection sideNavSection size10">
-            Busca
-        </div>
-        <div class="contSection sideNavSection size10">
-            Comunidade
-        </div>
-        <div class="contSection sideNavSection size10">
-            <a href="admLivro.php">
-                Administrador - Livros </a>
-
-
-        </div>
-        <div class="contSection sideNavSection size10">
-            <a href="admUser.php">
-                Administrador - Usuários </a>
-        </div>
+        <?php include_once ("components/sidenav.php"); ?>
     </div>
     <div class="contFluid mainContent overflowHide" id="main">
 
@@ -118,72 +89,13 @@
                     <div class="contSection">
                         <div class="sectionWrapper flex">
                             <?php
-                            include_once("components/contentLoader/indexDestaque.php");
+                            include_once ("components/contentLoader/indexDestaque.php");
                             ?>
                         </div>
-                        <div class="sectionWrapper">
-                            <div class="sectionTitle">
-                                Escolhas dos Usuários
-                            </div>
-                            <div class="sectionContent">
-                                <div class="sectionCard size1-5">
-                                    <div class="sectionCapaPadrao">
-                                        <img class="sectionCapa" src="../SRC/capas/1.jpg">
-                                    </div>
-                                    <div class="sectionCapaTitulo">
-                                        O Mundo Como Idéia
-                                    </div>
-                                </div>
-                                <div class="sectionCard size1-5">
-                                    <div class="sectionCapaPadrao">
-                                        <img class="sectionCapa" src="../SRC/capas/2.jpg">
-                                    </div>
-                                    <div class="sectionCapaTitulo">
-                                        A Ascendência Vertical
-                                    </div>
-                                </div>
-                                <div class="sectionCard size1-5">
-                                    <div class="sectionCapaPadrao">
-                                        <img class="sectionCapa" src="../SRC/capas/3.jpg">
-                                    </div>
-                                    <div class="sectionCapaTitulo">
-                                        Redescobrindo o Cosmos Integral: Física, Metafísica, e Causalidade Vertical
-                                    </div>
-                                </div>
-                                <div class="sectionCard size1-5">
-                                    <div class="sectionCapaPadrao">
-                                        <img class="sectionCapa" src="../SRC/capas/4.jpg">
-                                    </div>
-                                    <div class="sectionCapaTitulo">
-                                        Casa das Folhas
-                                    </div>
-                                </div>
-                                <div class="sectionCard size1-5">
-                                    <div class="sectionCapaPadrao">
-                                        <img class="sectionCapa" src="../SRC/capas/1.jpg">
-                                    </div>
-                                    <div class="sectionCapaTitulo">
-                                        O Mundo Como Idéia
-                                    </div>
-                                </div>
-                                <div class="sectionCard size1-5">
-                                    <div class="sectionCapaPadrao">
-                                        <img class="sectionCapa" src="../SRC/capas/2.jpg">
-                                    </div>
-                                    <div class="sectionCapaTitulo">
-                                        A Ascendência Vertical
-                                    </div>
-                                </div>
-                                <div class="sectionCard size1-5">
-                                    <div class="sectionCapaPadrao">
-                                        <img class="sectionCapa" src="../SRC/capas/3.jpg">
-                                    </div>
-                                    <div class="sectionCapaTitulo">
-                                        Redescobrindo o Cosmos Integral: Física, Metafísica, e Causalidade Vertical
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                        include_once ("components/contentLoader/indexForum.php");
+                        ?>
+
                         <div class="sectionWrapper">
                             <div class="sectionTitle">
                                 Melhores Avaliações
