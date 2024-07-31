@@ -20,7 +20,7 @@
     <!-- side nav -->
     <div class="sideNavTransition sideNav contFluid sideNavHide flexColumn sideNavShow" id="sideNav"
         style="opacity: 1; width: 0;">
-        <?php include_once ("components/sidenav.php"); ?>
+        <?php include_once("components/sidenav.php"); ?>
     </div>
     <div class="contFluid mainContent overflowHide" id="main">
 
@@ -92,9 +92,12 @@
                             include_once ("components/contentLoader/indexDestaque.php");
                             ?>
                         </div>
+                        <div class="sectionWrapper flex">
                         <?php
                         include_once ("components/contentLoader/indexForum.php");
+                        include_once ("components/contentLoader/indexAutor.php");
                         ?>
+                        </div>
 
                         <div class="sectionWrapper">
                             <div class="sectionTitle">

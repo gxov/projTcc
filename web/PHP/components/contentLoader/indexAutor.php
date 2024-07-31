@@ -3,8 +3,8 @@ include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php")
 
 $conn = connect();
 
-$sql = "SELECT cod, nome, descricao, dtinicio
-        FROM tb_foruns
+$sql = "SELECT cod, nome, descricao, imagem
+        FROM tb_autores
         ORDER BY nome
         LIMIT 3";
 $stmt = $conn->prepare($sql);
@@ -14,16 +14,20 @@ $items = "";
 
 if ($stmt->num_rows > 0) {
     $items .= '
-        <div class="size7">
+        <div class="size5">
             <div class="sectionTitle">
-                Fóruns
+                Autores
             </div>
             <div class="sectionContent flexColumn forumSection">';
-    $stmt->bind_result($id, $title, $desc, $date);
-    
+    $stmt->bind_result($id, $title, $desc, $img);
+
     while ($row = $stmt->fetch()) {
         $items .= '
-                <div class="sectionCardRow flexColumn size11">
+                <div class="sectionCardRow flex size5">
+                    <div class="sectionCardColumnCapa">
+                        <img class="sectionCardColumnImg" src="../SRC/capas/' . $img . '">
+                    </div>
+                    <div class="flexColumn">
                     <div class="sectionCardRowTitulo">
                         <a href="forum.php?id=' . $id . '">
                             ' . $title . '
@@ -43,9 +47,10 @@ if ($stmt->num_rows > 0) {
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                         </svg>
                     </div>
+                    </div>
                 </div>';
     }
-    
+
     $items .= '
             </div>
         </div>';
