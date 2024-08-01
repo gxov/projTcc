@@ -193,7 +193,7 @@
                                 <div class="size11 flexColumn">
                                     <label class="controlLabel" for="capaLivro">Imagem da capa:</label>
                                     <input class="controlInputTransparent size11" type="file" name="capaLivro"
-                                        id="capaLivro" required>
+                                        id="capaLivro">
                                     <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
                                 </div>
                             </div>
@@ -245,8 +245,7 @@
 
                                 <div class="size7 flexColumn">
                                     <label class="controlLabel" for="capaLivroUpd">Imagem da capa:</label>
-                                    <input class="controlInputTransparent size11" type="file" name="capaLivroUpd"
-                                        required>
+                                    <input class="controlInputTransparent size11" type="file" name="capaLivroUpd">
                                     <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
                                 </div>
                             </div>

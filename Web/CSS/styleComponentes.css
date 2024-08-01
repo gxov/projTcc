@@ -808,7 +808,7 @@
 .searchPageBarIn{
     background: transparent;
     border: 0px solid;
-    border-radius: 10px;
+    border-radius: 7px;
     color: white;
     transition: .5s;
     width: 100%;

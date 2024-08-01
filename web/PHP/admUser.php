@@ -313,7 +313,7 @@
                                 <div class="size7 flexColumn">
                                     <label class="controlLabel" for="imagemUserUpd">imagem de perfil:</label>
                                     <input class="controlInputTransparent size11" type="file" name="imagemUserUpd"
-                                        id="imagemUserUpd" required>
+                                        id="imagemUserUpd">
                                 </div>
                             </div>
                             <div class="controlInputSection flexColumn">

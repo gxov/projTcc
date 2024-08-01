@@ -5,21 +5,32 @@ include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php")
 $conn = connect();
 
 if (isset($_GET["id"])) {
-    $id = $_GET["id"];
+    $idL = $_GET["id"];
+
+$sqlA1 = "SELECT codautor FROM tb_livros_autores WHERE codlivro = " . $idL;
+    $stmtA1 = $conn->prepare($sqlA1);
+    $stmtA1->execute();
+    $stmtA1->store_result();
+    $stmtA1->bind_result($idA);
+$sqlA2 = "SELECT nome FROM tb_autores WHERE cod = " . $idA;
+    $stmtA2 = $conn->prepare($sqlA2);
+    $stmtA2->execute();
+    $stmtA2->store_result();
+    $stmtA2->bind_result($nomeA);
 
 
-    $sql = "SELECT nome, descricao, imagem
+    $sqlB = "SELECT nome, descricao, imagem
 FROM tb_livros
-WHERE cod = " . $id;
+WHERE cod = " . $idL;
 
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
-    $stmt->store_result();
+    $stmtB = $conn->prepare($sqlB);
+    $stmtB->execute();
+    $stmtB->store_result();
     $result = "";
 
-    if ($stmt->num_rows > 0) {
-        $stmt->bind_result($title, $desc, $img);
-        while ($stmt->fetch()) {
+    if ($stmtB->num_rows > 0) {
+        $stmtB->bind_result($title, $desc, $img);
+        while ($stmtB->fetch()) {
             $result .= '
                 <div class="size5 pZero grid">
                     <img class="livroCapa" src="../SRC/capas/' . htmlspecialchars($img) . '">
@@ -30,7 +41,7 @@ WHERE cod = " . $id;
                         <div class="flexColumn widthMax">
                         
                         <div class="livroAutor">
-                            Nome do Autor
+                            '. $nomeA .'
                         </div>
                         <div class="livroUserInfo">
                             <div class="livroAvaliacaoSection">
@@ -87,7 +98,7 @@ WHERE cod = " . $id;
 
     }
     ;
-    $stmt->close();
+    $stmtB->close();
     $conn->close();
 }
 ;
