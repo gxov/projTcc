@@ -7,16 +7,21 @@ $conn = connect();
 if (isset($_GET["id"])) {
     $idL = $_GET["id"];
 
-$sqlA1 = "SELECT codautor FROM tb_livros_autores WHERE codlivro = " . $idL;
+    $sqlA1 = "SELECT codautor FROM tb_livros_autores WHERE codlivro = ?";
     $stmtA1 = $conn->prepare($sqlA1);
+    $stmtA1->bind_param("i", $idL);
     $stmtA1->execute();
-    $stmtA1->store_result();
     $stmtA1->bind_result($idA);
-$sqlA2 = "SELECT nome FROM tb_autores WHERE cod = " . $idA;
+    $stmtA1->fetch();
+    $stmtA1->close();
+    
+    $sqlA2 = "SELECT nome FROM tb_autores WHERE cod = ?";
     $stmtA2 = $conn->prepare($sqlA2);
+    $stmtA2->bind_param("i", $idA);
     $stmtA2->execute();
-    $stmtA2->store_result();
     $stmtA2->bind_result($nomeA);
+    $stmtA2->fetch();
+    $stmtA2->close();
 
 
     $sqlB = "SELECT nome, descricao, imagem
