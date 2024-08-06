@@ -29,7 +29,7 @@ if ($stmt->num_rows > 0) {
                     </div>
                     <div class="flexColumn">
                     <div class="sectionCardRowTitulo">
-                        <a href="forum.php?id=' . $id . '">
+                        <a href="autor.php?id=' . $id . '">
                             ' . $title . '
                         </a>
                     </div>
