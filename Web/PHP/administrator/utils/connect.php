@@ -1,12 +1,12 @@
 <?php
 function connect()
 {
-  $sv = "localhost";
-  $us = "root";
-  $psw = "";
-  $db = "db_comlib";
+  $server = "localhost";
+  $username = "root";
+  $password = "";
+  $bd = "db_comlib";
 
-  $conn = new mysqli($sv, $us, $psw, $db);
+  $conn = new mysqli($server, $username, $password, $bd);
 
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

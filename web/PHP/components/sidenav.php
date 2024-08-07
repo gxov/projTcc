@@ -32,6 +32,10 @@ if($_SESSION['tipo'] == 'ADM'){
     <a href="admUser.php">
         Administrador - Usuários </a>
 </div>
+<div class="contSection sideNavSection size10">
+    <a href="admAutor.php">
+        Administrador - Autores </a>
+</div>
     ';
 
 }else{

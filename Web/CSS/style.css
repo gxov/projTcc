@@ -199,6 +199,11 @@ a:hover{
     grid-template-columns: 10% 15% 40% 15% 15% ;
 }
 
+.tableAutorSpacing{
+    grid-template-columns: 10% 15% 10% 30% 20% 10% ;
+}
+
+
 .tableBookRow{
     display: grid;
     width: 100%;

@@ -12,7 +12,7 @@ function select($table)
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
 
-            $items .= "<div class='tableBookRow tableBookSpacing'>";
+            $items .= "<div class='tableBookRow tableAutorSpacing'>";
             foreach ($row as $key => $dado) {
                 if ($key == 'ativo' && $dado == '1') {
                     $dado = 'sim';
@@ -70,7 +70,7 @@ function selectFiltered($table)
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            $filteredItems .= "<div class='tableBookRow tableBookSpacing'>";
+            $filteredItems .= "<div class='tableBookRow tableAutorSpacing'>";
             foreach ($row as $key => $dado) {
                 if ($key == 'ativo' && $dado == '1') {
                     $dado = 'true';
