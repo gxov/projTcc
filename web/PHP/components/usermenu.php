@@ -28,7 +28,7 @@ if (isset($_SESSION['username'])) {
                     </svg>';
                     } else {
                         echo '
-        <img class="acessoUserFoto" src="http://localhost/projTcc/Web/src/fotos/usuario/' .
+        <img class="acessoUserFoto" src="projTcc/Web/src/fotos/usuario/' .
                             $image .
                             '">
         </img>';
@@ -48,7 +48,7 @@ if (isset($_SESSION['username'])) {
                     </svg>';
                         } else {
                             echo '
-                <img style="height: 7rem; width: 7rem;" class="userMenuPicture" src="http://localhost/projTcc/Web/src/fotos/usuario/' .
+                <img style="height: 7rem; width: 7rem;" class="userMenuPicture" src="projTcc/Web/src/fotos/usuario/' .
                                 $image .
                                 '">
                 </img>';

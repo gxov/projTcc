@@ -5,8 +5,8 @@ $conn = connect();
 
 $sql = "SELECT cod, nome, descricao, imagem
         FROM tb_autores
-        ORDER BY nome
-        LIMIT 3";
+        ORDER BY RAND()
+        LIMIT 2";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $stmt->store_result();
@@ -19,36 +19,64 @@ if ($stmt->num_rows > 0) {
                 Autores
             </div>
             <div class="sectionContent flexColumn forumSection">';
+
     $stmt->bind_result($id, $title, $desc, $img);
 
-    while ($row = $stmt->fetch()) {
+    while ($stmt->fetch()) {
+        $sqlL1 = "SELECT codlivro FROM tb_livros_autores WHERE codautor = ?";
+        $stmtL1 = $conn->prepare($sqlL1);
+        $stmtL1->bind_param("i", $id);
+        $stmtL1->execute();
+        $stmtL1->store_result();
+
+        $livros = "";
+
+        if ($stmtL1->num_rows > 0) {
+            $stmtL1->bind_result($idL);
+
+            while ($stmtL1->fetch()) {
+                $sqlL2 = "SELECT nome, imagem FROM tb_livros WHERE cod = ?";
+                $stmtL2 = $conn->prepare($sqlL2);
+                $stmtL2->bind_param("i", $idL);
+                $stmtL2->execute();
+                $stmtL2->bind_result($nomeL, $imgL);
+                $stmtL2->fetch();
+                $stmtL2->close();
+
+                $livros .= '<div class="sectionCardBook size6">
+                    <img class="sectionCardColumnImg" src="../SRC/capas/' . htmlspecialchars($imgL) . '">
+                <div>
+                    <div>
+                        <a href="autor.php?id=' . htmlspecialchars($idL) . '"> ' . htmlspecialchars($nomeL) . ' </a>
+                    </div>
+                </div>
+                </div>';
+            }
+        }
+
+        $stmtL1->close();
+
         $items .= '
-                <div class="sectionCardRow flex size5">
-                    <div class="sectionCardColumnCapa">
-                        <img class="sectionCardColumnImg" src="../SRC/capas/' . $img . '">
+            <div class="sectionCardRow flex size12">
+                <div class="flex size6">
+                    <div class="sectionCardColumnCapa size5">
+                        <img class="sectionCardColumnImg" src="../SRC/fotos/autores/' . htmlspecialchars($img) . '">
                     </div>
-                    <div class="flexColumn">
-                    <div class="sectionCardRowTitulo">
-                        <a href="autor.php?id=' . $id . '">
-                            ' . $title . '
-                        </a>
-                    </div>
-                    <div class="sectionCardRowCategories">
-                        <div class="sectionCardRowBadge">
-                            Categoria
+                    <div class="sectionCardAuthor flexColumn size7">
+                        <div class="sectionCardRowTitulo">
+                            <a href="autor.php?id=' . htmlspecialchars($id) . '">
+                                ' . htmlspecialchars($title) . '
+                            </a>
+                        </div>
+                        <div class="sectionRowDesc">
+                            ' . htmlspecialchars($desc) . '
                         </div>
                     </div>
-                    <div class="sectionRowDesc">
-                        ' . $desc . '
-                    </div>
-                    <div class="forumStats flex">
-                        2
-                        <svg data-v-9ba4cb7e="" data-v-89359c03="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                        </svg>
-                    </div>
-                    </div>
-                </div>';
+                </div>
+                <div class="sectionCardBooks size6">
+                    ' . $livros . '
+                </div>
+            </div>';
     }
 
     $items .= '
@@ -57,4 +85,7 @@ if ($stmt->num_rows > 0) {
 }
 
 echo $items;
+
+$stmt->close();
+$conn->close();
 ?>

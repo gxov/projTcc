@@ -6,7 +6,7 @@ $conn = connect();
 $sql = "SELECT cod, nome, descricao, dtinicio
         FROM tb_foruns
         ORDER BY nome
-        LIMIT 3";
+        LIMIT 4";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $stmt->store_result();
@@ -39,7 +39,7 @@ if ($stmt->num_rows > 0) {
                     </div>
                     <div class="forumStats flex">
                         2
-                        <svg data-v-9ba4cb7e="" data-v-89359c03="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <svg data-v-9ba4cb7e="" data-v-89359c03="" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                         </svg>
                     </div>

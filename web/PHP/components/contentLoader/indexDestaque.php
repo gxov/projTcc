@@ -1,5 +1,5 @@
 <?php
-include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
+include_once("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
 
 
 $conn = connect();
@@ -11,9 +11,11 @@ LIMIT 3";
 $stmtW = $conn->prepare($sqlWeek);
 $stmtW->execute();
 $stmtW->store_result();
-$items = "";    
+$items = "";
 
 if ($stmtW->num_rows > 0) {
+
+
     $items .= '
     <div class="size6">
     <div class="sectionTitle">
@@ -21,7 +23,23 @@ if ($stmtW->num_rows > 0) {
     </div>
     <div class="sectionContent flexColumn">';
     $stmtW->bind_result($id, $title, $desc, $img);
+
     while ($row = $stmtW->fetch()) {
+        $sqlA1 = "SELECT codautor FROM tb_livros_autores WHERE codlivro = ?";
+        $stmtA1 = $conn->prepare($sqlA1);
+        $stmtA1->bind_param("i", $id);
+        $stmtA1->execute();
+        $stmtA1->bind_result($idA);
+        $stmtA1->fetch();
+        $stmtA1->close();
+
+        $sqlA2 = "SELECT nome FROM tb_autores WHERE cod = ?";
+        $stmtA2 = $conn->prepare($sqlA2);
+        $stmtA2->bind_param("i", $idA);
+        $stmtA2->execute();
+        $stmtA2->bind_result($nomeA);
+        $stmtA2->fetch();
+        $stmtA2->close();
         $items .= '
         <div class="sectionCardRow flex size11">
         <div class="sectionCardColumnCapa">
@@ -32,7 +50,7 @@ if ($stmtW->num_rows > 0) {
                     ' . $title . '
                 </a></div>
             <div class="sectionCardAuthor">
-            Nome do autor
+            <a href="autor.php?id=' . $idA . '">' . $nomeA . '</a>
             </div>
             <div class="sectionCardRowCategories">
             <div class="sectionCardRowBadge">
@@ -68,6 +86,21 @@ if ($stmtM->num_rows > 0) {
     <div class="sectionContent flexColumn">';
     $stmtM->bind_result($id, $title, $desc, $img);
     while ($row = $stmtM->fetch()) {
+        $sqlA1 = "SELECT codautor FROM tb_livros_autores WHERE codlivro = ?";
+        $stmtA1 = $conn->prepare($sqlA1);
+        $stmtA1->bind_param("i", $id);
+        $stmtA1->execute();
+        $stmtA1->bind_result($idA);
+        $stmtA1->fetch();
+        $stmtA1->close();
+
+        $sqlA2 = "SELECT nome FROM tb_autores WHERE cod = ?";
+        $stmtA2 = $conn->prepare($sqlA2);
+        $stmtA2->bind_param("i", $idA);
+        $stmtA2->execute();
+        $stmtA2->bind_result($nomeA);
+        $stmtA2->fetch();
+        $stmtA2->close();
         $items .= '
         <div class="sectionCardRow flex size11">
         <div class="sectionCardColumnCapa">
@@ -78,12 +111,12 @@ if ($stmtM->num_rows > 0) {
                     ' . $title . '
                 </a></div>
                 <div class="sectionCardAuthor">
-            Nome do autor
+            <a href="autor.php?id=' . $idA . '">' . $nomeA . '</a>
             </div>
             <div class="sectionCardRowCategories">
-            <div class="sectionCardRowBadge">
-                        Categoria
-                    </div>
+                <div class="sectionCardRowBadge">
+                    Categoria
+                </div>
             </div>
             <div class="sectionRowDesc">
                 ' . $desc . '
@@ -95,6 +128,7 @@ if ($stmtM->num_rows > 0) {
     ;
     $items .= '</div>
     </div>';
-};
+}
+;
 
 echo $items;

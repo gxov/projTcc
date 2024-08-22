@@ -144,6 +144,9 @@
                             <div class="tableAutorMin">
                                 imagem
                             </div>
+                            <div class="tableAutorMin">
+                                codautor
+                            </div>
                         </div>
                     </div>
                     <div id="results">
@@ -190,6 +193,13 @@
                                     required> </textarea>
                             </div>
                             <div class="controlInputSection flex">
+                                <div class="size6 flexColumn">
+                                    <label class="controlLabel" for="autorLivro">Código do autor:</label>
+                                    <input class="controlInput size12" type="text" name="autorLivro"
+                                        id="autorLivro">
+                                </div>
+                            </div>
+                            <div class="controlInputSection flex">
                                 <div class="size11 flexColumn">
                                     <label class="controlLabel" for="capaLivro">Imagem da capa:</label>
                                     <input class="controlInputTransparent size11" type="file" name="capaLivro"
@@ -197,6 +207,7 @@
                                     <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
                                 </div>
                             </div>
+                            
                             <div class="controlInputSection flexColumn">
                                 <div>
                                     <input class="controlBtn" type="submit" name="submit" value="Criar">

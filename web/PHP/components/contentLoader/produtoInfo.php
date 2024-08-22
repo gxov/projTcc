@@ -46,7 +46,9 @@ WHERE cod = " . $idL;
                         <div class="flexColumn widthMax">
                         
                         <div class="livroAutor">
+                            <a href="autor.php?id='. $idA .'">
                             '. $nomeA .'
+                            </a>
                         </div>
                         <div class="livroUserInfo">
                             <div class="livroAvaliacaoSection">
