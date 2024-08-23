@@ -43,12 +43,12 @@ if ($stmt->num_rows > 0) {
                 $stmtL2->fetch();
                 $stmtL2->close();
 
-                $livros .= '<div class="sectionCardBook size6">
+                $livros .= '<div class="sectionCardBook size4 flexColumn">
                     <img class="sectionCardColumnImg" src="../SRC/capas/' . htmlspecialchars($imgL) . '">
                 <div>
-                    <div>
+                    <st1>
                         <a href="autor.php?id=' . htmlspecialchars($idL) . '"> ' . htmlspecialchars($nomeL) . ' </a>
-                    </div>
+                    </st1>
                 </div>
                 </div>';
             }
@@ -58,7 +58,7 @@ if ($stmt->num_rows > 0) {
 
         $items .= '
             <div class="sectionCardRow flex size12">
-                <div class="flex size6">
+                <div class="flex size7">
                     <div class="sectionCardColumnCapa size5">
                         <img class="sectionCardColumnImg" src="../SRC/fotos/autores/' . htmlspecialchars($img) . '">
                     </div>
@@ -73,7 +73,7 @@ if ($stmt->num_rows > 0) {
                         </div>
                     </div>
                 </div>
-                <div class="sectionCardBooks size6">
+                <div class="sectionCardBooks flex size4">
                     ' . $livros . '
                 </div>
             </div>';
