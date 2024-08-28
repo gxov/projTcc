@@ -1,5 +1,5 @@
 <?php
-include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
+include_once("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
 
 
 $conn = connect();
@@ -14,6 +14,8 @@ $stmtW->store_result();
 $items = "";
 
 if ($stmtW->num_rows > 0) {
+
+
     $items .= '
     <div class="size6">
     <div class="sectionTitle">
@@ -21,6 +23,7 @@ if ($stmtW->num_rows > 0) {
     </div>
     <div class="sectionContent flexColumn">';
     $stmtW->bind_result($id, $title, $desc, $img);
+
     while ($row = $stmtW->fetch()) {
         $sqlA1 = "SELECT codautor FROM tb_livros_autores WHERE codlivro = ?";
         $stmtA1 = $conn->prepare($sqlA1);
@@ -46,10 +49,8 @@ if ($stmtW->num_rows > 0) {
             <div class="sectionCardRowTitulo"><a href="produto.php?id=' . $id . '">
                     ' . $title . '
                 </a></div>
-                <div class="sectionCardAuthor">
-                <a href="autor.php?id='. $idA .'">
-            ' . $nomeA . '
-            </a>
+            <div class="sectionCardAuthor">
+            <a href="autor.php?id=' . $idA . '">' . $nomeA . '</a>
             </div>
             <div class="sectionCardRowCategories">
             <div class="sectionCardRowBadge">
@@ -110,14 +111,12 @@ if ($stmtM->num_rows > 0) {
                     ' . $title . '
                 </a></div>
                 <div class="sectionCardAuthor">
-                <a href="autor.php?id='. $idA .'">
-            ' . $nomeA . '
-            </a>
+            <a href="autor.php?id=' . $idA . '">' . $nomeA . '</a>
             </div>
             <div class="sectionCardRowCategories">
-            <div class="sectionCardRowBadge">
-                        Categoria
-                    </div>
+                <div class="sectionCardRowBadge">
+                    Categoria
+                </div>
             </div>
             <div class="sectionRowDesc">
                 ' . $desc . '

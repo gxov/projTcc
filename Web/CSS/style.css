@@ -196,7 +196,7 @@ a:hover{
 }
 
 .tableBookSpacing{
-    grid-template-columns: 10% 15% 40% 15% 15% ;
+    grid-template-columns: 10% 15% 40% 10% 10% 10% ;
 }
 
 .tableAutorSpacing{
@@ -238,7 +238,7 @@ a:hover{
 }
 
 .tableValue{
-
+padding: 5px;
 }
 
 .controlEditContainer{
