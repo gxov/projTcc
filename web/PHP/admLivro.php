@@ -11,10 +11,10 @@
     <link rel="icon" href="../SRC/svg/logo.png" />
     <?php
     session_start();
-    include_once ("administrator/utils/livro/read.php");
-    include_once ("administrator/utils/livro/insert.php");
-    include_once ("administrator/utils/livro/delete.php");
-    include_once ("administrator/utils/livro/update.php");
+    include_once("administrator/utils/livro/read.php");
+    include_once("administrator/utils/livro/insert.php");
+    include_once("administrator/utils/livro/delete.php");
+    include_once("administrator/utils/livro/update.php");
     ?>
 
 
@@ -78,7 +78,7 @@
                         </div>
                     </div>
                     <?php
-                    include_once ("components/usermenu.php");
+                    include_once("components/usermenu.php");
                     ?>
                 </div>
             </div>
@@ -114,6 +114,9 @@
                             </div>
                             <div class="tableAutorMin">
                                 imagem
+                            </div>
+                            <div class="tableAutorMin">
+                                codcategorias
                             </div>
                             <div class="tableAutorMin">
                                 codautor
@@ -164,10 +167,15 @@
                                     required> </textarea>
                             </div>
                             <div class="controlInputSection flex">
-                                <div class="size6 flexColumn">
+                                <div class="size5 flexColumn">
                                     <label class="controlLabel" for="autorLivro">Código do autor:</label>
-                                    <input class="controlInput size12" type="text" name="autorLivro"
-                                        id="autorLivro">
+                                    <input class="controlInput size12" type="text" name="autorLivro" id="autorLivro">
+                                </div>
+                                <div class="size5 flexColumn">
+                                    <label class="controlLabel" for="categoriasLivro">Código da(s) categoria(s):</label>
+                                    <input class="controlInput size12" type="text" name="categoriasLivro"
+                                        id="categoriasLivro">
+                                    <st1>OBS: Separar códigos por vírgula</st1>
                                 </div>
                             </div>
                             <div class="controlInputSection flex">
@@ -178,7 +186,7 @@
                                     <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
                                 </div>
                             </div>
-                            
+
                             <div class="controlInputSection flexColumn">
                                 <div>
                                     <input class="controlBtn" type="submit" name="submit" value="Criar">

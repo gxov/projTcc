@@ -196,7 +196,7 @@ a:hover{
 }
 
 .tableBookSpacing{
-    grid-template-columns: 10% 15% 40% 10% 10% 10% ;
+    grid-template-columns: 5% 10% 40% 10% 10% 15% 5% ;
 }
 
 .tableAutorSpacing{
@@ -213,6 +213,7 @@ a:hover{
     border-radius: 15px;
     margin: 5px;
     padding: 5px;
+    height: 150px;
 }
 
 .tableBookRow:hover{
@@ -239,6 +240,15 @@ a:hover{
 
 .tableValue{
 padding: 5px;
+
+}
+
+.tableValue::-webkit-scrollbar{
+    width: 5px;
+}
+
+#descricao{
+    overflow-y: scroll;
 }
 
 .controlEditContainer{
@@ -323,6 +333,7 @@ padding: 5px;
 
 .controlInputSection{
     margin: 1% 0;
+    justify-content: space-between;
 }
 
 .controlShowBtn{
@@ -381,7 +392,7 @@ st1{
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--bgPrimaria);
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {

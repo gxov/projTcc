@@ -1,6 +1,8 @@
 <?php
 include_once("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
 
+
+
 function select($table)
 {
     $conn = connect();
@@ -23,6 +25,21 @@ function select($table)
                     $stmtA1->fetch();
                     $idprod = $dado;
                     $stmtA1->close();
+
+                    $sqlC = "SELECT c.nome FROM tb_categorias c 
+                             INNER JOIN tb_categorias_livros lc ON c.cod = lc.codcategoria 
+                             WHERE lc.codlivro = ?";
+                    $stmtC = $conn->prepare($sqlC);
+                    $stmtC->bind_param("i", $dado);
+                    $stmtC->execute();
+                    $stmtC->bind_result($categoryName);
+                    $categories = [];
+                    while ($stmtC->fetch()) {
+                        $categories[] = $categoryName;
+                    }
+                    $stmtC->close();
+
+                    
                 }
                 ;
 
@@ -40,13 +57,25 @@ function select($table)
                 } else {
                     $items .= "<div id='" . $key . "' class='tableValue'> " . $dado . " </div>";
                 }
+                
+                
 
+            }
+            if (!empty($categories)) {
+                $items .= "<div class='tableValue' id='categories'><ul style='overflow-y: scroll;margin: 0; padding-left: 20px;'>";
+                foreach ($categories as $category) {
+                    $items .= "<li>" . htmlspecialchars($category) . "</li>";
+                }
+                $items .= "</ul></div>";
+            } else {
+                $items .= "<div class='tableValue' id='categories'>Sem categorias</div>";
             }
             ;
             if ($table == 'tb_livros') {
                 $items .= "<div class='tableValue' id='codautor'> <a href='autor.php?id=" . $idA . "'>" . $idA . "</a></div>";
                 $items .= "</div>";
             }
+            
             
             ;
         }

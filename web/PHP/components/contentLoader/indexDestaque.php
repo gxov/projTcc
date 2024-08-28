@@ -1,8 +1,24 @@
 <?php
 include_once("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
 
-
 $conn = connect();
+
+function getBookCategories($conn, $bookId) {
+    $categoryName = null;
+    $sqlC = "SELECT c.nome FROM tb_categorias c 
+             INNER JOIN tb_categorias_livros lc ON c.cod = lc.codcategoria 
+             WHERE lc.codlivro = ?";
+    $stmtC = $conn->prepare($sqlC);
+    $stmtC->bind_param("i", $bookId);
+    $stmtC->execute();
+    $stmtC->bind_result($categoryName);
+    $categories = [];
+    while ($stmtC->fetch()) {
+        $categories[] = $categoryName;
+    }
+    $stmtC->close();
+    return $categories;
+}
 
 $sqlWeek = "SELECT cod, nome, descricao, imagem
 FROM tb_livros
@@ -40,29 +56,28 @@ if ($stmtW->num_rows > 0) {
         $stmtA2->bind_result($nomeA);
         $stmtA2->fetch();
         $stmtA2->close();
+
+        $categories = getBookCategories($conn, $id);
+
         $items .= '
         <div class="sectionCardRow flex size11">
-        <div class="sectionCardColumnCapa">
-            <img class="sectionCardColumnImg" src="../SRC/capas/' . $img . '">
-        </div>
-        <div class="sectionCardRowContent">
-            <div class="sectionCardRowTitulo"><a href="produto.php?id=' . $id . '">
-                    ' . $title . '
-                </a></div>
-            <div class="sectionCardAuthor">
-            <a href="autor.php?id=' . $idA . '">' . $nomeA . '</a>
+            <div class="sectionCardColumnCapa">
+                <img class="sectionCardColumnImg" src="../SRC/capas/' . $img . '">
             </div>
-            <div class="sectionCardRowCategories">
-            <div class="sectionCardRowBadge">
-                        Categoria
-                    </div>
+            <div class="sectionCardRowContent">
+                <div class="sectionCardRowTitulo"><a href="produto.php?id=' . $id . '">' . htmlspecialchars($title) . '</a></div>
+                <div class="sectionCardAuthor">
+                    <a href="autor.php?id=' . $idA . '">' . htmlspecialchars($nomeA) . '</a>
+                </div>
+                <div class="sectionCardRowCategories">';
+                    foreach ($categories as $category) {
+                        $items .= '<div class="sectionCardRowBadge">' . htmlspecialchars($category) . '</div>';
+                    }
+                    $items .= '
+                </div>
+                <div class="sectionRowDesc">' . htmlspecialchars($desc) . '</div>
             </div>
-            <div class="sectionRowDesc">
-                ' . $desc . '
-            </div>
-        </div>
-        </div>
-        ';
+        </div>';
     }
     ;
     $items .= '</div>
@@ -101,29 +116,29 @@ if ($stmtM->num_rows > 0) {
         $stmtA2->bind_result($nomeA);
         $stmtA2->fetch();
         $stmtA2->close();
-        $items .= '
+
+        $categories = getBookCategories($conn, $id);
+
+
+         $items .= '
         <div class="sectionCardRow flex size11">
-        <div class="sectionCardColumnCapa">
-            <img class="sectionCardColumnImg" src="../SRC/capas/' . $img . '">
-        </div>
-        <div class="sectionCardRowContent">
-            <div class="sectionCardRowTitulo"><a href="produto.php?id=' . $id . '">
-                    ' . $title . '
-                </a></div>
+            <div class="sectionCardColumnCapa">
+                <img class="sectionCardColumnImg" src="../SRC/capas/' . $img . '">
+            </div>
+            <div class="sectionCardRowContent">
+                <div class="sectionCardRowTitulo"><a href="produto.php?id=' . $id . '">' . htmlspecialchars($title) . '</a></div>
                 <div class="sectionCardAuthor">
-            <a href="autor.php?id=' . $idA . '">' . $nomeA . '</a>
-            </div>
-            <div class="sectionCardRowCategories">
-                <div class="sectionCardRowBadge">
-                    Categoria
+                    <a href="autor.php?id=' . $idA . '">' . htmlspecialchars($nomeA) . '</a>
                 </div>
+                <div class="sectionCardRowCategories">';
+                    foreach ($categories as $category) {
+                        $items .= '<div class="sectionCardRowBadge">' . htmlspecialchars($category) . '</div>';
+                    }
+                    $items .= '
+                </div>
+                <div class="sectionRowDesc">' . htmlspecialchars($desc) . '</div>
             </div>
-            <div class="sectionRowDesc">
-                ' . $desc . '
-            </div>
-        </div>
-        </div>
-        ';
+        </div>';
     }
     ;
     $items .= '</div>

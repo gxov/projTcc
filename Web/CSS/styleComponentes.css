@@ -94,7 +94,7 @@
     position: relative;
 }
 
-.logoLink{
+.logoLink {
     margin-left: 40px;
 }
 
@@ -107,7 +107,7 @@
     line-height: 1.4;
 }
 
-.logoTextHighlight{
+.logoTextHighlight {
     color: var(--corPrimaria);
 }
 
@@ -287,7 +287,7 @@
     transition: 0.2s;
 }
 
-.sideNavSection:hover{
+.sideNavSection:hover {
     cursor: pointer;
     color: var(--corPrimaria);
 }
@@ -327,7 +327,7 @@
     gap: 10px;
     font-size: 1.2rem;
     text-align: center;
-    background: linear-gradient(150deg,var(--corSecundaria) 0%, var(--bgTerciaria) 40%, var(--bgSecundaria) 80%);
+    background: linear-gradient(150deg, var(--corSecundaria) 0%, var(--bgTerciaria) 40%, var(--bgSecundaria) 80%);
 }
 
 .userMenuAccess:hover {
@@ -522,12 +522,12 @@
     justify-content: center;
 }
 
-.livroAutor>a{
+.livroAutor>a {
     text-decoration: none !important;
     transition: 0.3s;
 }
 
-.livroAutor>a:hover{
+.livroAutor>a:hover {
     color: var(--corSecundaria);
 }
 
@@ -569,7 +569,7 @@
     transition: 0.2s;
 }
 
-.livroBtn:hover{
+.livroBtn:hover {
     cursor: pointer;
     background-color: var(--corSecundaria);
 }
@@ -581,7 +581,7 @@
     border-radius: 0.6rem
 }
 
-.livroBtn2:hover{
+.livroBtn2:hover {
     cursor: pointer;
     background-color: var(--bgHover);
 }
@@ -735,7 +735,14 @@
     max-width: 130px;
     max-height: 180px;
     border-radius: 10px;
-    padding: 5%;
+    padding: 4px;
+}
+
+.sectionCardColumnImgAuth {
+    justify-self: center;
+    height: 180px;
+    border-radius: 10px;
+    padding: 4px;
 }
 
 .sectionCardRowTitulo {
@@ -754,23 +761,29 @@
 .sectionRowDesc {
     font-size: 0.7rem;
     font-family: 'Gotham Book';
-    max-height: 50%;
-    overflow-y: scroll; 
+    max-height: 55%;
+    overflow-y: scroll;
 }
 
-.sectionRowDesc::-webkit-scrollbar{
+.sectionRowDesc::-webkit-scrollbar {
     width: 6px;
+    height: 2px;
 }
 
-.sectionRowDesc::-webkit-scrollbar-track{
+.sectionRowDesc::-webkit-scrollbar-track {
     background-color: transparent;
-    
+
 }
 
 .sectionCardRowCategories {
     gap: 4px;
+    padding: 2px;
     display: flex;
     align-content: center;
+}
+
+.sectionCardRowCategories .sectionCardRowBadge{
+    
 }
 
 .sectionCardRowBadge {
@@ -782,58 +795,90 @@
     padding: 0.05rem 0.1rem;
 }
 
-.sectionCardRowContent{
+.sectionCardRowContent {
     gap: 3px;
     display: flex;
     flex-direction: column;
 }
 
-.sectionCardRow .sectionCardAuthor{
+.sectionCardRowContent .sectionCardAuthor a {
+    text-decoration: none !important;
+    transition: 0.2s;
+    line-height: 1px;
+}
+
+.sectionCardRowContent .sectionCardAuthor a:hover {
+    color: var(--corPrimaria);
+}
+
+
+.sectionCardRow .sectionCardAuthor {
     font-size: 0.9rem;
     font-family: 'Gotham Thin';
 }
 
-.sectionCardRow .sectionCardAuthor{
+.sectionCardRow .sectionCardAuthor {}
 
+.sectionCardRow .sectionCardBooksTitle{
+    font-size: 1.1rem;
+    font-family: 'Gotham Light';
 }
 
-.sectionCardRow .sectionCardBooks{
-margin: 0.8rem;
-border: 1px solid var(--bgTerciaria);
-border-radius: 10px;
-overflow-x: scroll;
-padding: 5px;
+.sectionCardRow .sectionCardBooks {
+    overflow-x: scroll;
+    padding: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 0;
+    height: 100%;
+    gap: 8px;
 }
 
-.sectionCardRow .sectionCardBooks .sectionCardBook{
-    margin: 5px;
+.sectionCardAuthor .sectionRowDesc {
+    padding-top: 5px;
+    max-height: 100%;
+    max-width: fit-content;
+    overflow-y: scroll;
+}
+
+
+.sectionCardRow .sectionCardBooks .sectionCardBook {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.sectionCardBook .sectionCardColumnImg{
-    height: 110px;
-    max-width: 80px;
+.sectionCardBook .sectionCardColumnImg {
+    height: 140px;
+    max-width: 110px;
 }
 
-.sectionCardBook st1{
+.sectionCardBook st1 {
     font-size: 0.4rem;
+}
+
+.sectionCardBooks::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+
+.sectionCardBooks::-webkit-scrollbar-track {
+    background-color: var(--bgSecundaria);
+    border-radius: 10px;
 }
 
 /* Seções de conteúdo END */
 
 /* Fóruns */
 
-.forumStats{
+.forumStats {
     gap: 5px;
     font-weight: bold;
     font-size: 0.9rem;
     align-items: center;
 }
 
-.forumSection .sectionCardRow{
+.forumSection .sectionCardRow {
     gap: 6px;
 }
 
@@ -843,7 +888,7 @@ padding: 5px;
 
 /* Página de Search */
 
-.searchPageBarIn{
+.searchPageBarIn {
     background: transparent;
     border: 0px solid;
     border-radius: 7px;
@@ -854,13 +899,13 @@ padding: 5px;
     background-color: var(--bgInput);
 }
 
-.searchPageBarIn:focus{
+.searchPageBarIn:focus {
     box-shadow: 0 0 0 5px var(--corSecundaria2);
     transition: 50ms box-shadow ease-in-out;
     outline: 2px solid var(--corPrimaria);
 }
 
-.searchPageBarOut{
+.searchPageBarOut {
     display: flex;
     justify-content: right;
     align-items: center;
@@ -873,11 +918,11 @@ padding: 5px;
     position: relative;
 }
 
-.searchPageBarContainer{
+.searchPageBarContainer {
     margin: 10px;
 }
 
-.searchFilterContainer{
+.searchFilterContainer {
     border: 2px solid var(--bgTerciaria);
     background-color: var(--bgPrimaria);
     border-radius: 15px;
@@ -885,29 +930,29 @@ padding: 5px;
     padding: 8px;
 }
 
-.searchResultsContainer{
+.searchResultsContainer {
     margin: 20px;
 }
 
-.searchResultTitle{
+.searchResultTitle {
     font-family: 'Gotham Medium';
     font-size: 1.2rem;
     width: fit-content;
     transition: 0.2s;
 }
 
-.searchResultTitle:hover{
+.searchResultTitle:hover {
     color: var(--corSecundaria);
     cursor: pointer;
 }
 
-.searchResultAuthor{
+.searchResultAuthor {
     display: flex;
     font-family: 'Gotham Thin';
     margin-bottom: 10px;
 }
 
-.searchResultDescription{
+.searchResultDescription {
     font-family: 'Gotham Book';
 }
 
@@ -919,7 +964,7 @@ padding: 5px;
 
 /* Autores */
 
-.autorCardLivro .livroCapa{
+.autorCardLivro .livroCapa {
     width: 120px;
 }
 

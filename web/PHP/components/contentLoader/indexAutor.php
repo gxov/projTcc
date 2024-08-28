@@ -28,11 +28,12 @@ if ($stmt->num_rows > 0) {
         $stmtL1->bind_param("i", $id);
         $stmtL1->execute();
         $stmtL1->store_result();
+        $stmtL1->bind_result($idL);
 
         $livros = "";
 
         if ($stmtL1->num_rows > 0) {
-            $stmtL1->bind_result($idL);
+           
 
             while ($stmtL1->fetch()) {
                 $sqlL2 = "SELECT nome, imagem FROM tb_livros WHERE cod = ?";
@@ -44,12 +45,9 @@ if ($stmt->num_rows > 0) {
                 $stmtL2->close();
 
                 $livros .= '<div class="sectionCardBook size4 flexColumn">
-                    <img class="sectionCardColumnImg" src="../SRC/capas/' . htmlspecialchars($imgL) . '">
-                <div>
-                    <st1>
-                        <a href="autor.php?id=' . htmlspecialchars($idL) . '"> ' . htmlspecialchars($nomeL) . ' </a>
-                    </st1>
-                </div>
+                    <a href="produto.php?id=' . htmlspecialchars($idL) . '">
+                        <img class="sectionCardColumnImg" src="../SRC/capas/' . htmlspecialchars($imgL) . '">
+                    </a>
                 </div>';
             }
         }
@@ -60,7 +58,7 @@ if ($stmt->num_rows > 0) {
             <div class="sectionCardRow flex size12">
                 <div class="flex size7">
                     <div class="sectionCardColumnCapa size5">
-                        <img class="sectionCardColumnImg" src="../SRC/fotos/autores/' . htmlspecialchars($img) . '">
+                        <img class="sectionCardColumnImgAuth" src="../SRC/fotos/autores/' . htmlspecialchars($img) . '">
                     </div>
                     <div class="sectionCardAuthor flexColumn size7">
                         <div class="sectionCardRowTitulo">
@@ -73,8 +71,13 @@ if ($stmt->num_rows > 0) {
                         </div>
                     </div>
                 </div>
-                <div class="sectionCardBooks flex size4">
-                    ' . $livros . '
+                <div class="flexColumn size4">
+                    <div class="sectionCardBooksTitle">
+                        Obras
+                    </div>
+                    <div class="sectionCardBooks">
+                        ' . $livros . '
+                    </div>
                 </div>
             </div>';
     }

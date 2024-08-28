@@ -62,7 +62,7 @@ WHERE cod = " . $idA;
         while ($stmtA->fetch()) {
             $resultA .= '
                 <div class="size5 pZero grid">
-                    <img class="livroCapa" src="../SRC/capas/' . htmlspecialchars($img) . '">
+                    <img class="autorImagem" src="../SRC/fotos/autores/' . htmlspecialchars($img) . '">
                 </div>
                 <div class="size7 livroInfoMain">
                     <div class="livroTituloSection borderBottom flexColumn contSection size8">
@@ -70,12 +70,15 @@ WHERE cod = " . $idA;
                         <div class="flexColumn widthMax">
                         </div>
                     </div>
-                    <div class="contSection livroBtnRow">
-                        '.$resultL.'
-                    </div>
                     <div class="contSection livroDesc">
                         ' . nl2br(htmlspecialchars($desc)) . '
                     </div>
+                </div>
+                <div>
+                    <div class="contSection livroBtnRow">
+                        '.$resultL.'
+                    </div>
+                    
                 </div>';
         }
 
