@@ -522,6 +522,15 @@
     justify-content: center;
 }
 
+.livroAutor>a{
+    text-decoration: none !important;
+    transition: 0.3s;
+}
+
+.livroAutor>a:hover{
+    color: var(--corSecundaria);
+}
+
 .livroDesc {
     padding-top: 1.75rem;
     font-family: 'Gotham Book';
@@ -782,6 +791,15 @@
 .sectionCardRow .sectionCardAuthor{
     font-size: 0.9rem;
     font-family: 'Gotham Thin';
+}
+
+.sectionCardAuthor>a{
+    text-decoration: none !important;
+    transition: 0.3s;
+}
+
+.sectionCardAuthor>a:hover{
+    color: var(--corSecundaria);
 }
 
 /* Seções de conteúdo END */

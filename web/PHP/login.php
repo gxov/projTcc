@@ -44,7 +44,7 @@
                         </div>
                         <div class="loginInputSection flexColumn">
                             <label for="senha">Senha</label>
-                            <input type="text" name="loginPassword" class="loginInputBox">
+                            <input type="password" name="loginPassword" class="loginInputBox">
                         </div>
                         <div class="loginSenhaResetSection">
                             <a href="#" class="loginLink">

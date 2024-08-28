@@ -6,7 +6,9 @@ if (isset($_POST['register'])) {
     $username = $_POST['registerUsername'];
     $email = $_POST['registerEmail'];
     $password = md5($_POST['registerPassword']);
+    $passwordCnf = md5($_POST['registerPasswordCnf']);
 
+    if($password == $passwordCnf){
     $sql = "INSERT INTO tb_usuarios 
     (username, email, senha, ativo, tipo) 
     VALUES 
@@ -17,6 +19,7 @@ if (isset($_POST['register'])) {
     if ($stmt->execute()) {
     } else {
     }
+    };
 
     $stmt->close();
     $conn->close();

@@ -48,11 +48,16 @@
                             </div>
                             <div class="loginInputSection flexColumn">
                                 <label for="senha">Senha</label>
-                                <input type="text" name="registerPassword" class="loginInputBox">
+                                <input type="password" name="registerPassword" class="loginInputBox">
+                            </div>
+                            <div class="loginInputSection flexColumn">
+                                <label for="senha">Confirmar Senha</label>
+                                <input type="password" name="registerPasswordCnf" class="loginInputBox">
                             </div>
                             <div class="loginBtnSection">
                                 <div class="loginBtnSection">
-                                    <input type="submit" value="Criar conta" name="register" class="loginBtn size11 flex">
+                                    <input type="submit" value="Criar conta" name="register"
+                                        class="loginBtn size11 flex">
                                 </div>
                             </div>
                         </form>
