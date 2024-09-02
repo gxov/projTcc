@@ -20,6 +20,7 @@ function getBookCategories($conn, $bookId) {
     return $categories;
 }
 
+
 $sqlWeek = "SELECT cod, nome, descricao, imagem
 FROM tb_livros
 ORDER BY nome

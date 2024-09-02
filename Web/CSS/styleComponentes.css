@@ -787,12 +787,13 @@
 }
 
 .sectionCardRowBadge {
-    font-family: 'Gotham Book';
-    font-size: 0.75rem;
+    font-family: 'Gotham Medium';
+    font-size: 0.7rem;
     background-color: var(--corPrimaria);
     border-radius: 5px;
     width: fit-content;
     padding: 0.05rem 0.1rem;
+    letter-spacing: 1px;
 }
 
 .sectionCardRowContent {
@@ -966,6 +967,22 @@
 
 .autorCardLivro .livroCapa {
     width: 120px;
+}
+
+.autorLivrosRow {
+    padding-top: 3rem;
+    gap: 20px;
+}
+
+.autorLivrosTitle{
+    margin: 0 0 0 1rem;
+    font-size: 2.8rem;
+    font-family: 'Gotham Medium';
+    border-bottom: 3px solid var(--bgTerciaria);
+}
+
+.autorLivrosRow .sectionCardRow{
+    margin-left: 1.2rem;
 }
 
 /* Autores END */

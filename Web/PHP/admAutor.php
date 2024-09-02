@@ -154,20 +154,20 @@
                         </div>
                         <form method="POST" enctype="multipart/form-data" action="" class="controlForm flexColumn">
                             <div class="controlInputSection">
-                                <label class="controlLabel" for="tituloLivro">Nome:</label>
-                                <input class="controlInput size12" type="text" name="tituloLivro" id="tituloLivro"
+                                <label class="controlLabel" for="nomeAutor">Nome:</label>
+                                <input class="controlInput size12" type="text" name="nomeAutor" id="nomeAutor"
                                     required>
                             </div>
                             <div class="controlInputSection">
-                                <label class="controlLabel" for="descricaoLivro">Descrição</label>
-                                <textarea class="controlInput size12" name="descricaoLivro" id="descricaoLivro"
+                                <label class="controlLabel" for="descricaoAutor">Descrição</label>
+                                <textarea class="controlInput size12" name="descricaoAutor" id="descricaoAutor"
                                     required> </textarea>
                             </div>
                             <div class="controlInputSection flex">
                                 <div class="size11 flexColumn">
-                                    <label class="controlLabel" for="capaLivro">Imagem:</label>
-                                    <input class="controlInputTransparent size11" type="file" name="capaLivro"
-                                        id="capaLivro">
+                                    <label class="controlLabel" for="imgAutor">Imagem:</label>
+                                    <input class="controlInputTransparent size11" type="file" name="imgAutor"
+                                        id="imgAutor">
                                     <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
                                 </div>
                             </div>

@@ -4,6 +4,23 @@ include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php")
 
 $conn = connect();
 
+function getBookCategories($conn, $bookId) {
+    $categoryName = null;
+    $sqlC = "SELECT c.nome FROM tb_categorias c 
+             INNER JOIN tb_categorias_livros lc ON c.cod = lc.codcategoria 
+             WHERE lc.codlivro = ?";
+    $stmtC = $conn->prepare($sqlC);
+    $stmtC->bind_param("i", $bookId);
+    $stmtC->execute();
+    $stmtC->bind_result($categoryName);
+    $categories = [];
+    while ($stmtC->fetch()) {
+        $categories[] = $categoryName;
+    }
+    $stmtC->close();
+    return $categories;
+}
+
 if (isset($_GET["id"])) {
     $idA = $_GET["id"];
 
@@ -24,24 +41,23 @@ if (isset($_GET["id"])) {
     if ($stmtL2->num_rows > 0) {
         $stmtL2->bind_result($nomeL, $imgL, $descL);
         while ($stmtL2->fetch()) {
+            $categories = getBookCategories($conn, $idL);
             $resultL .= '
-            <div class="size12 flex autorCardLivro">
-                <div class="">
-                </div>
-                <div class="flex">
-                    <div class="">
-                        <img class="livroCapa" src="../SRC/capas/' . htmlspecialchars($imgL) . '">
-                    </div>
-                    <div class="">
-                        <div class="">
-                        '.$nomeL.'
-                        </div>
-                        <div class="">
-                        '.$descL.'
-                        </div>
-                    </div>
-                </div>
+
+            <div class="sectionCardRow flex size5">
+            <div class="sectionCardColumnCapa">
+                <img class="sectionCardColumnImg" src="../SRC/capas/' . htmlspecialchars($imgL) . '">
             </div>
+            <div class="sectionCardRowContent">
+                <div class="sectionCardRowTitulo"><a href="produto.php?id=1">'.$nomeL.'</a></div>
+                <div class="sectionCardRowCategories">';
+                foreach ($categories as $category) {
+                    $resultL .= '<div class="sectionCardRowBadge">' . htmlspecialchars($category) . '</div>';
+                }
+                $resultL .= '</div>
+                <div class="sectionRowDesc">'.$descL.'</div>
+            </div>
+        </div>
             ';
         }
         $stmtL2->close();
@@ -61,10 +77,10 @@ WHERE cod = " . $idA;
         $stmtA->bind_result($nome, $desc, $img);
         while ($stmtA->fetch()) {
             $resultA .= '
-                <div class="size5 pZero grid">
+                <div class="size3 pZero grid">
                     <img class="autorImagem" src="../SRC/fotos/autores/' . htmlspecialchars($img) . '">
                 </div>
-                <div class="size7 livroInfoMain">
+                <div class="size9 livroInfoMain">
                     <div class="livroTituloSection borderBottom flexColumn contSection size8">
                         <div class="livroTitulo">' . htmlspecialchars($nome) . '</div>
                         <div class="flexColumn widthMax">
@@ -75,8 +91,13 @@ WHERE cod = " . $idA;
                     </div>
                 </div>
                 <div>
-                    <div class="contSection livroBtnRow">
+                    <div class="contSection autorLivrosRow size12">
+                        <div class="autorLivrosTitle size8">
+                        Obras
+                        </div>
+                        <div class="flex">
                         '.$resultL.'
+                        </div>
                     </div>
                     
                 </div>';

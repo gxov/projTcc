@@ -20,17 +20,11 @@
 </div>
 <?php
 if(isset($_SESSION['tipo'])){
-if($_SESSION['tipo'] == 'ADM'){
+if($_SESSION['tipo'] == 'VER'){
     echo '
     <div class="contSection sideNavSection size10">
     <a href="admLivro.php">
         Administrador - Livros </a>
-
-
-</div>
-<div class="contSection sideNavSection size10">
-    <a href="admUser.php">
-        Administrador - Usuários </a>
 </div>
 <div class="contSection sideNavSection size10">
     <a href="admAutor.php">
@@ -38,8 +32,20 @@ if($_SESSION['tipo'] == 'ADM'){
 </div>
     ';
 
-}else{
-
+}elseif($_SESSION['tipo'] == 'ADM'){
+echo '
+<div class="contSection sideNavSection size10">
+    <a href="admLivro.php">
+        Administrador - Livros </a>
+</div>
+<div class="contSection sideNavSection size10">
+    <a href="admAutor.php">
+        Administrador - Autores </a>
+</div>
+<div class="contSection sideNavSection size10">
+        <a href="admUser.php">
+        Administrador - Usuários </a>
+    </div>';
 }
 }
 ?>

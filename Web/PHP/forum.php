@@ -85,7 +85,7 @@
 
                     <?php
                     if ($_GET['id']) {
-                        include_once ("components/contentLoader/autorInfo.php");
+                        include_once ("components/contentLoader/forumInfo.php");
                     } else {
                         echo '
                         <div class="size5 pZero grid">
