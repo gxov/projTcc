@@ -1,25 +1,8 @@
 <?php
 include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
-
+include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/livro/getCategories.php");
 
 $conn = connect();
-
-function getBookCategories($conn, $bookId) {
-    $categoryName = null;
-    $sqlC = "SELECT c.nome FROM tb_categorias c 
-             INNER JOIN tb_categorias_livros lc ON c.cod = lc.codcategoria 
-             WHERE lc.codlivro = ?";
-    $stmtC = $conn->prepare($sqlC);
-    $stmtC->bind_param("i", $bookId);
-    $stmtC->execute();
-    $stmtC->bind_result($categoryName);
-    $categories = [];
-    while ($stmtC->fetch()) {
-        $categories[] = $categoryName;
-    }
-    $stmtC->close();
-    return $categories;
-}
 
 if (isset($_GET["id"])) {
     $idA = $_GET["id"];
@@ -49,7 +32,7 @@ if (isset($_GET["id"])) {
                 <img class="sectionCardColumnImg" src="../SRC/capas/' . htmlspecialchars($imgL) . '">
             </div>
             <div class="sectionCardRowContent">
-                <div class="sectionCardRowTitulo"><a href="produto.php?id=1">'.$nomeL.'</a></div>
+                <div class="sectionCardRowTitulo"><a href="produto.php?id='.$idL.'">'.$nomeL.'</a></div>
                 <div class="sectionCardRowCategories">';
                 foreach ($categories as $category) {
                     $resultL .= '<div class="sectionCardRowBadge">' . htmlspecialchars($category) . '</div>';

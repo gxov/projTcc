@@ -1,6 +1,6 @@
 <?php
 include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
-
+include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/livro/getCategories.php");
 
 $conn = connect();
 
@@ -36,6 +36,7 @@ WHERE cod = " . $idL;
     if ($stmtB->num_rows > 0) {
         $stmtB->bind_result($title, $desc, $img);
         while ($stmtB->fetch()) {
+            $categories = getBookCategories($conn, $idL);
             $result .= '
                 <div class="size5 pZero grid">
                     <img class="livroCapa" src="../SRC/capas/' . htmlspecialchars($img) . '">
@@ -73,12 +74,11 @@ WHERE cod = " . $idL;
                         </div>
                     </div>
                     <div class="contSection borderBottom">
-                        <div class="size12 livroRowCategorias">
-                            <div class="badgeCategoriaExtra">Muito Bem Avaliado</div>
-                            <div class="badgeCategoriaExtra">Livros Raros</div>
-                            <div class="badgeCategoria">Poesia</div>
-                            <div class="badgeCategoria">Século XX</div>
-                            <div class="badgeCategoria">Multi-Linguagem</div>
+                        <div class="size12 livroRowCategorias">';
+                        foreach ($categories as $category) {
+                            $result .= '<div class="badgeCategoria">' . htmlspecialchars($category) . '</div>';
+                        }
+                        $result .= '
                         </div>
                     </div>
                     <div class="contSection livroBtnRow">

@@ -519,6 +519,7 @@
     padding-bottom: 20px;
     display: flex;
     font-family: 'Gotham Thin';
+    font-size: 1.2rem;
     justify-content: center;
 }
 
@@ -548,7 +549,8 @@
 
 .livroRowCategorias {
     max-width: 90% !important;
-    gap: 2.5%;
+    gap: 4px;
+    display: flex;
 }
 
 .livroTituloSection {
@@ -613,7 +615,7 @@
 
 .badgeCategoria {
     color: black;
-    background-color: var(--corSecundaria);
+    background-color: var(--corPrimaria);
     padding: 0.3rem;
     border-radius: 0.35rem;
     font-family: 'Gotham Book';
@@ -747,7 +749,7 @@
 
 .sectionCardRowTitulo {
     font-family: 'Gotham Medium';
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     width: fit-content;
     transition: 0.2s;
     line-height: 25px;
@@ -759,7 +761,7 @@
 }
 
 .sectionRowDesc {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-family: 'Gotham Book';
     max-height: 55%;
     overflow-y: scroll;
@@ -814,7 +816,7 @@
 
 
 .sectionCardRow .sectionCardAuthor {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-family: 'Gotham Thin';
 }
 
@@ -835,8 +837,9 @@
 }
 
 .sectionCardAuthor .sectionRowDesc {
-    padding-top: 5px;
+    padding-top: 10px;
     max-height: 100%;
+    font-size: 0.8rem;
     max-width: fit-content;
     overflow-y: scroll;
 }
@@ -972,6 +975,10 @@
 .autorLivrosRow {
     padding-top: 3rem;
     gap: 20px;
+}
+
+.autorImagem{
+    justify-self: center;
 }
 
 .autorLivrosTitle{

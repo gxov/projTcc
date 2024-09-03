@@ -1,25 +1,8 @@
 <?php
 include_once("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
+include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/livro/getCategories.php");
 
 $conn = connect();
-
-function getBookCategories($conn, $bookId) {
-    $categoryName = null;
-    $sqlC = "SELECT c.nome FROM tb_categorias c 
-             INNER JOIN tb_categorias_livros lc ON c.cod = lc.codcategoria 
-             WHERE lc.codlivro = ?";
-    $stmtC = $conn->prepare($sqlC);
-    $stmtC->bind_param("i", $bookId);
-    $stmtC->execute();
-    $stmtC->bind_result($categoryName);
-    $categories = [];
-    while ($stmtC->fetch()) {
-        $categories[] = $categoryName;
-    }
-    $stmtC->close();
-    return $categories;
-}
-
 
 $sqlWeek = "SELECT cod, nome, descricao, imagem
 FROM tb_livros
@@ -76,7 +59,7 @@ if ($stmtW->num_rows > 0) {
                     }
                     $items .= '
                 </div>
-                <div class="sectionRowDesc">' . htmlspecialchars($desc) . '</div>
+                <div class="sectionRowDesc">' . substr(htmlspecialchars($desc), 0, 450) . '...</div>
             </div>
         </div>';
     }
@@ -137,7 +120,7 @@ if ($stmtM->num_rows > 0) {
                     }
                     $items .= '
                 </div>
-                <div class="sectionRowDesc">' . htmlspecialchars($desc) . '</div>
+                <div class="sectionRowDesc">' . substr(htmlspecialchars($desc), 0, 450) . '...</div>
             </div>
         </div>';
     }

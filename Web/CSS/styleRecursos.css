@@ -1,6 +1,8 @@
 :root {
     --navHeight: 3.5rem;
 
+
+    /* --font: #f8e5de; 
     --corPrimaria: #ea4f36;
     --corSecundaria: #bc3131;
     --corSecundaria2: #bc31318e;
@@ -9,11 +11,11 @@
     --bgTerciaria: #243542;
     --bgLogin: #1d2230;
     --bgInput: #343a3b;
-    --bgHover: #1c2635;
-    --font: #eff1f3; 
+    --bgHover: #1c2635; */
 
-    
-   /* --corPrimaria: #3fa0a4;
+    /* 
+    --font: #c3d2db; 
+    --corPrimaria: #3fa0a4;
     --corSecundaria: #387497;
     --corSecundaria2: #3874978e;
     --bgPrimaria: #111418;
@@ -21,7 +23,30 @@
     --bgTerciaria: #313c42;
     --bgLogin: #303b42;
     --bgInput: #2d3538;
-    --bgHover: #0d161b;  */
+    --bgHover: #0d161b; */
+
+
+    /* --font: #202020;
+    --corPrimaria: #77ad88;
+    --corSecundaria: #83a36e;
+    --corSecundaria2: #82a16c8e;
+    --bgPrimaria: #8d918b;
+    --bgSecundaria: #babdb1;
+    --bgTerciaria: #cbdbc5;
+    --bgLogin: #303b42;
+    --bgInput: #8d697a;
+    --bgHover: #888d86; */
+
+    --font: #e2dcd1;
+    --corPrimaria: #a48d6a;
+    --corSecundaria: #8b7d62;
+    --corSecundaria2: #8b7d628e;
+    --bgPrimaria: #292418;
+    --bgSecundaria: #524839;
+    --bgTerciaria: #73654a;
+    --bgLogin: #8b7d62;
+    --bgInput: #8b7d62;
+    --bgHover: #8b7d62;
 }
 
 @font-face {
@@ -58,4 +83,3 @@
     font-family: 'Gotham Bold';
     src: url('../SRC/fontes/Gotham/Gotham-Bold.otf');
 }
-
