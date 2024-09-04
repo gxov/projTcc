@@ -2,7 +2,7 @@
     --navHeight: 3.5rem;
 
 
-    /* --font: #f8e5de; 
+    --font: #f8e5de; 
     --corPrimaria: #ea4f36;
     --corSecundaria: #bc3131;
     --corSecundaria2: #bc31318e;
@@ -11,9 +11,9 @@
     --bgTerciaria: #243542;
     --bgLogin: #1d2230;
     --bgInput: #343a3b;
-    --bgHover: #1c2635; */
+    --bgHover: #1c2635;
 
-    /* 
+/*     
     --font: #c3d2db; 
     --corPrimaria: #3fa0a4;
     --corSecundaria: #387497;
@@ -37,7 +37,7 @@
     --bgInput: #8d697a;
     --bgHover: #888d86; */
 
-    --font: #e2dcd1;
+    /* --font: #e2dcd1;
     --corPrimaria: #a48d6a;
     --corSecundaria: #8b7d62;
     --corSecundaria2: #8b7d628e;
@@ -46,7 +46,7 @@
     --bgTerciaria: #73654a;
     --bgLogin: #8b7d62;
     --bgInput: #8b7d62;
-    --bgHover: #8b7d62;
+    --bgHover: #8b7d62; */
 }
 
 @font-face {

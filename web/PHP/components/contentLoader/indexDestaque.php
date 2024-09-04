@@ -59,7 +59,7 @@ if ($stmtW->num_rows > 0) {
                     }
                     $items .= '
                 </div>
-                <div class="sectionRowDesc">' . substr(htmlspecialchars($desc), 0, 450) . '...</div>
+                <div class="sectionRowDesc">' . substr(htmlspecialchars($desc), 0, 250) . '...</div>
             </div>
         </div>';
     }
