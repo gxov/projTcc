@@ -33,11 +33,11 @@ if (isset($_POST['submit'])) {
         $stmt3->execute();
         $stmt3->close();
 
-        if (is_string($categorias)) {
+        if ($categorias) {
           $categorias = explode(',', $categorias);
         }
 
-        $sql4 = "INSERT INTO tb_livros_categorias(codlivro, codcategoria) VALUES (?, ?)";
+        $sql4 = "INSERT INTO tb_categorias_livros(codlivro, codcategoria) VALUES (?, ?)";
         $stmt4 = $conn->prepare($sql4);
 
         foreach ($categorias as $categoria) {

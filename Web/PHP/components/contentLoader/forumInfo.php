@@ -11,23 +11,23 @@ $postId = intval($_GET['id']);
 $conn = connect();
 
 
-$sqlPost = "SELECT cod, nome, descricao, dtinicio, nome 
+$sqlPost = "SELECT cod, nome, descricao, dtinicio 
             FROM tb_foruns WHERE cod = ?";
 $stmtPost = $conn->prepare($sqlPost);
 $stmtPost->bind_param("i", $postId);
 $stmtPost->execute();
 $stmtPost->store_result();
-$stmtPost->bind_result($postId, $postTitle, $postContent, $postDate, $postAuthor);
+$stmtPost->bind_result($postId, $postTitle, $postContent, $postDate);
 
 if ($stmtPost->num_rows > 0) {
     $stmtPost->fetch();
 
     echo '
-    <div class="forumPost">
-        <h2>' . htmlspecialchars($postTitle) . '</h2>
-        <p>by ' . htmlspecialchars($postAuthor) . ' on ' . date("F j, Y, g:i a", strtotime($postDate)) . '</p>
-        <div class="postContent">' . nl2br(htmlspecialchars($postContent)) . '</div>
-        <h3>Comments</h3>';
+    <div class="forumPost flexColumn">
+        <span class="forumTitle">' . htmlspecialchars($postTitle) . '</span>
+        <span class="forumDate">Criado ' . date("j-m-y, H:i", strtotime($postDate)) . '</span>
+        <div class="forumDesc">' . nl2br(htmlspecialchars($postContent)) . '</div>
+        <div class="forumCommentSection"><div class="forumSubtitle"> Comentários </div>';
 
 
     $sqlComments = "SELECT c.conteudo, c.dtpostagem, u.nome 
@@ -64,6 +64,7 @@ if ($stmtPost->num_rows > 0) {
             <textarea name="commentContent" placeholder="Add a comment..." required></textarea>
             <button type="submit" name="submitComment">Post Comment</button>
         </form>
+    </div>
     </div>';
 } else {
     echo "Forum post not found.";

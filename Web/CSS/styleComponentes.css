@@ -784,9 +784,7 @@
     align-content: center;
 }
 
-.sectionCardRowCategories .sectionCardRowBadge{
-    
-}
+.sectionCardRowCategories .sectionCardRowBadge {}
 
 .sectionCardRowBadge {
     font-family: 'Gotham Medium';
@@ -822,7 +820,7 @@
 
 .sectionCardRow .sectionCardAuthor {}
 
-.sectionCardRow .sectionCardBooksTitle{
+.sectionCardRow .sectionCardBooksTitle {
     font-size: 1.1rem;
     font-family: 'Gotham Light';
 }
@@ -884,6 +882,25 @@
 
 .forumSection .sectionCardRow {
     gap: 6px;
+}
+
+.forumTitle {
+    font-size: 2.2rem;
+    font-family: 'Gotham Bold';
+}
+
+.forumDate{
+    font-family: 'Gotham Thin';
+    font-size: 0.9rem;
+}
+
+.forumDesc{
+margin-top: 1.2rem;
+}
+
+.forumSubtitle{
+    font-size: 1.8;
+    font-family: 'Gotham Bold';
 }
 
 /* Fóruns END */
@@ -977,18 +994,20 @@
     gap: 20px;
 }
 
-.autorImagem{
+.autorImagem {
     justify-self: center;
+    max-width: 95%;
+    min-width: 80%;
 }
 
-.autorLivrosTitle{
+.autorLivrosTitle {
     margin: 0 0 0 1rem;
     font-size: 2.8rem;
     font-family: 'Gotham Medium';
     border-bottom: 3px solid var(--bgTerciaria);
 }
 
-.autorLivrosRow .sectionCardRow{
+.autorLivrosRow .sectionCardRow {
     margin-left: 1.2rem;
 }
 
