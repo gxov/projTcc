@@ -311,7 +311,8 @@
     margin-top: 0.5rem;
     flex-direction: column;
     border-radius: 5px;
-    gap: 5px
+    gap: 5px;
+    padding-bottom: 10px;
 }
 
 .userMenuItem {
@@ -742,7 +743,8 @@
 
 .sectionCardColumnImgAuth {
     justify-self: center;
-    height: 180px;
+    max-height: 180px;
+    width: 100%;
     border-radius: 10px;
     padding: 4px;
 }
@@ -837,7 +839,7 @@
 .sectionCardAuthor .sectionRowDesc {
     padding-top: 10px;
     max-height: 100%;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     max-width: fit-content;
     overflow-y: scroll;
 }
@@ -901,6 +903,30 @@ margin-top: 1.2rem;
 .forumSubtitle{
     font-size: 1.8;
     font-family: 'Gotham Bold';
+}
+
+.forumInput{
+    background-color: var(--bgInput);
+    color: var(--font);
+    font-family: 'Gotham Book';
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.forumInput:focus{
+    box-shadow: 0 0 0 5px var(--corSecundaria2);
+    transition: 50ms box-shadow ease-in-out;
+    outline: 2px solid var(--corPrimaria);
+}
+
+.forumBtn{
+    border: 0px;
+    background-color: var(--corPrimaria);
+    border-radius: 10px;
+    padding: 5px;
+    color: var(--font);
+    font-family: 'Gotham Medium';
 }
 
 /* Fóruns END */

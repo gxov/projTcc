@@ -23,11 +23,11 @@ if ($stmtPost->num_rows > 0) {
     $stmtPost->fetch();
 
     echo '
-    <div class="forumPost flexColumn">
+    <div class="forumPost size5 flexColumn">
         <span class="forumTitle">' . htmlspecialchars($postTitle) . '</span>
-        <span class="forumDate">Criado ' . date("j-m-y, H:i", strtotime($postDate)) . '</span>
+        <span class="forumDate">Criado ' . date("j-m-y", strtotime($postDate)) . '</span>
         <div class="forumDesc">' . nl2br(htmlspecialchars($postContent)) . '</div>
-        <div class="forumCommentSection"><div class="forumSubtitle"> Comentários </div>';
+        <div class="forumCommentSection"><div class="forumSubtitle"> Comentários </div></div>';
 
 
     $sqlComments = "SELECT c.conteudo, c.dtpostagem, u.nome 
@@ -47,25 +47,25 @@ if ($stmtPost->num_rows > 0) {
         while ($stmtComments->fetch()) {
             echo '
             <li class="comment">
-                <p><strong>' . htmlspecialchars($commentAuthor) . '</strong> on ' . date("F j, Y, g:i a", strtotime($commentDate)) . '</p>
+                <p><strong>' . htmlspecialchars($commentAuthor) . '</strong> on ' . date("F j, Y", strtotime($commentDate)) . '</p>
                 <div class="commentContent">' . nl2br(htmlspecialchars($commentContent)) . '</div>
             </li>';
         }
-        echo '</ul>';
+        echo '</ul></div> ';
     } else {
-        echo '<p>No comments yet. Be the first to comment!</p>';
+        echo '<p>No comments yet. Be the first to comment!</p></div> ';
     }
     $stmtComments->close();
 
 
-    echo '
-        <form class="commentForm" method="post" action="add_comment.php">
-            <input type="hidden" name="postId" value="' . $postId . '">
-            <textarea name="commentContent" placeholder="Add a comment..." required></textarea>
-            <button type="submit" name="submitComment">Post Comment</button>
+    echo '<div class="size6">
+        <form class="forumForm flexColumn" method="post" action="administrator/utils/forum/addComment.php">
+            <input type="hidden" name="commId" value="' . $postId . '">
+            <textarea class="forumInput size8" name="commCont" placeholder="Faça um comentário!" required style="resize: none;"></textarea>
+            <button class="forumBtn size2" type="submit" name="commSubmit">Post Comment</button>
         </form>
     </div>
-    </div>';
+    </div></div>';
 } else {
     echo "Forum post not found.";
 }

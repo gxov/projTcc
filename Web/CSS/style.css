@@ -183,7 +183,7 @@ a:hover{
     display: grid;
     width: 100%;
     background-color: var(--bgSecundaria);
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     border: 2px solid var(--bgTerciaria);
     font-weight: 800;
     border-radius: 15px;

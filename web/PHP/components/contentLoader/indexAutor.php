@@ -67,7 +67,7 @@ if ($stmt->num_rows > 0) {
                             </a>
                         </div>
                         <div class="sectionRowDesc">
-                            ' . substr(htmlspecialchars($desc), 0, 250) . '...
+                            ' . substr(htmlspecialchars($desc), 0, 150) . '...
                         </div>
                     </div>
                 </div>
