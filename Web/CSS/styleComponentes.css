@@ -744,7 +744,7 @@
 .sectionCardColumnImgAuth {
     justify-self: center;
     max-height: 180px;
-    width: 100%;
+    max-width: 100%;
     border-radius: 10px;
     padding: 4px;
 }
@@ -901,8 +901,16 @@ margin-top: 1.2rem;
 }
 
 .forumSubtitle{
-    font-size: 1.8;
+    font-size: 1.6rem;
     font-family: 'Gotham Bold';
+}
+
+.forumSubtitle::after {
+    content: "";
+    background-color: var(--corPrimaria);
+    width: 50px;
+    height: 3px;
+    margin: 0 0 0 10px;
 }
 
 .forumInput{
@@ -927,6 +935,17 @@ margin-top: 1.2rem;
     padding: 5px;
     color: var(--font);
     font-family: 'Gotham Medium';
+    margin-top: 0.6rem;
+}
+
+.forumBtn:hover{
+    background-color: var(--corSecundaria);
+    cursor: pointer;
+}
+
+.forumCommentSection{
+    padding-left: 1rem;
+    border-left: 3px solid var(--bgTerciaria)
 }
 
 /* Fóruns END */

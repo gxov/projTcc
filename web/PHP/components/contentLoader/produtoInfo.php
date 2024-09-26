@@ -42,7 +42,7 @@ WHERE cod = " . $idL;
                     <img class="livroCapa" src="../SRC/capas/' . htmlspecialchars($img) . '">
                 </div>
                 <div class="size7 livroInfoMain">
-                    <div class="livroTituloSection flexColumn contSection size8">
+                    <div class="livroTituloSection flexColumn contSection size12">
                         <div class="livroTitulo">' . htmlspecialchars($title) . '</div>
                         <div class="flexColumn widthMax">
                         
