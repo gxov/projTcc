@@ -916,6 +916,7 @@ margin-top: 1.2rem;
 .forumInput{
     background-color: var(--bgInput);
     color: var(--font);
+    height: 100px;
     font-family: 'Gotham Book';
     font-size: 1rem;
     border-radius: 10px;

@@ -19,6 +19,7 @@ if (isset($_POST['login'])) {
         if ($password == $hashed_password) {
             $_SESSION['tipo'] = $tipo;
             $_SESSION['username'] = $username;
+            $_SESSION['id'] = $id;
         } else {
             header("location: login.php");
         }

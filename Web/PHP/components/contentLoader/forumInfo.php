@@ -42,13 +42,14 @@ if ($stmtPost->num_rows > 0) {
     $stmtComments->store_result();
     echo '
     <div class="size5 forumCommentSection">
-        <div class="forumSubtitle flex alignCenter"> Comentários </div>
-        <form class="flexColumn" method="post" action="administrator/utils/forum/addComment.php">
+        <div class="forumSubtitle flex alignCenter"> Comentários </div>';
+    if (isset($_SESSION['id'])) {
+        echo '<form class="flexColumn" method="post" action="administrator/utils/forum/addComment.php">
             <input type="hidden" name="commId" value="' . $postId . '">
             <textarea class="forumInput size12" name="commCont" placeholder="Faça um comentário!" required style="resize: none;"></textarea>
             <button class="forumBtn size2" type="submit" name="commSubmit">Publicar</button>
         </form>';
-
+    }
     if ($stmtComments->num_rows > 0) {
         echo '<ul class="commentsList">';
         while ($stmtComments->fetch()) {
@@ -60,7 +61,11 @@ if ($stmtPost->num_rows > 0) {
         }
         echo '</ul></div>';
     } else {
-        echo '<p>Sem comentários ainda, seja o primeiro a comentar!</p></div>';
+        if (isset($_SESSION['id'])) {
+            echo '<p>Sem comentários ainda, seja o primeiro a comentar!</p></div>';
+        }else{
+            echo '<p>Sem comentários ainda, faça login para comentar!</p></div';
+        }
     }
     $stmtComments->close();
 
