@@ -9,7 +9,9 @@
     <link href="../CSS/styleComponentes.css" rel="stylesheet">
     <link href="../CSS/style.css" rel="stylesheet">
     <link rel="icon" href="../SRC/svg/logo.png" />
-    <?php include_once ("administrator/utils/user/register.php") ?>
+    <?php include_once ("administrator/utils/user/register.php") 
+    
+    ?>
 </head>
 
 <body class="conteudo">
@@ -34,29 +36,31 @@
         <div class="contFluid">
             <div class="contSection contMain" style="background: none ;justify-content: center;">
                 <div class="size5 loginSectionBorder">
-                    <form action="index.php" method="POST" class="size12 loginSection grid">
+                    <form action="administrator/utils/user/resetPass.php" method="POST" class="size12 loginSection grid">
                         <div class="loginTitle justifySlfCent">
-                            Entre na sua conta
+                            Recuperar Senha
                         </div>
                         <div class="loginInputSection flexColumn">
-                            <label for="email">E-mail ou Usuário</label>
-                            <input type="text" name="loginValue" class="loginInputBox">
-                        </div>
-                        <div class="loginInputSection flexColumn">
-                            <label for="senha">Senha</label>
-                            <input type="password" name="loginPassword" class="loginInputBox">
-                        </div>
-                        <div class="loginSenhaResetSection">
-                            <a href="resetPass.php" class="loginLink">
-                                Esqueceu a Senha?
-                            </a>
+                            <label for="email">E-mail</label>
+                            <input type="text" name="email" class="loginInputBox">
+                            <st1>Insira o e-mail da sua conta</st1>
                         </div>
                         <div class="loginBtnSection">
-                            <input type="submit" value="Entrar" name="login" class="loginBtn size11 flex">
+                            <input type="submit" value="Confirmar" name="resetConf" class="loginBtn size11 flex">
                         </div>
                     </form>
+
+                    <?php
+            if (isset($_SESSION['recuperacao_erro'])) {
+                echo '<div class="error-message">' . $_SESSION['recuperacao_erro'] . '</div>';
+                unset($_SESSION['recuperacao_erro']);
+            }
+            if (isset($_SESSION['recuperacao_sucesso'])) {
+                echo '<div class="success-message">' . $_SESSION['recuperacao_sucesso'] . '</div>';
+                unset($_SESSION['recuperacao_sucesso']);
+            }
+            ?>
                     <div class="loginCadSection flexColumn textAlignCenter">
-                        <div>Novo aqui? <a class="loginLink" href="cadastro.php">Crie uma conta</a> </div>
                         <div><a href="index.php">Voltar para a tela inicial</a></div>
                     </div>
                 </div>

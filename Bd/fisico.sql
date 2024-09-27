@@ -14,7 +14,9 @@ CREATE TABLE IF NOT EXISTS tb_usuarios (
 	ativo BOOLEAN,
 	tipo VARCHAR(3) CHECK (tipo IN ('USR', 'VER', 'ADM' )),
 	imagem VARCHAR(100),
-	descricao VARCHAR(700)
+	descricao VARCHAR(700),
+	token_recuperacao VARCHAR(255),
+	token_expires INTEGER(11)
 );
 
 CREATE TABLE IF NOT EXISTS tb_livros (

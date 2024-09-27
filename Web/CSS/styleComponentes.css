@@ -224,6 +224,7 @@
 
 .loginBtn {
     border-radius: 5px;
+    border: 0;
     justify-content: center;
     background-color: var(--corPrimaria);
     color: white;
@@ -312,7 +313,6 @@
     flex-direction: column;
     border-radius: 5px;
     gap: 5px;
-    padding-bottom: 10px;
 }
 
 .userMenuItem {
