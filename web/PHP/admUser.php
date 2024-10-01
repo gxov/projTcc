@@ -11,10 +11,10 @@
     <link rel="icon" href="../SRC/svg/logo.png" />
     <?php
     session_start();
-    include_once ("administrator/utils/user/read.php");
-    include_once ("administrator/utils/user/insert.php");
-    include_once ("administrator/utils/user/delete.php");
-    include_once ("administrator/utils/user/update.php");
+    include_once("administrator/utils/user/read.php");
+    include_once("administrator/utils/user/insert.php");
+    include_once("administrator/utils/user/delete.php");
+    include_once("administrator/utils/user/update.php");
     ?>
 
 
@@ -78,7 +78,7 @@
                         </div>
                     </div>
                     <?php
-                    include_once ("components/usermenu.php");
+                    include_once("components/usermenu.php");
                     ?>
                 </div>
             </div>
@@ -97,60 +97,65 @@
                                 style="background:none; border: none; position: absolute;">
                             </input>
                         </form>
-                    </div> 
-                    <div class="tableSection">
-                        <div class="containerComplement tableUserSpacing">
-                            <div class="tableCodMin">
-                                cod
-                            </div>
-                            <div class="tableTituloMin">
-                                nome
-                            </div>
-                            <div class="tableTituloMin">
-                                username
-                            </div>
-                            <div class="tableTituloMin">
-                                cpf
-                            </div>
-                            <div class="tableTituloMin">
-                                email
-                            </div>
-                            <div class="tableAutorMin">
-                                ativo
-                            </div>
-                            <div class="tableTituloMin">
-                                tipo
-                            </div>
-                            <div class="tableAutorMin">
-                                imagem
+                    </div>
+                    <div class="adminScroll">
+                        <div class="tableSection">
+                            <div class="containerComplement tableUserSpacing">
+                                <div class="tableCodMin">
+                                    cod
+                                </div>
+                                <div class="tableTituloMin">
+                                    nome
+                                </div>
+                                <div class="tableTituloMin">
+                                    username
+                                </div>
+                                <div class="tableTituloMin">
+                                    cpf
+                                </div>
+                                <div>
+                                    dtcriacao
+                                </div>
+                                <div class="tableTituloMin">
+                                    email
+                                </div>
+                                <div class="tableAutorMin">
+                                    ativo
+                                </div>
+                                <div class="tableTituloMin">
+                                    tipo
+                                </div>
+                                <div class="tableAutorMin">
+                                    imagem
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="results">
+                        <div id="results">
 
-                        <?php
-                        if ($_GET["search"] != NULL) {
-                            selectFiltered("tb_usuarios");
-                        } else {
-                            select("tb_usuarios");
-                        }
-                        ?>
+                            <?php
+                            if ($_GET["search"] != NULL) {
+                                selectFiltered("tb_usuarios");
+                            } else {
+                                select("tb_usuarios");
+                            }
+                            ?>
+                        </div>
                     </div>
                 </div>
                 <div class="size4">
                     <div class="controlAcessButtons flex">
-                        <div id="adminCreateBtn" class="controlShowBtn controlShowBorder" style="z-index: 7;"
+                        <button id="adminCreateBtn" class="controlShowBtn controlShowBorder" style="z-index: 7;"
                             onclick="controlShow('create')">
-                            criar
-                        </div>
-                        <div id="adminUpdateBtn" class="controlShowBtn controlShowBorder"
+                            Criar
+                        </button>
+                        <button id="adminUpdateBtn" class="controlShowBtn controlShowBorder"
                             style="z-index: 6; margin-left: -2px" onclick="controlShow('update')">
-                            atualizar
-                        </div>
-                        <div id="adminDeleteBtn" class="controlShowBtn controlShowBorder"
+                            Atualizar
+                        </button>
+                        <button id="adminDeleteBtn" class="controlShowBtn controlShowBorder"
                             style="z-index: 5; margin-left: -2px" onclick="controlShow('delete')">
-                            deletar
-                        </div>
+                            Deletar
+                        </button>
                     </div>
                     <div id="adminCreate" class="controlEditContainer controlBackgroundStart">
                         <div class="controlTitulo">

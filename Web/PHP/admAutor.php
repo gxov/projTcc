@@ -11,10 +11,10 @@
     <link rel="icon" href="../SRC/svg/logo.png" />
     <?php
     session_start();
-    include_once ("administrator/utils/autor/read.php");
-    include_once ("administrator/utils/autor/insert.php");
-    include_once ("administrator/utils/autor/delete.php");
-    include_once ("administrator/utils/autor/update.php");
+    include_once("administrator/utils/autor/read.php");
+    include_once("administrator/utils/autor/insert.php");
+    include_once("administrator/utils/autor/delete.php");
+    include_once("administrator/utils/autor/update.php");
     ?>
 
 
@@ -78,7 +78,7 @@
                         </div>
                     </div>
                     <?php
-                    include_once ("components/usermenu.php");
+                    include_once("components/usermenu.php");
                     ?>
                 </div>
             </div>
@@ -98,53 +98,55 @@
                             </input>
                         </form>
                     </div>
-                    <div class="tableSection">
-                        <div class="containerComplement tableAutorSpacing">
-                            <div class="tableCodMin">
-                                cod
-                            </div>
-                            <div class="tableTituloMin">
-                                nome
-                            </div>
-                            <div class="tableTituloMin">
-                                dtnasc
-                            </div>
-                            <div class="tableAutorMin">
-                                descricao
-                            </div>
-                            <div class="tableAutorMin">
-                                imagem
-                            </div>
-                            <div class="tableAutorMin">
-                                ativo
+                    <div class="adminScroll">
+                        <div class="tableSection">
+                            <div class="containerComplement tableAutorSpacing">
+                                <div class="tableCodMin">
+                                    cod
+                                </div>
+                                <div class="tableTituloMin">
+                                    nome
+                                </div>
+                                <div class="tableTituloMin">
+                                    dtnasc
+                                </div>
+                                <div class="tableAutorMin">
+                                    descricao
+                                </div>
+                                <div class="tableAutorMin">
+                                    imagem
+                                </div>
+                                <div class="tableAutorMin">
+                                    ativo
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="results">
+                        <div id="results">
 
-                        <?php
-                        if ($_GET["search"] != NULL) {
-                            selectFiltered("tb_autores");
-                        } else {
-                            select("tb_autores");
-                        }
-                        ?>
+                            <?php
+                            if ($_GET["search"] != NULL) {
+                                selectFiltered("tb_autores");
+                            } else {
+                                select("tb_autores");
+                            }
+                            ?>
+                        </div>
                     </div>
                 </div>
                 <div class="size4">
                     <div class="controlAcessButtons flex">
-                        <div id="adminCreateBtn" class="controlShowBtn controlShowBorder" style="z-index: 7;"
+                        <button id="adminCreateBtn" class="controlShowBtn controlShowBorder" style="z-index: 7;"
                             onclick="controlShow('create')">
-                            criar
-                        </div>
-                        <div id="adminUpdateBtn" class="controlShowBtn controlShowBorder"
+                            Criar
+                        </button>
+                        <button id="adminUpdateBtn" class="controlShowBtn controlShowBorder"
                             style="z-index: 6; margin-left: -2px" onclick="controlShow('update')">
-                            atualizar
-                        </div>
-                        <div id="adminDeleteBtn" class="controlShowBtn controlShowBorder"
+                            Atualizar
+                        </button>
+                        <button id="adminDeleteBtn" class="controlShowBtn controlShowBorder"
                             style="z-index: 5; margin-left: -2px" onclick="controlShow('delete')">
-                            deletar
-                        </div>
+                            Deletar
+                        </button>
                     </div>
 
 
@@ -155,8 +157,7 @@
                         <form method="POST" enctype="multipart/form-data" action="" class="controlForm flexColumn">
                             <div class="controlInputSection">
                                 <label class="controlLabel" for="nomeAutor">Nome:</label>
-                                <input class="controlInput size12" type="text" name="nomeAutor" id="nomeAutor"
-                                    required>
+                                <input class="controlInput size12" type="text" name="nomeAutor" id="nomeAutor" required>
                             </div>
                             <div class="controlInputSection">
                                 <label class="controlLabel" for="descricaoAutor">Descrição</label>

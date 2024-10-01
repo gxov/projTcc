@@ -1058,3 +1058,15 @@ margin-top: 1.2rem;
 }
 
 /* Autores END */
+
+/* MISC */
+
+.adminScroll{
+    max-width: 100%;
+    overflow-x: scroll;
+    padding: 5px;
+    border: solid 1px var(--corSecundaria);
+    border-radius: 5px
+}
+
+/* MISC END */

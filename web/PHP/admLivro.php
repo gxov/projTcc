@@ -98,56 +98,58 @@
                             </input>
                         </form>
                     </div>
-                    <div class="tableSection">
-                        <div class="containerComplement tableBookSpacing">
-                            <div class="tableCodMin">
-                                cod
-                            </div>
-                            <div class="tableTituloMin">
-                                nome
-                            </div>
-                            <div class="tableAutorMin">
-                                descricao
-                            </div>
-                            <div class="tableAutorMin">
-                                ativo
-                            </div>
-                            <div class="tableAutorMin">
-                                imagem
-                            </div>
-                            <div class="tableAutorMin">
-                                codcategorias
-                            </div>
-                            <div class="tableAutorMin">
-                                codautor
+                    <div class="adminScroll">
+                        <div class="tableSection">
+                            <div class="containerComplement tableBookSpacing">
+                                <div class="tableCodMin">
+                                    cod
+                                </div>
+                                <div class="tableTituloMin">
+                                    nome
+                                </div>
+                                <div class="tableAutorMin">
+                                    descricao
+                                </div>
+                                <div class="tableAutorMin">
+                                    ativo
+                                </div>
+                                <div class="tableAutorMin">
+                                    imagem
+                                </div>
+                                <div class="tableAutorMin">
+                                    codcategorias
+                                </div>
+                                <div class="tableAutorMin">
+                                    codautor
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="results">
+                        <div id="results">
 
-                        <?php
-                        if ($_GET["search"] != NULL) {
-                            selectFiltered("tb_livros");
-                        } else {
-                            select("tb_livros");
-                        }
-                        ?>
+                            <?php
+                            if ($_GET["search"] != NULL) {
+                                selectFiltered("tb_livros");
+                            } else {
+                                select("tb_livros");
+                            }
+                            ?>
+                        </div>
                     </div>
                 </div>
                 <div class="size4">
                     <div class="controlAcessButtons flex">
-                        <div id="adminCreateBtn" class="controlShowBtn controlShowBorder" style="z-index: 7;"
+                        <button id="adminCreateBtn" class="controlShowBtn controlShowBorder" style="z-index: 7;"
                             onclick="controlShow('create')">
-                            criar
-                        </div>
-                        <div id="adminUpdateBtn" class="controlShowBtn controlShowBorder"
+                            Criar
+                        </button>
+                        <button id="adminUpdateBtn" class="controlShowBtn controlShowBorder"
                             style="z-index: 6; margin-left: -2px" onclick="controlShow('update')">
-                            atualizar
-                        </div>
-                        <div id="adminDeleteBtn" class="controlShowBtn controlShowBorder"
+                            Atualizar
+                        </button>
+                        <button id="adminDeleteBtn" class="controlShowBtn controlShowBorder"
                             style="z-index: 5; margin-left: -2px" onclick="controlShow('delete')">
-                            deletar
-                        </div>
+                            Deletar
+                        </button>
                     </div>
 
 

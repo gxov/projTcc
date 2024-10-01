@@ -192,7 +192,7 @@ a:hover{
 }
 
 .tableUserSpacing{
-    grid-template-columns: 5% 20% 15% 15% 20% 10% 5% 10%;
+    grid-template-columns: 5% 17.5% 12.5% 10% 10% 20% 5% 10% 10%;
 }
 
 .tableBookSpacing{
@@ -200,7 +200,7 @@ a:hover{
 }
 
 .tableAutorSpacing{
-    grid-template-columns: 10% 15% 10% 30% 20% 10% ;
+    grid-template-columns: 10% 20% 10% 40% 10% 5% ;
 }
 
 
@@ -222,6 +222,11 @@ a:hover{
 }
 
 .tableSection{  
+    width: 150%;
+}
+
+#results{
+    width: 150%;
 }
 
 .tableCodMin{
@@ -339,6 +344,19 @@ padding: 5px;
 .controlShowBtn{
     transition: 0.3s;
     padding: 5px;
+    background-color: var(--corPrimaria);
+    color: var(--font);
+    font-family: 'Gotham Medium';
+    font-size: 1.1rem;
+    border: 0;
+}
+
+.controlShowBtn:hover{
+    cursor: pointer;
+    background-color: var(--corSecundaria);
+}
+
+.controlShowBtn:focus{
     background-color: var(--corSecundaria);
 }
 
