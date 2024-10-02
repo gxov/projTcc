@@ -99,69 +99,6 @@
                         ?>
                         </div>
 
-                        <div class="sectionWrapper">
-                            <div class="sectionTitle">
-                                Melhores Avaliações
-                            </div>
-                            <div class="sectionContent">
-                                <div class="sectionCard size1-5">
-                                    <div class="sectionCapaPadrao">
-                                        <img class="sectionCapa" src="../SRC/capas/1.jpg">
-                                    </div>
-                                    <div class="sectionCapaTitulo">
-                                        O Mundo Como Idéia
-                                    </div>
-                                </div>
-                                <div class="sectionCard size1-5">
-                                    <div class="sectionCapaPadrao">
-                                        <img class="sectionCapa" src="../SRC/capas/2.jpg">
-                                    </div>
-                                    <div class="sectionCapaTitulo">
-                                        A Ascendência Vertical
-                                    </div>
-                                </div>
-                                <div class="sectionCard size1-5">
-                                    <div class="sectionCapaPadrao">
-                                        <img class="sectionCapa" src="../SRC/capas/3.jpg">
-                                    </div>
-                                    <div class="sectionCapaTitulo">
-                                        Redescobrindo o Cosmos Integral: Física, Metafísica, e Causalidade Vertical
-                                    </div>
-                                </div>
-                                <div class="sectionCard size1-5">
-                                    <div class="sectionCapaPadrao">
-                                        <img class="sectionCapa" src="../SRC/capas/4.jpg">
-                                    </div>
-                                    <div class="sectionCapaTitulo">
-                                        Casa das Folhas
-                                    </div>
-                                </div>
-                                <div class="sectionCard size1-5">
-                                    <div class="sectionCapaPadrao">
-                                        <img class="sectionCapa" src="../SRC/capas/1.jpg">
-                                    </div>
-                                    <div class="sectionCapaTitulo">
-                                        O Mundo Como Idéia
-                                    </div>
-                                </div>
-                                <div class="sectionCard size1-5">
-                                    <div class="sectionCapaPadrao">
-                                        <img class="sectionCapa" src="../SRC/capas/2.jpg">
-                                    </div>
-                                    <div class="sectionCapaTitulo">
-                                        A Ascendência Vertical
-                                    </div>
-                                </div>
-                                <div class="sectionCard size1-5">
-                                    <div class="sectionCapaPadrao">
-                                        <img class="sectionCapa" src="../SRC/capas/3.jpg">
-                                    </div>
-                                    <div class="sectionCapaTitulo">
-                                        Redescobrindo o Cosmos Integral: Física, Metafísica, e Causalidade Vertical
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
