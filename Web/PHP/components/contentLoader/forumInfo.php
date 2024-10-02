@@ -30,7 +30,7 @@ if ($stmtPost->num_rows > 0) {
         </div>';
 
 
-    $sqlComments = "SELECT c.conteudo, c.dtpostagem, u.nome 
+    $sqlComments = "SELECT c.conteudo, c.dtpostagem, u.nome, u.imagem 
                     FROM tb_comentarios c
                     JOIN tb_usuarios u ON c.codusuario = u.cod
                     WHERE c.codforum = ?
@@ -38,28 +38,29 @@ if ($stmtPost->num_rows > 0) {
     $stmtComments = $conn->prepare($sqlComments);
     $stmtComments->bind_param("i", $postId);
     $stmtComments->execute();
-    $stmtComments->bind_result($commentContent, $commentDate, $commentAuthor);
+    $stmtComments->bind_result($commentContent, $commentDate, $commentAuthor, $commentAuthorImage);
     $stmtComments->store_result();
     echo '
     <div class="size5 forumCommentSection">
         <div class="forumSubtitle flex alignCenter"> Comentários </div>';
     if (isset($_SESSION['id'])) {
-        echo '<form class="flexColumn" method="post" action="administrator/utils/forum/addComment.php">
+        echo '<form class="flexColumn" method="post" action="">
             <input type="hidden" name="commId" value="' . $postId . '">
             <textarea class="forumInput size12" name="commCont" placeholder="Faça um comentário!" required style="resize: none;"></textarea>
             <button class="forumBtn size2" type="submit" name="commSubmit">Publicar</button>
         </form>';
     }
     if ($stmtComments->num_rows > 0) {
-        echo '<ul class="commentsList">';
+        echo '<div class="forumCommentsList">';
         while ($stmtComments->fetch()) {
             echo '
-            <li class="comment">
-                <p><strong>' . htmlspecialchars($commentAuthor) . '</strong> on ' . date("F j, Y", strtotime($commentDate)) . '</p>
-                <div class="commentContent">' . nl2br(htmlspecialchars($commentContent)) . '</div>
-            </li>';
+            <div class="forumComment flex">
+                <img class="forumCommentImage" src="../SRC/fotos/usuario/'.$commentAuthorImage.'">
+                <div class="commentContent size10 flexColumn"><span><strong>' . htmlspecialchars($commentAuthor) . '</strong> <st1> ' . date("j-m-y", strtotime($commentDate)) . '</st1></span>
+                ' . nl2br(htmlspecialchars($commentContent)) . '</div>
+            </div>';
         }
-        echo '</ul></div>';
+        echo '</div></div>';
     } else {
         if (isset($_SESSION['id'])) {
             echo '<p>Sem comentários ainda, seja o primeiro a comentar!</p></div>';

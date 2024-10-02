@@ -11,9 +11,6 @@
     <link rel="icon" href="../SRC/svg/logo.png" />
     <?php
     session_start();
-    if ($_GET['id']) {
-        include_once ("administrator/utils/forum/addComment.php");
-    } 
     ?>
 </head>
 
@@ -85,16 +82,14 @@
         <!-- conteúdo -->
         <div class="contFluid" style="margin-top: -8%;">
             <div class="contMainBorder contSection">
-                    <div class="size12 flex">
+
                     <?php
                     if ($_GET['id']) {
-                        include_once ("components/contentLoader/forumInfo.php");
+                        include_once ("components/contentLoader/userInfo.php");
                     } else {
-                        
                     }
                     ;
                     ?>
-                    </div>
                     <div class="size12 livroContent">
                     </div>
 

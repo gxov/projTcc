@@ -949,6 +949,12 @@ margin-top: 1.2rem;
     border-left: 3px solid var(--bgTerciaria)
 }
 
+.forumCommentImage{
+    width: 13%;
+    border-radius: 10px;
+    margin: 5px;
+}
+
 /* Fóruns END */
 
 /* Página Principal END */
@@ -1028,6 +1034,21 @@ margin-top: 1.2rem;
 /* Fóruns */
 
 /* Fóruns END */
+
+/* Usuários */
+
+.userNome{
+    font-size: 1.2rem;
+}
+
+.userNome span{
+    font-size: 2.4rem;
+    font-family: 'Gotham Medium';
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+/* Usuários END */
 
 /* Autores */
 
