@@ -1,5 +1,6 @@
 <?php
 include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
+include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/livro/getCategories.php");
 
 $conn = connect();
 
@@ -20,6 +21,8 @@ if ($stmt->num_rows > 0) {
             </div>
             <div class="sectionContent flexColumn forumSection">';
     $stmt->bind_result($id, $title, $desc, $date);
+
+    $categories = getForumCategories($conn, $id);
     
     while ($row = $stmt->fetch()) {
         $items .= '
@@ -31,9 +34,11 @@ if ($stmt->num_rows > 0) {
                         </a>
                     </div>
                     <div class="sectionCardRowCategories">
-                        <div class="sectionCardRowBadge">
-                            Categoria
-                        </div>
+                        ';
+                        foreach ($categories as $category) {
+                            $items .= '<div class="sectionCardRowBadge">' . htmlspecialchars($category) . '</div>';
+                        }
+                        $items .= '
                     </div>
                     
                     <div class="forumStats flex">

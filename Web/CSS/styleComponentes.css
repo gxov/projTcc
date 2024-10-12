@@ -961,6 +961,7 @@ margin-top: 1.2rem;
 .forumCommentImage{
     width: 13%;
     border-radius: 10px;
+    height: fit-content;
     margin: 5px;
 }
 
@@ -1048,6 +1049,11 @@ margin-top: 1.2rem;
 
 .userNome{
     font-size: 1.2rem;
+}
+
+.userPicture {
+    width: 80%;
+    border-radius: 50%;
 }
 
 .userNome span{
