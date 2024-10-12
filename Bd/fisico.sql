@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS tb_usuarios (
 	dtnasc DATE,
 	email VARCHAR(100),
 	senha VARCHAR(32),
-	ativo BOOLEAN,
+	ativo BOOLEAN DEFAULT true,
 	tipo VARCHAR(3) CHECK (tipo IN ('USR', 'VER', 'ADM' )),
 	imagem VARCHAR(100),
 	descricao VARCHAR(700),
@@ -23,25 +23,25 @@ CREATE TABLE IF NOT EXISTS tb_livros (
 	cod INTEGER PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(90),	
 	descricao VARCHAR(1000),
-	ativo BOOLEAN,
+	ativo BOOLEAN DEFAULT true,
 	imagem VARCHAR(100)
 );
 
 CREATE TABLE IF NOT EXISTS tb_categorias(
 	cod INTEGER PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(60),
-	ativo BOOLEAN
+	ativo BOOLEAN DEFAULT true
 );
 
 CREATE TABLE IF NOT EXISTS tb_forumcategorias(
 	cod INTEGER PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(60) NOT NULL,
-	ativo BOOLEAN
+	ativo BOOLEAN DEFAULT true
 );
 
 CREATE TABLE IF NOT EXISTS tb_foruns (
 	cod INTEGER PRIMARY KEY AUTO_INCREMENT,
-   	ativo BOOLEAN,
+   	ativo BOOLEAN DEFAULT true,
 	dtinicio DATE,
    	nome VARCHAR(50),
 	descricao VARCHAR(1000)
@@ -53,14 +53,14 @@ CREATE TABLE IF NOT EXISTS tb_autores (
   	dtnasc DATE,
 descricao VARCHAR(1000),
 imagem VARCHAR(130),
-ativo BOOLEAN
+ativo BOOLEAN DEFAULT true
 );
 
 
 CREATE TABLE tb_bibliotecas (
     cod INTEGER PRIMARY KEY AUTO_INCREMENT,
-ativo BOOLEAN,
-descricao VARCHAR(700),
+ativo BOOLEAN DEFAULT true,
+descricao VARCHAR(500),
     nome VARCHAR(60),
     codusuario INTEGER,
 CONSTRAINT fk_codusuario FOREIGN KEY(codusuario) REFERENCES tb_usuarios(cod) 
@@ -185,7 +185,7 @@ INSERT INTO tb_categorias_livros(codcategoria, codlivro) VALUES (2, 3);
 INSERT INTO tb_categorias_livros(codcategoria, codlivro) VALUES (3, 3);
 INSERT INTO tb_categorias_livros(codcategoria, codlivro) VALUES (4, 3);
 
-
+INSERT INTO tb_bibliotecas(nome, codusuario) VALUES ('teste', 1)
 
 
 

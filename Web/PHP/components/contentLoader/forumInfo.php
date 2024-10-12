@@ -34,7 +34,7 @@ if ($stmtPost->num_rows > 0) {
                     FROM tb_comentarios c
                     JOIN tb_usuarios u ON c.codusuario = u.cod
                     WHERE c.codforum = ?
-                    ORDER BY c.dtpostagem ASC";
+                    ORDER BY c.dtpostagem DESC";
     $stmtComments = $conn->prepare($sqlComments);
     $stmtComments->bind_param("i", $postId);
     $stmtComments->execute();

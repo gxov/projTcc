@@ -19,33 +19,4 @@
     Comunidade
 </div>
 <?php
-if(isset($_SESSION['tipo'])){
-if($_SESSION['tipo'] == 'VER'){
-    echo '
-    <div class="contSection sideNavSection size10">
-    <a href="admLivro.php">
-        Administrador - Livros </a>
-</div>
-<div class="contSection sideNavSection size10">
-    <a href="admAutor.php">
-        Administrador - Autores </a>
-</div>
-    ';
-
-}elseif($_SESSION['tipo'] == 'ADM'){
-echo '
-<div class="contSection sideNavSection size10">
-    <a href="admLivro.php">
-        Administrador - Livros </a>
-</div>
-<div class="contSection sideNavSection size10">
-    <a href="admAutor.php">
-        Administrador - Autores </a>
-</div>
-<div class="contSection sideNavSection size10">
-        <a href="admUser.php">
-        Administrador - Usuários </a>
-    </div>';
-}
-}
 ?>

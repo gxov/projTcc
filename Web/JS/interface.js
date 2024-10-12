@@ -139,3 +139,8 @@ function controlShow(tipo) {
             break;
     }
 };
+
+function mostrarBibliotecas(){
+let bibliotecasForm = document.getElementById("bibliotecas");
+bibliotecasForm.style.display = 'flex';
+}
