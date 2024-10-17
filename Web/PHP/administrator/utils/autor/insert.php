@@ -22,6 +22,12 @@ if (isset($_POST['submit'])) {
   if (move_uploaded_file($tempname, $folder)) {
   } else {
   }
+
+  header("Location: " . $_SERVER['PHP_SELF']);
+  
+  $tsql->close();
+  $conn->close();
+  exit(); 
 }
 
 ?>

@@ -33,7 +33,7 @@ if (isset($_GET['token'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recuperar Senha</title>
     <link href="../CSS/styleRecursos.css" rel="stylesheet">
     <link href="../CSS/styleComponentes.css" rel="stylesheet">
     <link href="../CSS/style.css" rel="stylesheet">

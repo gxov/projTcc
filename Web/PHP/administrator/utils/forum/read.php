@@ -11,7 +11,7 @@ function select($table)
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
 
-            $items .= "<div class='tableBookRow tableUserSpacing'>";
+            $items .= "<div class='tableBookRow tableForumSpacing' style='height: 100px'>";
             foreach ($row as $key => $dado) {
                 if ($key == 'ativo' && $dado == '1') {
                     $dado = 'sim';
@@ -20,8 +20,8 @@ function select($table)
                 }
                 ;
 
-                if ($key == 'imagem') {
-                    $items .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='projTcc/Web/src/fotos/usuario/" . $dado . "'>" . $dado . " </a></div>";
+                if ($key == 'cod') {
+                    $items .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='forum.php?id=" . $dado . "'>" . $dado . " </a></div>";
                 } elseif ($key != 'senha' and $key != 'dtnasc') {
                     $items .= "<div id='" . $key . "' class='tableValue'> " . $dado . " </div>";
                 }
@@ -57,7 +57,7 @@ function selectFiltered($table)
         $tsql->execute();
         $result = $tsql->get_result();
     } else {
-        $sql = 'SELECT * FROM ' . $table . " WHERE nome LIKE '%" . $filteredValue . "%' OR cod LIKE '%" . $filteredValue . "%' OR username LIKE '%" . $filteredValue . "%';";
+        $sql = 'SELECT * FROM ' . $table . " WHERE nome LIKE '%" . $filteredValue . "%' OR cod LIKE '%" . $filteredValue . "%';";
 
         $tsql = $conn->prepare($sql);
         $tsql->execute();
@@ -69,7 +69,7 @@ function selectFiltered($table)
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            $filteredItems .= "<div class='tableBookRow tableUserSpacing'>";
+            $filteredItems .= "<div class='tableBookRow tableForumSpacing' style='height: 100px'>";
             foreach ($row as $key => $dado) {
                 if ($key == 'ativo' && $dado == '1') {
                     $dado = 'true';
@@ -77,8 +77,8 @@ function selectFiltered($table)
                     $dado = 'false';
                 };
                 
-                if ($key == 'imagem') {
-                    $filteredItems .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='projtcc/web/src/fotos/usuario/" . $dado . "'>" . $dado . " </a></div>";
+                if ($key == 'cod') {
+                    $filteredItems .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='forum.php?id=" . $dado . "'>" . $dado . " </a></div>";
                 } elseif ($key != 'senha' and $key != 'dtnasc') {
                     $filteredItems .= "<div id='" . $key . "' class='tableValue'> " . $dado . " </div>";
                 }

@@ -6,25 +6,20 @@ include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php")
 
 if (isset($_POST['submit'])) {
   $nome = $_POST["nomeForum"];
-  $cpf = $_POST["cpfForum"];
-  $email = $_POST["emailForum"];
-  $senha = md5($_POST["senhaForum"]);
-  $tipo = $_POST["tipoForum"];
-
-  $filename = $_FILES["imagemForum"]["name"];
-  $tempname = $_FILES["imagemForum"]["tmp_name"];
-  $folder = "C:/xampp/htdocs/projtcc/web/src/fotos/usuario/" . $filename;
-
+  $desc = $_POST["descricaoForum"];
+  unset($_POST['submit']);
   $conn = connect();
-  $sql = "INSERT INTO tb_usuarios (ativo, dtinicio, nome, descricao) VALUES (true, '" . $nome . "', " . $cpf . ", '" . $email . "', '" . $senha . "', '" . $tipo . "', '" . $filename . "', true);";
+  $sql = "INSERT INTO tb_foruns (ativo, nome, descricao) VALUES (true, '" . $nome . "', '" . $desc . "');";
 
 
   $tsql = $conn->prepare($sql);
   $tsql->execute();
 
-  if (move_uploaded_file($tempname, $folder)) {
-  } else {
-  }
+  header("Location: " . $_SERVER['PHP_SELF']);
+  
+  $tsql->close();
+  $conn->close();
+  exit(); 
 }
 
 ?>

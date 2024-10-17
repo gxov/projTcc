@@ -1,5 +1,5 @@
 <?php
-include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
+include_once("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
 
 $conn = connect();
 
@@ -10,9 +10,9 @@ if (isset($_SESSION['id'])) {
     $sqlBibliotecas = "
         SELECT cod, nome, descricao, ativo 
         FROM tb_bibliotecas 
-        WHERE codusuario = ? AND ativo = 1"; 
+        WHERE codusuario = ? AND ativo = 1";
     $stmtBibliotecas = $conn->prepare($sqlBibliotecas);
-    $stmtBibliotecas->bind_param("i", $idU); 
+    $stmtBibliotecas->bind_param("i", $idU);
     $stmtBibliotecas->execute();
     $stmtBibliotecas->store_result();
 
@@ -20,8 +20,8 @@ if (isset($_SESSION['id'])) {
         $stmtBibliotecas->bind_result($bibliotecaCod, $bibliotecaNome, $bibliotecaDesc, $bibliotecaAtivo);
 
         while ($stmtBibliotecas->fetch()) {
-
-            echo '
+            if ($bibliotecaAtivo == true) {
+                echo '
                 <div class="bibliotecaSection">
                     <div class="sectionTitle"> Bibliotecas </div>
                     <h3>' . htmlspecialchars($bibliotecaNome) . '</h3>
@@ -29,22 +29,22 @@ if (isset($_SESSION['id'])) {
                     <h3>Livros nesta biblioteca:</h3>';
 
 
-            $sqlLivros = "
+                $sqlLivros = "
                 SELECT l.nome, l.descricao, l.imagem 
                 FROM tb_livros_bibliotecas lb 
                 JOIN tb_livros l ON lb.codlivro = l.cod 
                 WHERE lb.codbiblioteca = ?";
-            $stmtLivros = $conn->prepare($sqlLivros);
-            $stmtLivros->bind_param("i", $bibliotecaCod);
-            $stmtLivros->execute();
-            $stmtLivros->store_result();
+                $stmtLivros = $conn->prepare($sqlLivros);
+                $stmtLivros->bind_param("i", $bibliotecaCod);
+                $stmtLivros->execute();
+                $stmtLivros->store_result();
 
-            if ($stmtLivros->num_rows > 0) {
-                $stmtLivros->bind_result($livroNome, $livroDesc, $livroImg);
+                if ($stmtLivros->num_rows > 0) {
+                    $stmtLivros->bind_result($livroNome, $livroDesc, $livroImg);
 
-                // Display books for the current library
-                while ($stmtLivros->fetch()) {
-                    echo '
+                    // Display books for the current library
+                    while ($stmtLivros->fetch()) {
+                        echo '
                         <div class="livroItem">
                             <div class="livroImagem">
                                 <img src="../SRC/fotos/livros/' . htmlspecialchars($livroImg) . '">
@@ -54,13 +54,14 @@ if (isset($_SESSION['id'])) {
                                 <p class="livroDesc">' . nl2br(htmlspecialchars($livroDesc)) . '</p>
                             </div>
                         </div>';
+                    }
+                } else {
+                    echo '<p>Nenhum livro nesta biblioteca.</p>';
                 }
-            } else {
-                echo '<p>Nenhum livro nesta biblioteca.</p>';
-            }
-            $stmtLivros->close();
+                $stmtLivros->close();
 
-            echo '</div>';
+                echo '</div>';
+            }
         }
     } else {
         echo '<p>O usuário não possui bibliotecas ativas.</p>';

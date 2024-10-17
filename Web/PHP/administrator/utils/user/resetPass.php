@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $mail->isHTML(true);
             $mail->Subject = 'Recuperação de Senha';
-            $mail->Body = 'Clique no link para O BIASOTTO É VIADO redefinir sua senha: <a href="' . $url . '">' . $url . '</a>';
+            $mail->Body = 'Clique no link para redefinir sua senha: <a href="' . $url . '">' . $url . '</a>';
 
             if ($mail->send()) {
                 $_SESSION['recuperacao_sucesso'] = 'Link de recuperação enviado para seu e-mail.';

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>ADMIN</title>
     <link href="../CSS/styleRecursos.css" rel="stylesheet">
     <link href="../CSS/styleComponentes.css" rel="stylesheet">
     <link href="../CSS/style.css" rel="stylesheet">
@@ -48,43 +48,31 @@
                     </div>
                     <div class="adminScroll">
                         <div class="tableSection">
-                            <div class="containerComplement tableUserSpacing">
+                            <div class="containerComplement tableForumSpacing">
                                 <div class="tableCodMin">
                                     cod
                                 </div>
                                 <div class="tableTituloMin">
-                                    nome
-                                </div>
-                                <div class="tableTituloMin">
-                                    username
-                                </div>
-                                <div class="tableTituloMin">
-                                    cpf
-                                </div>
-                                <div>
-                                    dtcriacao
-                                </div>
-                                <div class="tableTituloMin">
-                                    email
-                                </div>
-                                <div class="tableAutorMin">
                                     ativo
                                 </div>
-                                <div class="tableTituloMin">
-                                    tipo
+                                <div>
+                                    dtinicio
+                                </div>
+                                <div>
+                                    nome
                                 </div>
                                 <div class="tableAutorMin">
-                                    imagem
+                                    descricao
                                 </div>
                             </div>
                         </div>
                         <div id="results">
 
                             <?php
-                            if ($_GET["search"] != NULL) {
-                                selectFiltered("tb_usuarios");
+                            if (isset($_GET['search'])) {
+                                selectFiltered("tb_foruns");
                             } else {
-                                select("tb_usuarios");
+                                select("tb_foruns");
                             }
                             ?>
                         </div>
@@ -111,50 +99,13 @@
                         </div>
                         <form method="POST" enctype="multipart/form-data" action="" class="controlForm flexColumn">
                             <div class="controlInputSection">
-                                <label class="controlLabel" for="nomeUser">Nome:</label>
-                                <input class="controlInput size12" type="text" name="nomeUser" id="nomeUser" required>
+                                <label class="controlLabel" for="nomeForum">Nome:</label>
+                                <input class="controlInput size12" type="text" name="nomeForum" id="nomeForum" required>
                             </div>
                             <div class="controlInputSection">
-                                <label class="controlLabel" for="usernameUser">Username:</label>
-                                <input class="controlInput size12" type="text" name="usernameUser" id="usernameUser"
-                                    required>
-                            </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="cpfUser">CPF</label>
-                                <input class="controlInput size12" type="text" name="cpfUser" id="cpfUser" required>
-                            </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="emailUser">E-mail:</label>
-                                <input class="controlInput size12" type="text" name="emailUser" id="emailUser" required>
-                            </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="senhaUser">Senha:</label>
-                                <input class="controlInput size12" type="text" name="senhaUser" id="senhaUser" required>
-                            </div>
-                            <div class="controlInputSection flex">
-                                <div class="size7 flexColumn">
-                                    <label class="controlLabel" for="imagemUser">Foto de perfil:</label>
-                                    <input class="controlInputTransparent size11" type="file" name="imagemUser"
-                                        id="imagemUser">
-                                </div>
-                                <div class="size5 flexColumn">
-                                    <label class="controlLabel" for="tipoUser">Tipo:</label>
-                                    <div class="flex">
-                                        Administrador
-                                        <input class="controlRadio size10" type="radio" value="ADM" name="tipoUser"
-                                            id="tipoUser" required>
-                                    </div>
-                                    <div class="flex">
-                                        Usuário Verificado
-                                        <input class="controlRadio size10" type="radio" value="VER" name="tipoUser"
-                                            id="tipoUser" required>
-                                    </div>
-                                    <div class="flex">
-                                        Usuário Regular
-                                        <input class="controlRadio size10" type="radio" value="USR" name="tipoUser"
-                                            id="tipoUser" required>
-                                    </div>
-                                </div>
+                                <label class="controlLabel" for="descricaoForum">Descrição</label>
+                                <textarea class="controlInput size12" name="descricaoForum" id="descricaoForum"
+                                    required> </textarea>
                             </div>
                             <div class="controlInputSection flexColumn">
                                 <div>
@@ -172,7 +123,7 @@
                             <div class="controlInputSection flex">
                                 <div class="size6">
                                     <form method="GET">
-                                        <label class="controlLabel" for="codUpd">Código do Usuário:</label>
+                                        <label class="controlLabel" for="codUpd">Código do fórum:</label>
                                         <input class="controlInput size10" type="text" name="codUpd">
                                         <form>
                                 </div>
@@ -183,21 +134,8 @@
                                 <input class="controlInput size12" type="text" name="nomeUpd" id="nomeUpd" required>
                             </div>
                             <div class="controlInputSection">
-                                <label class="controlLabel" for="usernameUpd">Username:</label>
-                                <input class="controlInput size12" type="text" name="usernameUpd" id="usernameUpd"
-                                    required>
-                            </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="cpfUpd">CPF:</label>
-                                <input class="controlInput size12" type="text" name="cpfUpd" id="cpfUpd" required>
-                            </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="emailUpd">E-mail:</label>
-                                <input class="controlInput size12" type="text" name="emailUpd" id="emailUpd" required>
-                            </div>
-                            <div class="controlInputSection">
-                                <label class="controlLabel" for="senhaUpd">senha:</label>
-                                <input class="controlInput size12" type="password" name="senhaUpd" id="senhaUpd"
+                                <label class="controlLabel" for="descricaoUpd">Descrição:</label>
+                                <input class="controlInput size12" type="text" name="descricaoUpd" id="descricaoUpd"
                                     required>
                             </div>
                             <div class="controlInputSection flex">
@@ -213,31 +151,6 @@
                                         <input class="controlRadio size10" type="radio" value="false" name="ativoUpd"
                                             id="ativoUpd" required>
                                     </div>
-                                </div>
-                                <div class="size5 flexColumn">
-                                    <label class="controlLabel" for="tipoUpd">Tipo:</label>
-                                    <div class="flex">
-                                        Administrador
-                                        <input class="controlRadio size10" type="radio" value="ADM" name="tipoUpd"
-                                            id="tipoUpd" required>
-                                    </div>
-                                    <div class="flex">
-                                        Usuário Verificado
-                                        <input class="controlRadio size10" type="radio" value="VER" name="tipoUpd"
-                                            id="tipoUpd" required>
-                                    </div>
-                                    <div class="flex">
-                                        Usuário Regular
-                                        <input class="controlRadio size10" type="radio" value="USR" name="tipoUpd"
-                                            id="tipoUpd" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="controlInputSection flex">
-                                <div class="size7 flexColumn">
-                                    <label class="controlLabel" for="imagemUserUpd">imagem de perfil:</label>
-                                    <input class="controlInputTransparent size11" type="file" name="imagemUserUpd"
-                                        id="imagemUserUpd">
                                 </div>
                             </div>
                             <div class="controlInputSection flexColumn">
@@ -255,7 +168,7 @@
                         <form method="POST" action="" class="controlForm flexColumn">
                             <div class="controlInputSection flex">
                                 <div class="size6">
-                                    <label class="controlLabel" for="codDelete">Código do livro:</label>
+                                    <label class="controlLabel" for="codDelete">Código do fórum:</label>
                                     <input class="controlInput size10" type="text" name="codDelete">
                                 </div>
                             </div>

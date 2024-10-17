@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>ADMIN</title>
     <link href="../CSS/styleRecursos.css" rel="stylesheet">
     <link href="../CSS/styleComponentes.css" rel="stylesheet">
     <link href="../CSS/style.css" rel="stylesheet">
@@ -72,7 +72,7 @@
                         <div id="results">
 
                             <?php
-                            if ($_GET["search"] != NULL) {
+                            if (isset($_GET['search'])) {
                                 selectFiltered("tb_autores");
                             } else {
                                 select("tb_autores");

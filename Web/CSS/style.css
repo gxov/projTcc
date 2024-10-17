@@ -195,6 +195,10 @@ a:hover{
     grid-template-columns: 5% 17.5% 12.5% 10% 10% 20% 5% 10% 10%;
 }
 
+.tableForumSpacing{
+    grid-template-columns: 5% 10% 20% 20% 35%;
+}
+
 .tableBookSpacing{
     grid-template-columns: 5% 10% 40% 10% 10% 15% 5% ;
 }
