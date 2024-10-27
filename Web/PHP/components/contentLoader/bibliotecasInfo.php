@@ -8,7 +8,7 @@ if (isset($_SESSION['id'])) {
 
 
     $sqlBibliotecas = "
-        SELECT cod, nome, descricao, ativo 
+        SELECT cod, nome, ativo 
         FROM tb_bibliotecas 
         WHERE codusuario = ? AND ativo = 1";
     $stmtBibliotecas = $conn->prepare($sqlBibliotecas);
@@ -17,7 +17,7 @@ if (isset($_SESSION['id'])) {
     $stmtBibliotecas->store_result();
 
     if ($stmtBibliotecas->num_rows > 0) {
-        $stmtBibliotecas->bind_result($bibliotecaCod, $bibliotecaNome, $bibliotecaDesc, $bibliotecaAtivo);
+        $stmtBibliotecas->bind_result($bibliotecaCod, $bibliotecaNome, $bibliotecaAtivo);
 
         while ($stmtBibliotecas->fetch()) {
             if ($bibliotecaAtivo == true) {
@@ -25,7 +25,6 @@ if (isset($_SESSION['id'])) {
                 <div class="bibliotecaSection">
                     <div class="sectionTitle"> Bibliotecas </div>
                     <h3>' . htmlspecialchars($bibliotecaNome) . '</h3>
-                    <div class="bibliotecaDesc">' . nl2br(htmlspecialchars($bibliotecaDesc)) . '</div>
                     <h3>Livros nesta biblioteca:</h3>';
 
 
@@ -46,12 +45,8 @@ if (isset($_SESSION['id'])) {
                     while ($stmtLivros->fetch()) {
                         echo '
                         <div class="livroItem">
-                            <div class="livroImagem">
-                                <img src="../SRC/fotos/livros/' . htmlspecialchars($livroImg) . '">
-                            </div>
                             <div class="livroInfo">
-                                <h4 class="livroNome">' . htmlspecialchars($livroNome) . '</h4>
-                                <p class="livroDesc">' . nl2br(htmlspecialchars($livroDesc)) . '</p>
+                                <h4  class="livroNome">' . htmlspecialchars($livroNome) . '</h4>
                             </div>
                         </div>';
                     }

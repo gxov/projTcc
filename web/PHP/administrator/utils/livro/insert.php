@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
   
   $stmt->close();
   $conn->close();
-  exit();
+  exit();   
 }
 
 ?>

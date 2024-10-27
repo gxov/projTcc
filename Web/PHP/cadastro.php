@@ -48,7 +48,7 @@
                             </div>
                             <div class="loginInputSection flexColumn">
                                 <label for="senha">Senha</label>
-                                <input type="password" name="registerPassword" class="loginInputBox">
+                                <input type="password" name="registerPassword" minlength="8" class="loginInputBox">
                             </div>
                             <div class="loginInputSection flexColumn">
                                 <label for="senha">Confirmar Senha</label>

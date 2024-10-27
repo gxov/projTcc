@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS tb_foruns_categorias (
 
 
 /* obs: a senha para todos é 12345. */
-INSERT INTO tb_usuarios (nome, username, cpf, dtnasc, email, senha, ativo, tipo, imagem) VALUES ('Usuario1', 'User_1', 11122233344, '2001/01/23', 'teste1@gmail.com' , MD5('12345'), true, 'ADM', '01.png');
+INSERT INTO tb_usuarios (nome, username, cpf, dtnasc, email, senha, ativo, tipo, imagem) VALUES ('Usuario1', 'adm', 11122233344, '2001/01/23', 'emanuelvitorino.silv@gmail.com' , MD5('12345'), true, 'ADM', '01.png');
 INSERT INTO tb_usuarios (nome, username, cpf, dtnasc, email, senha, ativo, tipo, imagem) VALUES ('Usuario2', 'User_2', 55566677788, '2004/10/12', 'teste2@gmail.com', MD5('12345'), true, 'VER', '02.png');
 INSERT INTO tb_usuarios (nome, username, cpf, dtnasc, email, senha, ativo, tipo, imagem) VALUES ('Usuario3', 'User_3', 99900011122, '2000/11/12', 'teste3@gmail.com', MD5('12345'), true, 'USR', '03.png');
 
@@ -180,6 +180,9 @@ INSERT INTO tb_categorias(nome, ativo) VALUES ('Literatura Francesa', true);
 INSERT INTO tb_categorias(nome, ativo) VALUES ('Existencialismo', true);
 INSERT INTO tb_categorias(nome, ativo) VALUES ('Século XX', true);
 
+INSERT INTO tb_categorias_livros(codcategoria, codlivro) VALUES (1, 1);
+INSERT INTO tb_categorias_livros(codcategoria, codlivro) VALUES (1, 2);
+INSERT INTO tb_categorias_livros(codcategoria, codlivro) VALUES (1, 4);
 INSERT INTO tb_categorias_livros(codcategoria, codlivro) VALUES (1, 3);
 INSERT INTO tb_categorias_livros(codcategoria, codlivro) VALUES (2, 3);
 INSERT INTO tb_categorias_livros(codcategoria, codlivro) VALUES (3, 3);

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
+include_once("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
 $conn = connect();
 
 if (isset($_GET['token'])) {
@@ -68,8 +68,10 @@ if (isset($_GET['token'])) {
 
                     <form action="" method="post">
                         <label for="nova_senha">Nova Senha:</label>
-                        <input type="password" id="nova_senha" name="nova_senha" required minlength="8">
-                        <button type="submit" class="button-submit">Redefinir Senha</button>
+                        <div class="loginInputSection flexColumn">
+                            <input class="loginInputBox" type="password" id="nova_senha" name="nova_senha" required minlength="8">
+                            <button type="submit" class="loginBtn size11 flex">Redefinir Senha</button>
+                        </div>
                     </form>
                     <!-- <form action="administrator/utils/user/resetPass.php" method="POST"
                         class="size12 loginSection grid">
