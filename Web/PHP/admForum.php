@@ -119,8 +119,8 @@
                         <div class="controlTitulo">
                             <t3>Atualizar</t3>
                         </div>
-                        <form method="POST" enctype="multipart/form-data" action="" class="controlForm flexColumn">
-                            <div class="controlInputSection flex">
+                        <form method="POST" enctype="multipart/form-data" action="" class=" controlForm flexColumn">
+                            <div class="controlInputSection flex forumCommentSection">
                                 <div class="size6">
                                     <form method="GET">
                                         <label class="controlLabel" for="codUpd">Código do fórum:</label>

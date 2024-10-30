@@ -34,6 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $stmtCheck->close();
     $conn->close();
-    header('Location: index.php');
+    header('Location: http://localhost/projTcc/Web/PHP/bibliotecas.php');
 }
 ?>

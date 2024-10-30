@@ -11,6 +11,7 @@
     <link rel="icon" href="../SRC/svg/logo.png" />
     <?php
     session_start();
+    include_once("administrator/utils/biblioteca/criarBiblioteca.php");
     ?>
 </head>
 
@@ -29,7 +30,7 @@
         </div>
         <!-- conteúdo -->
         <div class="contFluid" style="margin-top: -8%;">
-            <div class="contMainBorder contSection">
+            <div class="contMainBorder contSection flexColumn">
 
                     <?php
                     if ($_SESSION['id']) {
