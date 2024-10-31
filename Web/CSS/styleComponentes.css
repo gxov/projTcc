@@ -1095,6 +1095,41 @@ margin-top: 1.2rem;
 
 /* Autores END */
 
+/* Bibliotecas */
+
+.bibliotecaCard{
+    border-radius: 5px;
+    margin: 2rem;
+padding: 1rem;
+border: solid 2px var(--bgTerciaria);
+}
+
+.bibliotecaCard span{
+    font-size: 1.3rem;
+}
+
+.bibliotecaCard span::after{
+    content: "";
+    background-color: var(--corPrimaria);
+    width: 50px;
+    height: 3px;
+    margin: 0 0 0 10px;
+}
+
+.bibliotecaBtn{
+    margin-top: auto;
+    background-color: var(--corPrimaria);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.bibliotecaCard st1{
+padding-bottom: 1rem;
+}
+
+/* Bibliotecas END */
+
 /* MISC */
 
 .adminScroll{

@@ -24,7 +24,8 @@ CREATE TABLE IF NOT EXISTS tb_livros (
 	nome VARCHAR(90),	
 	descricao VARCHAR(1000),
 	ativo BOOLEAN DEFAULT true,
-	imagem VARCHAR(100)
+	imagem VARCHAR(100),
+	arquivo VARCHAR(150)
 );
 
 CREATE TABLE IF NOT EXISTS tb_categorias(
@@ -138,7 +139,7 @@ INSERT INTO tb_usuarios (nome, username, cpf, dtnasc, email, senha, ativo, tipo,
 INSERT INTO tb_usuarios (nome, username, cpf, dtnasc, email, senha, ativo, tipo, imagem) VALUES ('Usuario3', 'User_3', 99900011122, '2000/11/12', 'teste3@gmail.com', MD5('12345'), true, 'USR', '03.png');
 
 
-INSERT INTO tb_livros (nome, ativo, descricao, imagem) VALUES ("O Mundo Como Idéia", true, 'Coletânea de poemas concebidos pelo autor durante 40 anos (1959-1999), dividido em três
+INSERT INTO tb_livros (nome, ativo, descricao, imagem, arquivo) VALUES ("O Mundo Como Idéia", true, 'Coletânea de poemas concebidos pelo autor durante 40 anos (1959-1999), dividido em três
 capítulos: \n
 "Lição de Modelagem": Poemas compostos de diversas formas, bem como a terça-rima, reproduzidos
 tanto em inglês, francês e português. \n
@@ -147,7 +148,7 @@ como italiano e espanhol, sem força estética porém grande capacidade de manej
 poético. \n
 "A Imitação de Música": Coleção de 101 sonetos que conclui o livro. \n
 Essa coletânea percorre toda a tradição artística ocidental posterior ao século XV, poeticamente
-dramatizando temas como a razão com poesia erudita.', "1.jpg");
+dramatizando temas como a razão com poesia erudita.', "1.jpg", "1.pdf");
 
 INSERT INTO tb_livros (nome, ativo, descricao, imagem) VALUES ("Moby Dick, ou A Baleia", true, "A narrativa épica segue a jornada do Capitão Ahab, obcecado em caçar a gigantesca baleia branca, Moby Dick, que lhe causou uma terrível mutilação. Narrado por Ishmael, um marinheiro a bordo do navio baleeiro Pequod, o romance explora temas como a vingança, a luta contra a natureza e a busca pelo sentido da vida.\n Com uma prosa rica e detalhada, Melville oferece uma profunda reflexão sobre a condição humana e os limites da obsessão. Uma leitura indispensável para os amantes de aventuras marítimas e clássicos literários.", "2.jpg");
 
