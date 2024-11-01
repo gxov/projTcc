@@ -83,3 +83,8 @@
     font-family: 'Gotham Bold';
     src: url('../SRC/fontes/Gotham/Gotham-Bold.otf');
 }
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

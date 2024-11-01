@@ -144,3 +144,13 @@ function mostrarBibliotecas(){
 let bibliotecasForm = document.getElementById("bibliotecas");
 bibliotecasForm.style.display = 'flex';
 }
+
+
+function sendAlert(){
+    let counter = 0;
+    let alertDiv = document.getElementById("alertDiv");
+    alertDiv.innerHTML += '<div class="alertCard flexColumn" id='+counter+'> <t2> Alerta! </t2> <st1> ERRO </st1> </div>'
+    setTimeout()
+    document.getElementById(counter).className = "alertCard alertFadein flexColumn "
+    counter = counter + 1;  
+}

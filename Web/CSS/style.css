@@ -402,6 +402,30 @@ padding: 5px;
     transition: 0.2s;
 }
 
+.alertDiv{
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    width: 20rem;
+}
+
+.alertCard{
+    opacity: 0;
+    transition: 0.4s;
+    padding: 1rem;
+    border: 3px solid var(--corPrimaria);
+    background-color: var(--corSecundaria2);
+    border-radius: 1rem;
+}
+
+.alertFadein{
+    opacity: 1;
+}
+
+t2{
+    font-size: 1.6rem;
+}
+
 t3{
     font-size: 1.2rem;
 }
