@@ -48,6 +48,10 @@ WHERE cod = " . $idU;
 
     }
     ;
+    
+if($_SESSION['id'] == $_GET['id']){
+    echo 'teste';
+}
     $stmtU->close();
     $conn->close();
 }

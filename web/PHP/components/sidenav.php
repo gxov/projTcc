@@ -12,11 +12,3 @@
         Início
     </a>
 </div>
-<div class="contSection sideNavSection size10">
-    Busca
-</div>
-<div class="contSection sideNavSection size10">
-    Comunidade
-</div>
-<?php
-?>
