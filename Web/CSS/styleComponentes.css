@@ -1140,4 +1140,12 @@ padding-bottom: 1rem;
     border-radius: 5px
 }
 
+iframe .backgroundContainer{
+    background-color: var(--bgPrimaria) !important;
+}
+
+.logoBar{
+    display: none;
+}
+
 /* MISC END */

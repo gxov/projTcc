@@ -189,7 +189,21 @@ INSERT INTO tb_categorias_livros(codcategoria, codlivro) VALUES (2, 3);
 INSERT INTO tb_categorias_livros(codcategoria, codlivro) VALUES (3, 3);
 INSERT INTO tb_categorias_livros(codcategoria, codlivro) VALUES (4, 3);
 
+<<<<<<< Updated upstream
 INSERT INTO tb_bibliotecas(nome, codusuario) VALUES ('teste', 1)
+=======
+INSERT INTO tb_avaliacoes (cod, nota, descricao, codlivro, codusuario) VALUES
+(1, 4.5, 'Excelente leitura, recomendo para todos!', 1, 1),
+(2, 3.0, 'Livro bom, mas esperava mais.', 2, 2),
+(3, 5.0, 'Obra incrível, me surpreendeu em vários aspectos.', 3, 3),
+(4, 2.5, 'Não gostei muito, a narrativa é lenta.', 4, 1),
+(5, 4.0, 'História envolvente e bem escrita.', 1, 2),
+(6, 3.5, 'Interessante, mas alguns pontos poderiam ser melhores.', 2, 3),
+(7, 4.8, 'Um dos melhores livros que li este ano!', 3, 1),
+(8, 2.0, 'Achei um pouco cansativo, difícil de finalizar.', 4, 2),
+(9, 5.0, 'Simplesmente perfeito, leitura obrigatória.', 1, 3),
+(10, 3.2, 'Alguns capítulos são bons, mas no geral é mediano.', 2, 1);
+>>>>>>> Stashed changes
 
 
 

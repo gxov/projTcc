@@ -86,7 +86,8 @@
         <div class="contFluid" style="margin-top: -10%;">
             <div class="contMainBorder contSection">
                 <div class="size12">
-                    <div class="contSection">
+                    <div class="contSection justifyContCent">
+                    <iframe title="tcc" width="1100" height="640" src="https://app.powerbi.com/view?r=eyJrIjoiYzc1YTA5MmYtNmNjZi00OGUyLWI2NTEtZmFlN2NkOGZiODYyIiwidCI6IjMwYjFlNWVhLWUwNWUtNGE3Ny05OWQzLWEzYzYyYzMyODc4NCJ9" frameborder="0" allowFullScreen="true"></iframe>
                         <div class="sectionWrapper flex">
                             <?php
                             include_once ("components/contentLoader/indexDestaque.php");
@@ -117,5 +118,13 @@
     <script src="../JS/interface.js"></script>
     <script src="../JS/user.js"></script>
 </body>
+<style>
+    iframe .backgroundContainer{
+    background-color: var(--bgPrimaria) !important;
+}
 
+.logoBar{
+    display: none;
+}
+</style>
 </html>
