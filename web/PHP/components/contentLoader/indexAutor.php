@@ -55,7 +55,7 @@ if ($stmt->num_rows > 0) {
         $stmtL1->close();
 
         $items .= '
-            <div class="sectionCardRow flex size12">
+            <div class="sectionCardRow flex size11">
                 <div class="flex size7">
                     <div class="sectionCardColumnCapa size5">
                         <img class="sectionCardColumnImgAuth" src="../SRC/fotos/autores/' . htmlspecialchars($img) . '">

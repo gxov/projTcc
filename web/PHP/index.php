@@ -10,8 +10,8 @@
     <link href="../CSS/style.css" rel="stylesheet">
     <link rel="icon" href="../SRC/svg/logo.png" />
     <?php
-    include_once ("administrator/utils/user/register.php");
-    include_once ("administrator/utils/user/login.php");
+    include_once("administrator/utils/user/register.php");
+    include_once("administrator/utils/user/login.php");
     ?>
 
 </head>
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                     <?php
-                    include_once ("components/usermenu.php");
+                    include_once("components/usermenu.php");
                     ?>
                 </div>
             </div>
@@ -86,24 +86,33 @@
         <div class="contFluid" style="margin-top: -10%;">
             <div class="contMainBorder contSection">
                 <div class="size12">
-                    <div class="contSection justifyContCent">
-                    <iframe title="tcc" width="1100" height="640" src="https://app.powerbi.com/view?r=eyJrIjoiYzc1YTA5MmYtNmNjZi00OGUyLWI2NTEtZmFlN2NkOGZiODYyIiwidCI6IjMwYjFlNWVhLWUwNWUtNGE3Ny05OWQzLWEzYzYyYzMyODc4NCJ9" frameborder="0" allowFullScreen="true"></iframe>
-                        <div class="sectionWrapper flex">
-                            <?php
-                            include_once ("components/contentLoader/indexDestaque.php");
-                            ?>
+                    <div class="contSection">
+                        <div class="size12">
+                            <div class="sectionWrapper mAuto flex">
+                                <?php
+                                include_once("components/contentLoader/indexDestaque.php");
+                                ?>
+                            </div>
+                            <div class="sectionWrapper mAuto flex">
+                                <?php
+                                include_once("components/contentLoader/indexForum.php");
+                                include_once("components/contentLoader/indexAutor.php");
+                                ?>
+                            </div>
                         </div>
-                        <div class="sectionWrapper flex">
-                        <?php
-                        include_once ("components/contentLoader/indexForum.php");
-                        include_once ("components/contentLoader/indexAutor.php");
-                        ?>
+                        <div class="flexColumn alignCenter size12">
+                            <div class="sectionTitle sectionTitleSides">
+                                Relatório
+                            </div>
+                            <iframe title="tcc" width="70%" height="600px"
+                                src="https://app.powerbi.com/view?r=eyJrIjoiYzc1YTA5MmYtNmNjZi00OGUyLWI2NTEtZmFlN2NkOGZiODYyIiwidCI6IjMwYjFlNWVhLWUwNWUtNGE3Ny05OWQzLWEzYzYyYzMyODc4NCJ9"
+                                frameborder="0" allowFullScreen="true"></iframe>
                         </div>
-
-
                     </div>
                 </div>
+
             </div>
+
             <div class="size12 livroContent">
 
             </div>
@@ -119,12 +128,13 @@
     <script src="../JS/user.js"></script>
 </body>
 <style>
-    iframe .backgroundContainer{
-    background-color: var(--bgPrimaria) !important;
-}
+    iframe .backgroundContainer {
+        background-color: var(--bgPrimaria) !important;
+    }
 
-.logoBar{
-    display: none;
-}
+    .logoBar {
+        display: none;
+    }
 </style>
+
 </html>

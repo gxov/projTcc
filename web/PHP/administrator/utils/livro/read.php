@@ -51,9 +51,11 @@ function select($table)
                 ;
 
                 if ($key == 'imagem') {
-                    $items .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='projTcc/Web/src/capas/" . $dado . "'>" . $dado . " </a></div>";
+                    $items .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='../src/capas/" . $dado . "'>" . $dado . " </a></div>";
                 } elseif ($table == 'tb_livros' && $key == 'nome') {
                     $items .= "<div id='" . $key . "' class='tableValue'> <a href='produto.php?id=" . $idprod . "'> " . $dado . " </a> </div>";
+                } elseif ($table == 'tb_livros' && $key == 'arquivo') {
+                    $items .= "<div id='" . $key . "' class='tableValue'> <a target='_blank' href='../src/livros/" . $dado . "'> " . $dado . " </a> </div>";
                 } else {
                     $items .= "<div id='" . $key . "' class='tableValue'> " . $dado . " </div>";
                 }

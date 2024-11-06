@@ -87,6 +87,7 @@ if (isset($_SESSION['id'])) {
                     echo '<p>Nenhum livro nesta biblioteca.</p></div>';
                 }
                 $stmtLivros->close();
+                echo '</div></div>';
             }
         }
         echo '</div></div>';

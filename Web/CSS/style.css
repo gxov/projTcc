@@ -79,6 +79,14 @@
     padding: 0 !important;
 }
 
+.mZero{
+    margin: 0 !important;
+}
+
+.mAuto{
+    margin: 0 !important;
+}
+
 .size1 {
     flex: 0 0 auto;
     width: 8.33333333%;
@@ -200,7 +208,7 @@ a:hover{
 }
 
 .tableBookSpacing{
-    grid-template-columns: 5% 10% 40% 10% 10% 15% 5% ;
+    grid-template-columns: 5% 10% 30% 10% 10% 10% 15% 5% ;
 }
 
 .tableCatSpacing{

@@ -13,6 +13,7 @@
     session_start();
     if ($_GET['id']) {
         include_once ("administrator/utils/forum/addComment.php");
+        include_once ("administrator/utils/forum/deleteComment.php");
     } 
     ?>
 </head>

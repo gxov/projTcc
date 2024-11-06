@@ -21,7 +21,7 @@ function select($table)
                 ;
 
                 if ($key == 'imagem') {
-                    $items .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='projTcc/Web/src/fotos/usuario/" . $dado . "'>" . $dado . " </a></div>";
+                    $items .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='../src/fotos/usuario/" . $dado . "'>" . $dado . " </a></div>";
                 } elseif ($key != 'senha' and $key != 'dtnasc') {
                     $items .= "<div id='" . $key . "' class='tableValue'> " . $dado . " </div>";
                 }
@@ -78,7 +78,7 @@ function selectFiltered($table)
                 };
                 
                 if ($key == 'imagem') {
-                    $filteredItems .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='projtcc/web/src/fotos/usuario/" . $dado . "'>" . $dado . " </a></div>";
+                    $filteredItems .= "<div id='" . $key . "' class='tableValue'><a target='_blank' href='../src/fotos/usuario/" . $dado . "'>" . $dado . " </a></div>";
                 } elseif ($key != 'senha' and $key != 'dtnasc') {
                     $filteredItems .= "<div id='" . $key . "' class='tableValue'> " . $dado . " </div>";
                 }

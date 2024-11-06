@@ -30,7 +30,7 @@ if ($stmtPost->num_rows > 0) {
         </div>';
 
 
-    $sqlComments = "SELECT c.conteudo, c.dtpostagem, u.nome, u.imagem 
+    $sqlComments = "SELECT c.cod, c.conteudo, c.dtpostagem, u.nome, u.imagem 
                     FROM tb_comentarios c
                     JOIN tb_usuarios u ON c.codusuario = u.cod
                     WHERE c.codforum = ?
@@ -38,7 +38,7 @@ if ($stmtPost->num_rows > 0) {
     $stmtComments = $conn->prepare($sqlComments);
     $stmtComments->bind_param("i", $postId);
     $stmtComments->execute();
-    $stmtComments->bind_result($commentContent, $commentDate, $commentAuthor, $commentAuthorImage);
+    $stmtComments->bind_result($commentId, $commentContent, $commentDate, $commentAuthor, $commentAuthorImage);
     $stmtComments->store_result();
     echo '
     <div class="size5 forumCommentSection">
@@ -55,10 +55,13 @@ if ($stmtPost->num_rows > 0) {
         while ($stmtComments->fetch()) {
             echo '
             <div class="forumComment flex">
-                <img class="forumCommentImage" src="../SRC/fotos/usuario/'.$commentAuthorImage.'">
-                <div class="commentContent size10 flexColumn"><span><strong>' . htmlspecialchars($commentAuthor) . '</strong> <st1> ' . date("j-m-y", strtotime($commentDate)) . '</st1></span>
-                ' . nl2br(htmlspecialchars($commentContent)) . '</div>
-            </div>';
+                <img class="forumCommentImage" src="../SRC/fotos/usuario/'.$commentAuthorImage.'"><div class="commentContent size10 flexColumn"><span><strong>' . htmlspecialchars($commentAuthor) . '</strong> <st1> ' . date("j-m-y", strtotime($commentDate)) . '</st1></span>
+                ' . nl2br(htmlspecialchars($commentContent)) . '</div>';
+                
+            if($_SESSION['tipo'] == 'ADM'){
+                echo '<form action="" method="POST"><input type="hidden" name="commIdDelete" value="' . $commentId . '"><input type="hidden" name="forumCod" value="' . $postId . '"><button class="deleteComment" type="submit" name="deleteSubmit">Deletar</button></form>';
+                }
+            echo '</div>';
         }
         echo '</div></div>';
     } else {

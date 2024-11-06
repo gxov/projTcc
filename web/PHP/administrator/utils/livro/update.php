@@ -10,20 +10,21 @@ if (isset($_POST['update'])) {
   $ativo = $_POST["ativoUpd"];
   $desc = $_POST["descricaoLivroUpd"];
 
-  $filename = $_FILES["capaLivroUpd"]["name"];
-  $tempname = $_FILES["capaLivroUpd"]["tmp_name"];
+  $filename1 = $_FILES["capaLivroUpd"]["name"];
+  $tempname1 = $_FILES["capaLivroUpd"]["tmp_name"];
 
+  $filename2 = $_FILES["capaArqUpd"]["name"];
+  $tempname2 = $_FILES["capaArqUpd"]["tmp_name"];
 
-  $folder = "C:/xampp/htdocs/projtcc/web/src/capas/" . $filename;
+  $folder1 = "C:/xampp/htdocs/projtcc/web/src/capas/" . $filename1;
+  $folder2 = "C:/xampp/htdocs/projtcc/web/src/livros/" . $filename1;
 
-  if (move_uploaded_file($tempname, $folder)) {
-    echo "success";
+  if (move_uploaded_file($tempname1, $folder1) && move_uploaded_file($tempname2, $folder2)) {
   } else {
-    echo "fail";
   }
 
   $sql = "UPDATE tb_livros
-  SET nome ='" . $titulo . "', ativo = ". $ativo .", descricao = '" . $desc . "', imagem = '" . $filename . "' 
+  SET nome ='" . $titulo . "', ativo = ". $ativo .", descricao = '" . $desc . "', arquivo='".$filename2."' imagem = '" . $filename1 . "' 
   WHERE cod = ".$cod;
 
 

@@ -65,6 +65,9 @@
                                     imagem
                                 </div>
                                 <div class="tableAutorMin">
+                                    arquivo
+                                </div>
+                                <div class="tableAutorMin">
                                     codcategorias
                                 </div>
                                 <div class="tableAutorMin">
@@ -129,11 +132,16 @@
                                 </div>
                             </div>
                             <div class="controlInputSection flex">
-                                <div class="size11 flexColumn">
+                                <div class="size6 flexColumn">
                                     <label class="controlLabel" for="capaLivro">Imagem da capa:</label>
                                     <input class="controlInputTransparent size11" type="file" name="capaLivro"
                                         id="capaLivro">
                                     <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
+                                </div>
+                                <div class="size6 flexColumn">
+                                    <label class="controlLabel" for="arqLivro">Arquivo do livro:</label>
+                                    <input class="controlInputTransparent size11" type="file" name="arqLivro"
+                                        id="arqLivro">
                                 </div>
                             </div>
 
@@ -182,11 +190,16 @@
                                             id="ativoUpd" required>
                                     </div>
                                 </div>
-
-                                <div class="size7 flexColumn">
+                            </div>
+                            <div class="controlInputSection flex">
+                                <div class="size6 flexColumn">
                                     <label class="controlLabel" for="capaLivroUpd">Imagem da capa:</label>
                                     <input class="controlInputTransparent size11" type="file" name="capaLivroUpd">
                                     <st1>OBS: Arquivos devem ter dimensão de no mínimo 300x600</st1>
+                                </div>
+                                <div class="size6 flexColumn">
+                                    <label class="controlLabel" for="arqLivroUpd">Arquivo do livro:</label>
+                                    <input class="controlInputTransparent size11" type="file" name="arqLivroUpd">
                                 </div>
                             </div>
                             <div class="controlInputSection flexColumn">

@@ -150,11 +150,11 @@ poético. \n
 Essa coletânea percorre toda a tradição artística ocidental posterior ao século XV, poeticamente
 dramatizando temas como a razão com poesia erudita.', "1.jpg", "1.pdf");
 
-INSERT INTO tb_livros (nome, ativo, descricao, imagem) VALUES ("Moby Dick, ou A Baleia", true, "A narrativa épica segue a jornada do Capitão Ahab, obcecado em caçar a gigantesca baleia branca, Moby Dick, que lhe causou uma terrível mutilação. Narrado por Ishmael, um marinheiro a bordo do navio baleeiro Pequod, o romance explora temas como a vingança, a luta contra a natureza e a busca pelo sentido da vida.\n Com uma prosa rica e detalhada, Melville oferece uma profunda reflexão sobre a condição humana e os limites da obsessão. Uma leitura indispensável para os amantes de aventuras marítimas e clássicos literários.", "2.jpg");
+INSERT INTO tb_livros (nome, ativo, descricao, imagem, arquivo) VALUES ("Moby Dick, ou A Baleia", true, "A narrativa épica segue a jornada do Capitão Ahab, obcecado em caçar a gigantesca baleia branca, Moby Dick, que lhe causou uma terrível mutilação. Narrado por Ishmael, um marinheiro a bordo do navio baleeiro Pequod, o romance explora temas como a vingança, a luta contra a natureza e a busca pelo sentido da vida.\n Com uma prosa rica e detalhada, Melville oferece uma profunda reflexão sobre a condição humana e os limites da obsessão. Uma leitura indispensável para os amantes de aventuras marítimas e clássicos literários.", "2.jpg", "2.pdf");
 
-INSERT INTO tb_livros (nome, ativo, descricao, imagem) VALUES ("The Stranger", true, "“O Estrangeiro” de Albert Camus é uma obra-prima do existencialismo, publicada em 1942.\n A história segue Meursault, um homem indiferente e apático que vive na Argélia colonial. Após a morte de sua mãe, ele comete um crime aparentemente sem motivo e enfrenta um julgamento que questiona sua moralidade e humanidade.\n Camus explora temas profundos como a absurda condição humana, a alienação e a busca por sentido em um mundo indiferente. Este romance impactante desafia os leitores a refletirem sobre a natureza da existência e a liberdade individual. Uma leitura essencial para os amantes da literatura filosófica.", "3.jpg");
+INSERT INTO tb_livros (nome, ativo, descricao, imagem, arquivo) VALUES ("The Stranger", true, "“O Estrangeiro” de Albert Camus é uma obra-prima do existencialismo, publicada em 1942.\n A história segue Meursault, um homem indiferente e apático que vive na Argélia colonial. Após a morte de sua mãe, ele comete um crime aparentemente sem motivo e enfrenta um julgamento que questiona sua moralidade e humanidade.\n Camus explora temas profundos como a absurda condição humana, a alienação e a busca por sentido em um mundo indiferente. Este romance impactante desafia os leitores a refletirem sobre a natureza da existência e a liberdade individual. Uma leitura essencial para os amantes da literatura filosófica.", "3.jpg", "3.pdf");
 
-INSERT INTO tb_livros (nome, ativo, descricao, imagem) VALUES ("Demian", true, "Aos olhos de Sinclair, o mundo acontece de um modo revelador e epicurista. O desesperado anseio pelo alcance do hedonismo em seguida, do amor e do autoconhecimento sereno e maduro percorre linhas tênues e difusas.\n Obra que apresenta tensões sobre o sentido da vida e da humanidade existir, crises existenciais profundas de uma pessoa que viveu de perto a Primeira Guerra Mundial, que aparecem de forma tocante na obra, pode-se dizer que Demian demonstra como um autor de uma obra literária pode ser influenciado pelo seu tempo, com uma história que mescla influências de Nietzsche e da psicologia analítica de Carl Jung, com quem o autor Hesse fazia terapia.", "4.jpg");
+INSERT INTO tb_livros (nome, ativo, descricao, imagem, arquivo) VALUES ("Demian", true, "Aos olhos de Sinclair, o mundo acontece de um modo revelador e epicurista. O desesperado anseio pelo alcance do hedonismo em seguida, do amor e do autoconhecimento sereno e maduro percorre linhas tênues e difusas.\n Obra que apresenta tensões sobre o sentido da vida e da humanidade existir, crises existenciais profundas de uma pessoa que viveu de perto a Primeira Guerra Mundial, que aparecem de forma tocante na obra, pode-se dizer que Demian demonstra como um autor de uma obra literária pode ser influenciado pelo seu tempo, com uma história que mescla influências de Nietzsche e da psicologia analítica de Carl Jung, com quem o autor Hesse fazia terapia.", "4.jpg", "4.pdf");
 
 INSERT INTO tb_autores(nome, descricao, imagem) VALUES ('Bruno Tolentino', 'autor1', '1.png');
 
@@ -189,9 +189,7 @@ INSERT INTO tb_categorias_livros(codcategoria, codlivro) VALUES (2, 3);
 INSERT INTO tb_categorias_livros(codcategoria, codlivro) VALUES (3, 3);
 INSERT INTO tb_categorias_livros(codcategoria, codlivro) VALUES (4, 3);
 
-<<<<<<< Updated upstream
-INSERT INTO tb_bibliotecas(nome, codusuario) VALUES ('teste', 1)
-=======
+INSERT INTO tb_bibliotecas(nome, codusuario) VALUES ('teste', 1);
 INSERT INTO tb_avaliacoes (cod, nota, descricao, codlivro, codusuario) VALUES
 (1, 4.5, 'Excelente leitura, recomendo para todos!', 1, 1),
 (2, 3.0, 'Livro bom, mas esperava mais.', 2, 2),
@@ -203,7 +201,6 @@ INSERT INTO tb_avaliacoes (cod, nota, descricao, codlivro, codusuario) VALUES
 (8, 2.0, 'Achei um pouco cansativo, difícil de finalizar.', 4, 2),
 (9, 5.0, 'Simplesmente perfeito, leitura obrigatória.', 1, 3),
 (10, 3.2, 'Alguns capítulos são bons, mas no geral é mediano.', 2, 1);
->>>>>>> Stashed changes
 
 
 

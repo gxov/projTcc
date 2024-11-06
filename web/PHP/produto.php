@@ -11,6 +11,7 @@
     <link rel="icon" href="../SRC/svg/logo.png" />
     <?php
     session_start();
+    include_once('administrator/utils/livro/addAval.php');
     ?>
 </head>
 

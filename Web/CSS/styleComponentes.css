@@ -649,6 +649,12 @@
     text-align: center;
 }
 
+.livroReviewSection{
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--bgTerciaria);
+}
+
 /* Capa END */
 
 /* Página Principal */
@@ -671,6 +677,14 @@
     width: 50px;
     height: 3px;
     margin: 0 0 0 10px;
+}
+
+.sectionTitleSides::before {
+    content: "";
+    background-color: var(--corPrimaria);
+    width: 50px;
+    height: 3px;
+    margin: 0 10px 0 0;
 }
 
 .sectionWrapper {
@@ -963,6 +977,17 @@ margin-top: 1.2rem;
     border-radius: 10px;
     height: fit-content;
     margin: 5px;
+}
+
+.commentUserAvatar{
+    width: 13%;
+}
+
+.deleteComment{
+    font-size: 0.8s;
+    color: rgb(165, 71, 71);
+    background-color: transparent;
+    border: 0px;
 }
 
 /* Fóruns END */
