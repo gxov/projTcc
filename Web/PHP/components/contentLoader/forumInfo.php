@@ -30,15 +30,15 @@ if ($stmtPost->num_rows > 0) {
         </div>';
 
 
-    $sqlComments = "SELECT c.cod, c.conteudo, c.dtpostagem, u.nome, u.imagem 
+    $sqlComments = "SELECT c.cod, c.conteudo, c.dtpostagem, u.cod, u.username, u.nome, u.imagem 
                     FROM tb_comentarios c
                     JOIN tb_usuarios u ON c.codusuario = u.cod
                     WHERE c.codforum = ?
-                    ORDER BY c.dtpostagem DESC";
+                    ORDER BY c.cod DESC";
     $stmtComments = $conn->prepare($sqlComments);
     $stmtComments->bind_param("i", $postId);
     $stmtComments->execute();
-    $stmtComments->bind_result($commentId, $commentContent, $commentDate, $commentAuthor, $commentAuthorImage);
+    $stmtComments->bind_result($commentId, $commentContent, $commentDate, $commentAuthorCod, $commentAuthorUs, $commentAuthorNm, $commentAuthorImage);
     $stmtComments->store_result();
     echo '
     <div class="size5 forumCommentSection">
@@ -54,20 +54,32 @@ if ($stmtPost->num_rows > 0) {
         echo '<div class="forumCommentsList">';
         while ($stmtComments->fetch()) {
             echo '
-            <div class="forumComment flex">
-                <img class="forumCommentImage" src="../SRC/fotos/usuario/'.$commentAuthorImage.'"><div class="commentContent size10 flexColumn"><span><strong>' . htmlspecialchars($commentAuthor) . '</strong> <st1> ' . date("j-m-y", strtotime($commentDate)) . '</st1></span>
-                ' . nl2br(htmlspecialchars($commentContent)) . '</div>';
-                
-            if($_SESSION['tipo'] == 'ADM'){
+            <div class="forumComment livroReview flex">';
+
+
+            if ($commentAuthorImage != "") {
+                echo '<div class="flexColumn alignCenter textAlignCenter avalAuthorSection">
+                    <st1>' . nl2br(htmlspecialchars($commentDate)) . '</st1><img class="forumCommentImage size11" src="../SRC/fotos/usuario/' . $commentAuthorImage . '"><span class="reviewAuthor size12"><a class="flexColumn" href="usuario.php?id=' . $commentAuthorCod . '"><strong>' . htmlspecialchars($commentAuthorNm) . '</strong> <st1>' . $commentAuthorUs . '</st1></a></span></div>';
+            } else {
+                echo '<div class="flexColumn alignCenter textAlignCenter avalAuthorSection">
+                    <st1>' . nl2br(htmlspecialchars($commentDate)) . '</st1><svg class="commentUserAvatar size11" data-v-5cba5096="" data-v-dd104bd2="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="avatar">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8">
+                    </path>
+                </svg><span class="reviewAuthor size3"><a class="flexColumn" href="usuario.php?id=' . $commentAuthorCod . '"><strong>' . htmlspecialchars($commentAuthorNm) . '</strong> <st1>' . $commentAuthorUs . '</st1></a></span></div>';
+            }
+
+            echo '<div class="commentContent size9 flexColumn">
+                    ' . nl2br(htmlspecialchars($commentContent)) . '</div>';
+            if ($_SESSION['tipo'] == 'ADM') {
                 echo '<form action="" method="POST"><input type="hidden" name="commIdDelete" value="' . $commentId . '"><input type="hidden" name="forumCod" value="' . $postId . '"><button class="deleteComment" type="submit" name="deleteSubmit">Deletar</button></form>';
-                }
+            }
             echo '</div>';
         }
         echo '</div></div>';
     } else {
         if (isset($_SESSION['id'])) {
             echo '<p>Sem comentários ainda, seja o primeiro a comentar!</p></div>';
-        }else{
+        } else {
             echo '<p>Sem comentários ainda, faça login para comentar!</p></div';
         }
     }

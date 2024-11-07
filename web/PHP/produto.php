@@ -12,6 +12,7 @@
     <?php
     session_start();
     include_once('administrator/utils/livro/addAval.php');
+    include_once('administrator/utils/livro/deleteAval.php');
     ?>
 </head>
 

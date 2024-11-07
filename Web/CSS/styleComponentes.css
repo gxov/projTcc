@@ -655,6 +655,26 @@
     border-top: 2px solid var(--bgTerciaria);
 }
 
+.livroReview{
+    margin: 0.6rem 0 0.6rem 0;
+    border: 2px solid var(--bgTerciaria);
+    border-radius: 1rem;
+}
+
+.livroReview strong{
+    font-size: 1.1rem;
+    color: var(--corPrimaria);
+}
+
+.avaliacaoNota{
+    padding: 0.4rem 0 0.4rem 0;
+    font-size: 1.2rem;
+}
+
+.avaliacaoNota span{
+    color: var(--corPrimaria);
+}
+
 /* Capa END */
 
 /* Página Principal */
@@ -979,15 +999,31 @@ margin-top: 1.2rem;
     margin: 5px;
 }
 
-.commentUserAvatar{
-    width: 13%;
+.avalAuthorSection{
+    margin-left: 0.4rem;
+}
+
+.commentContent span a{
+    text-decoration: none;
+}
+
+.commentContent{
+    margin-left: 0.4rem;
+    padding-left: 0.4rem;
+    border-left: 2px solid var(--bgTerciaria);
 }
 
 .deleteComment{
     font-size: 0.8s;
-    color: rgb(165, 71, 71);
+    color: var(--corPrimaria);
     background-color: transparent;
     border: 0px;
+    transition: 0.2s;
+}
+
+.deleteComment:hover{
+    cursor: pointer;
+    color: var(--corSecundaria);
 }
 
 /* Fóruns END */

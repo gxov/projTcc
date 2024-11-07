@@ -100,7 +100,7 @@ if (isset($id)) {
             <button class="forumBtn size2" type="submit" name="avaliacaoSubmit">Publicar</button>    
         </form>
         <div class="livroReviewSection">';
-            $sqlAvals = "SELECT a.cod, a.descricao, a.nota, u.nome, u.username, u.imagem 
+            $sqlAvals = "SELECT a.cod, a.descricao, a.nota, u.cod, u.nome, u.username, u.imagem 
                 FROM tb_avaliacoes a
                 JOIN tb_usuarios u ON a.codusuario = u.cod
                 WHERE a.codlivro = ?
@@ -108,22 +108,22 @@ if (isset($id)) {
             $stmtAvals = $conn->prepare($sqlAvals);
             $stmtAvals->bind_param("i", $idL);
             $stmtAvals->execute();
-            $stmtAvals->bind_result($avalId, $avalContent, $avalNota, $avalAuthorNm, $avalAuthorUs, $avalAuthorImage);
+            $stmtAvals->bind_result($avalId, $avalContent, $avalNota, $avalAuthorCod, $avalAuthorNm, $avalAuthorUs, $avalAuthorImage);
             $stmtAvals->store_result();
             if ($stmtAvals->num_rows > 0) {
                 while ($stmtAvals->fetch()) {
                     echo '
-                <div class="forumComment flex">';
+                <div class="livroReview flex">';
                     if($avalAuthorImage != ""){
-                        echo'<img class="forumCommentImage" src="../SRC/fotos/usuario/' . $avalAuthorImage . '">';
+                        echo'<div class="flexColumn alignCenter textAlignCenter avalAuthorSection"><img class="forumCommentImage size11" src="../SRC/fotos/usuario/' . $avalAuthorImage . '"><span class="reviewAuthor size12"><a href="usuario.php?id='.$avalAuthorCod.'"><strong>' . htmlspecialchars($avalAuthorNm) . '</strong> <st1>'.$avalAuthorUs.'</st1></a></span></div>';
                     }else{
-                        echo '<svg class="commentUserAvatar" data-v-5cba5096="" data-v-dd104bd2="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="avatar">
+                        echo '<div class="flexColumn alignCenter textAlignCenter avalAuthorSection"><svg class="commentUserAvatar size11" data-v-5cba5096="" data-v-dd104bd2="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="avatar">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8">
                         </path>
-                    </svg>';
+                    </svg><span class="reviewAuthor size3"><a href="usuario.php?id='.$avalAuthorCod.'"><strong>' . htmlspecialchars($avalAuthorNm) . '</strong> <st1>'.$avalAuthorUs.'</st1></a></span></div>';
                     }
-                    echo '<div class="commentContent size10 flexColumn"><span><strong>' . htmlspecialchars($avalAuthorNm) . '</strong> <st1>'.$avalAuthorUs.'</st1></span>
-                    <span class="avaliacaoNota">'.nl2br(htmlspecialchars($avalNota)).'
+                    echo '<div class="commentContent size10 flexColumn">
+                    <span class="avaliacaoNota"><span>'.nl2br(htmlspecialchars($avalNota)).'</span>/10</span>
                     ' . nl2br(htmlspecialchars($avalContent)) . '</div>';
 
                     if ($_SESSION['tipo'] == 'ADM') {
