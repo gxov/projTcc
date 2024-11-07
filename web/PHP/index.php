@@ -104,7 +104,7 @@
                             <div class="sectionTitle sectionTitleSides">
                                 Relatório
                             </div>
-                            <iframe title="tcc" width="70%" height="600px"
+                            <iframe title="tcc" width="70%" height="700"
                                 src="https://app.powerbi.com/view?r=eyJrIjoiYzc1YTA5MmYtNmNjZi00OGUyLWI2NTEtZmFlN2NkOGZiODYyIiwidCI6IjMwYjFlNWVhLWUwNWUtNGE3Ny05OWQzLWEzYzYyYzMyODc4NCJ9"
                                 frameborder="0" allowFullScreen="true"></iframe>
                         </div>

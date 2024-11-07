@@ -12,8 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $query = "INSERT INTO tb_avaliacoes (codlivro, codusuario, descricao, nota) VALUES (?, ?, ?, ?)";
 
-        if ($stmt = $conn->prepare($query)) {
-            $stmt->bind_param("iiss", $livroId, $userId, $content, $date);
+        if ($nota <= 10 && $nota >= 0) {
+            $stmt = $conn->prepare($query);
+            $stmt->bind_param("iisd", $livroId, $userId, $content, $nota);
             if ($stmt->execute()) {
 
                 header("Location: produto.php?id=" . $livroId);

@@ -439,8 +439,19 @@ t3{
 }
 
 st1{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-family: 'Gotham Book';
+}
+
+strong{
+    font-weight: 500;
+    font-family: 'Gotham Medium';
+    transition: 0.2s;
+    color: var(--corPrimaria);
+}
+
+a strong:hover{
+    color: var(--corSecundaria);
 }
 
 /* Scrollbar */
