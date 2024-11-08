@@ -70,7 +70,7 @@ if ($stmtPost->num_rows > 0) {
 
             echo '<div class="commentContent size9 flexColumn">
                     ' . nl2br(htmlspecialchars($commentContent)) . '</div>';
-            if ($_SESSION['tipo'] == 'ADM') {
+            if ($_SESSION['tipo'] == 'ADM' || $commentAuthorCod == $_SESSION['id']) {
                 echo '<form action="" method="POST"><input type="hidden" name="commIdDelete" value="' . $commentId . '"><input type="hidden" name="forumCod" value="' . $postId . '"><button class="deleteComment" type="submit" name="deleteSubmit">Deletar</button></form>';
             }
             echo '</div>';

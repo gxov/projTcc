@@ -46,7 +46,10 @@
                     <div class="flexColumn size12">
                         <div class="flex">
                             <div class="pesquisaScroll size6">
-                                <div id="results">
+                                <div class="sectionTitle">
+                                    Autores
+                                </div>
+                                <div id="results" class="flex">
 
                                     <?php
                                     if (isset($_GET['search'])) {
@@ -58,7 +61,10 @@
                                 </div>
                             </div>
                             <div class="pesquisaScroll size6">
-                                <div id="results">
+                                <div class="sectionTitle">
+                                    Livros
+                                </div>
+                                <div id="results" class="flex">
 
                                     <?php
                                     if (isset($_GET['search'])) {
@@ -72,7 +78,10 @@
                         </div>
                         <div class="flex">
                             <div class="pesquisaScroll size6">
-                                <div id="results">
+                                <div class="sectionTitle">
+                                    Usuários
+                                </div>
+                                <div id="results" class="flex">
 
                                     <?php
                                     if (isset($_GET['search'])) {
@@ -84,7 +93,10 @@
                                 </div>
                             </div>
                             <div class="pesquisaScroll size6">
-                                <div id="results">
+                                <div class="sectionTitle">
+                                    Fóruns
+                                </div>
+                                <div id="results" class="flex">
 
                                     <?php
                                     if (isset($_GET['search'])) {

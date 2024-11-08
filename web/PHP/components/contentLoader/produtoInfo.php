@@ -52,34 +52,36 @@ if (isset($id)) {
         $result .= '</div></div>';
 
 
-        $result .= '
-        <div class="contSection livroBtnRow">
-            <button class="livroBtn" onclick="mostrarBibliotecas()">
-                Adicionar à Biblioteca
-            </button>
-        </div>';
-
-
-        $result .= '
-        <form id="bibliotecas" class="livroBibliotecasForm" method="POST" action="administrator/utils/livro/adicionarBiblioteca.php">
-            <input type="hidden" name="codLivro" value="' . htmlspecialchars($idL) . '">
-            <div class="livroBibliotecas">';
-
-
         $sql = "SELECT cod, nome FROM tb_bibliotecas WHERE codusuario = ? AND ativo = 1";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("i", $_SESSION['id']);
         $stmt->execute();
         $stmt->bind_result($bibliotecaCod, $bibliotecaNome);
-
+        if(isset($_SESSION['id'])){
+            $result .= '
+            <div class="contSection livroBtnRow">
+            <button class="livroBtn" onclick="mostrarBibliotecas()">
+                Adicionar à Biblioteca
+            </button>
+        </div>
+        <form id="bibliotecas" class="livroBibliotecasForm" method="POST" action="administrator/utils/livro/adicionarBiblioteca.php">
+            <input type="hidden" name="codLivro" value="' . htmlspecialchars($idL) . '">
+            <div class="livroBibliotecas">';
         while ($stmt->fetch()) {
             $result .= '<input type="radio" name="codBiblioteca" value="' . htmlspecialchars($bibliotecaCod) . '">' . htmlspecialchars($bibliotecaNome) . '</input><br>';
         }
-
         $result .= '
             <input type="submit" value="Adicionar à Biblioteca">
             </div>
         </form>';
+        }else{
+            $result .= '<div class="contSection livroBtnRow">
+            <a href="login.php">
+            <button class="livroBtn">Faça login para poder ler livros.</button>
+            </a></div>';
+        }
+
+        
 
 
         $result .= '
@@ -95,7 +97,7 @@ if (isset($id)) {
                 <input type="hidden" name="avaliacaoId" value="' . $idL . '">
                 <textarea class="forumInput size8" name="avaliacaoCont" placeholder="Faça um comentário!" required style="resize: none;"></textarea>
                 <div class="flexColumn" style="margin: 0 0 0 1rem"><label for="avaliacaoNota" class="controlLabel"> Nota: </label>
-                <input type="number" name="avaliacaoNota" class="flex forumInput size4" style="height: fit-content"></div>
+                <input type="text" name="avaliacaoNota" class="flex forumInput size4" style="height: fit-content"></div>
             </div>
             <button class="forumBtn size2" type="submit" name="avaliacaoSubmit">Publicar</button>    
         </form>
@@ -126,7 +128,7 @@ if (isset($id)) {
                     <span class="avaliacaoNota"><span>'.nl2br(htmlspecialchars($avalNota)).'</span>/10</span>
                     ' . nl2br(htmlspecialchars($avalContent)) . '</div>';
 
-                    if ($_SESSION['tipo'] == 'ADM') {
+                    if ($_SESSION['tipo'] == 'ADM' || $avalAuthorCod == $_SESSION['id']) {
                         echo '<form action="" method="POST"><input type="hidden" name="avalIdDelete" value="' . $avalId . '"><input type="hidden" name="livroCod" value="' . $idL . '"><button class="deleteComment" type="submit" name="deleteSubmit">Deletar</button></form>';
                     }
                     echo '</div>';

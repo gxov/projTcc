@@ -40,7 +40,7 @@ if (isset($_SESSION['username'])) {
                     <div class="userMenuItem userMenuAccess flexColumn alignCenter">
                         <?php
                         if ($image == null) {
-                            echo '<a class="flexColumn" href="usuario.php?id='.$_SESSION['id'].'"><svg class="userMenuPicture" data-v-5cba5096="" data-v-dd104bd2="" xmlns="http://www.w3.org/2000/svg"
+                            echo '<a class="flexColumn" href="usuario.php?id=' . $_SESSION['id'] . '"><svg class="userMenuPicture" data-v-5cba5096="" data-v-dd104bd2="" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 24 24" class="icon large text-icon-contrast text-undefined" id="avatar">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2m8-10a4 4 0 1 0 0-8 4 4 0 0 0 0 8">
@@ -54,7 +54,8 @@ if (isset($_SESSION['username'])) {
                 </img>' . $_SESSION['username'] . '</a>';
                         } ?>
                     </div>
-                    <a href="bibliotecas.php" class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
+                    <a href="bibliotecas.php"
+                        class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
                         <svg class="svgConfigAccess" data-v-9ba4cb7e="" data-v-8a0f6996="" xmlns="http://www.w3.org/2000/svg"
                             width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" class="feather feather-book-open icon" viewBox="0 0 24 24"
@@ -64,7 +65,8 @@ if (isset($_SESSION['username'])) {
                         </svg>
                         Bibliotecas
                     </a>
-                    <a href="configuracoes.php" class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
+                    <a href="configuracoes.php"
+                        class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
                         <svg class="svgConfigAccess" data-v-5cba5096="" data-v-62f4b649="" xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 24 24" class="icon text-icon-contrast text-undefined mr-3">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -83,8 +85,8 @@ if (isset($_SESSION['username'])) {
                         <div class="userMenuScroll justifyContCent flexColumn">
                             <a href="admUser.php" style="margin-top: 8rem"
                                 class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
-                                <svg class="svgConfigAccess" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512" fill="var(--font)">
+                                <svg class="svgConfigAccess" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                    fill="var(--font)">
                                     <path
                                         d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4l54.1 0 109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109 0-54.1c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7L352 176c-8.8 0-16-7.2-16-16l0-57.4c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
                                 </svg>
@@ -92,8 +94,8 @@ if (isset($_SESSION['username'])) {
                             </a>
                             <a href="admForum.php"
                                 class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
-                                <svg class="svgConfigAccess" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512" fill="var(--font)">
+                                <svg class="svgConfigAccess" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                    fill="var(--font)">
                                     <path
                                         d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4l54.1 0 109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109 0-54.1c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7L352 176c-8.8 0-16-7.2-16-16l0-57.4c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
                                 </svg>
@@ -101,8 +103,8 @@ if (isset($_SESSION['username'])) {
                             </a>
                             <a href="admAutor.php"
                                 class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
-                                <svg class="svgConfigAccess" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512" fill="var(--font)">
+                                <svg class="svgConfigAccess" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                    fill="var(--font)">
                                     <path
                                         d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4l54.1 0 109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109 0-54.1c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7L352 176c-8.8 0-16-7.2-16-16l0-57.4c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
                                 </svg>
@@ -110,8 +112,8 @@ if (isset($_SESSION['username'])) {
                             </a>
                             <a href="admLivro.php"
                                 class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
-                                <svg class="svgConfigAccess" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512" fill="var(--font)">
+                                <svg class="svgConfigAccess" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                    fill="var(--font)">
                                     <path
                                         d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4l54.1 0 109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109 0-54.1c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7L352 176c-8.8 0-16-7.2-16-16l0-57.4c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
                                 </svg>
@@ -119,8 +121,8 @@ if (isset($_SESSION['username'])) {
                             </a>
                             <a href="admCategoria.php"
                                 class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
-                                <svg class="svgConfigAccess" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512" fill="var(--font)">
+                                <svg class="svgConfigAccess" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                    fill="var(--font)">
                                     <path
                                         d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4l54.1 0 109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109 0-54.1c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7L352 176c-8.8 0-16-7.2-16-16l0-57.4c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
                                 </svg>
@@ -132,22 +134,24 @@ if (isset($_SESSION['username'])) {
                         <div class="logoutForm">
                         </div>
                         <div class="userMenuScroll justifyContCent flexColumn">
-                            <div class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
-                            <svg class="svgConfigAccess" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512" fill="var(--font)">
+                            <a href="admAutor.php"
+                                class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
+                                <svg class="svgConfigAccess" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                    fill="var(--font)">
                                     <path
                                         d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4l54.1 0 109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109 0-54.1c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7L352 176c-8.8 0-16-7.2-16-16l0-57.4c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
                                 </svg>
                                 Autores
-                            </div>
-                            <div class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
-                            <svg class="svgConfigAccess" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512" fill="var(--font)">
+                            </a>
+                            <a href="admLivro.php"
+                                class="userMenuItem flex alignSlfCent justifyContCent alignCenter flex userConfigAccess">
+                                <svg class="svgConfigAccess" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                    fill="var(--font)">
                                     <path
                                         d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4l54.1 0 109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109 0-54.1c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7L352 176c-8.8 0-16-7.2-16-16l0-57.4c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
                                 </svg>
                                 Livros
-                            </div>
+                            </a>
                         </div>
                         <?php
                     }

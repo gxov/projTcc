@@ -50,7 +50,11 @@ WHERE cod = " . $idU;
     ;
     
 if($_SESSION['id'] == $_GET['id']){
-    echo 'teste';
+    echo '<div>
+        <form action="" method="POST">
+        
+        </form>
+    </div>';
 }
     $stmtU->close();
     $conn->close();

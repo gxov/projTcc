@@ -1,9 +1,9 @@
 <?php
 include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php");
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $codlivro = $_POST['codLivro'];       // Book ID
-    $codbiblioteca = $_POST['codBiblioteca']; // User-selected Library (Biblioteca) ID
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION['id'])) {
+    $codlivro = $_POST['codLivro'];
+    $codbiblioteca = $_POST['codBiblioteca'];
 
     $conn = connect();
 
@@ -15,10 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmtCheck->store_result();
 
     if ($stmtCheck->num_rows > 0) {
-        // Book is already in this library, so show an error or message
         echo "This book is already in the selected library.";
     } else {
-        // Add the book to the selected library
         $sqlInsert = "INSERT INTO tb_livros_bibliotecas (codbiblioteca, codlivro) VALUES (?, ?)";
         $stmtInsert = $conn->prepare($sqlInsert);
         $stmtInsert->bind_param("ii", $codbiblioteca, $codlivro);

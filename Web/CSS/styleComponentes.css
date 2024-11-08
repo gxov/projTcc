@@ -1201,6 +1201,18 @@ padding-bottom: 1rem;
     border-radius: 5px
 }
 
+.pesquisaScroll #results{
+    max-height: 100%;
+    max-width:  90%;
+    overflow-x: scroll;
+    padding: 5px;
+    border: solid 1px var(--corSecundaria);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    max-height: 500px;
+}
+
 iframe .backgroundContainer{
     background-color: var(--bgPrimaria) !important;
 }
