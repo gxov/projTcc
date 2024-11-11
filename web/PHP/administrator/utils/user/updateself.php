@@ -6,11 +6,11 @@ include_once ("C:/xampp/htdocs/projtcc/web/PHP/administrator/utils/connect.php")
 if (isset($_POST['updateP'])) {
   $conn = connect();
   $cod = $_SESSION["id"];
-  $nome = $_POST["nomeUpd"];
-  $cpf = $_POST["cpfUpd"];
-  $email = $_POST["emailUpd"];
-  $dtnasc = $_POST["dtnascUpd"];
-  $desc = $_POST["descricaoUpd"];
+  $nome = $_POST["nome"];
+  $cpf = $_POST["CPF"];
+  $email = $_POST["email"];
+  $dtnasc = $_POST["dtnasc"];
+  $desc = $_POST["descricao"];
 
   $filename = $_FILES["imagemUserUpd"]["name"];
   $tempname = $_FILES["imagemUserUpd"]["tmp_name"];
